@@ -1,0 +1,4 @@
+.DS_Store
+.netrwhist
+vim/backup/*.swp
+vim/backup/*.swo
