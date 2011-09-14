@@ -1,0 +1,40 @@
+iscd()
+{
+  hop Insync
+  workon isyncd-server
+}
+
+isstart()
+{
+  iscd
+  supervisord
+}
+
+isctl()
+{
+  iscd
+  supervisorctl
+}
+
+isupdate()
+{
+  if [ -z "$ISYNCD_PATH" ]; then
+    echo ISYNCD_PATH not set!
+  else
+    if [ -z "$1" ]; then
+      echo Must specify package!
+    else
+      P=$1
+      if [ -z "$2" ]; then
+        B="dev"
+      else
+        B=$2
+      fi
+      echo Updating $P to $B...
+      cd $ISYNCD_PATH/$P/$B
+      hg pull --update
+      python setup.py develop 2>1 /dev/null
+      echo Done.
+    fi
+  fi
+}
