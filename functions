@@ -33,7 +33,7 @@ isupdate()
       echo Updating $P to $B...
       cd $ISYNCD_PATH/$P/$B
       hg pull --update
-      python setup.py develop 2>1 /dev/null
+      python setup.py develop > /dev/null 2>&1
       echo Done.
     fi
   fi
