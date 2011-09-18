@@ -7,24 +7,34 @@
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+  ignore = dirty
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+  ignore = dirty
 [submodule "vim/bundle/taglist.vim"]
 	path = vim/bundle/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+  ignore = dirty
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+  ignore = dirty
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+  ignore = dirty
 [submodule "vim/bundle/ZoomWin"]
 	path = vim/bundle/ZoomWin
 	url = https://github.com/vim-scripts/ZoomWin.git
+  ignore = dirty
+[submodule "vim/bundle/vim-speeddating"]
+	path = vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+  ignore = dirty
