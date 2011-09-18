@@ -1,9 +1,11 @@
-# Install
+## Install
 ```
 git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 ./install.sh
 ```
 
-# Update
+## Update
+```
 ./update.sh
+```
