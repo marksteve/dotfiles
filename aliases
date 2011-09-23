@@ -2,7 +2,8 @@ alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
 alias pbg='pbpaste | gorgeous | cat'
 alias ..='cd ..'
-alias tardir='ls | xargs -I x tar -czf x.tar.gz x'
+alias tgz='xargs -I {file} tar -czf {file}.tar.gz {file}'
+alias untgz='xargs -I {file} tar -xzf {file}'
 
 # coreutils
 brew_prefix=`brew --prefix`
