@@ -1,5 +1,11 @@
 PS1='\u@\h:\w $(vcprompt)\$ '
 
+shopt -s nocaseglob
+
+# http://www.reddit.com/r/commandline/comments/kbeoe/you_can_make_readline_and_bash_much_more_user/
+bind 'set completion-ignore-case on'
+bind 'set completion-prefix-display-length 2'
+
 for F in exports aliases functions; do
   F=$HOME/.$F
   [ -e "$F" ] && source $F
