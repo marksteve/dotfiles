@@ -9,6 +9,8 @@ autocmd VimEnter * call s:VimEnter(expand("<amatch>"))
 function s:VimEnter(directory)
   if isdirectory(a:directory)
     exe "cd " . fnameescape(a:directory)
+    " Close directory listing
+    bd
   endif
 
   " Allows reading from stdin
@@ -16,9 +18,6 @@ function s:VimEnter(directory)
   if strlen(a:directory) == 0
     return
   endif
-
-  " Close directory listing
-  bd
 endfunction
 
 if has ("gui_macvim")
