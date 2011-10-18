@@ -42,3 +42,11 @@
 	path = vim/bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
   ignore = dirty
+[submodule "vim/bundle/vim-indent-object"]
+	path = vim/bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+  ignore = dirty
+[submodule "vim/bundle/CamelCaseMotion"]
+	path = vim/bundle/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion.git
+  ignore = dirty
