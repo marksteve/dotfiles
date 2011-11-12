@@ -106,7 +106,11 @@ set noequalalways
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-map <D-O> :CommandT<CR>
+if has ("gui_macvim")
+  map <D-O> :CommandT<CR>
+else
+  map <C-O> :CommandT<CR>
+endif
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
