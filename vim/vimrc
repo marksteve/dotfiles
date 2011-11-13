@@ -104,21 +104,13 @@ call pathogen#helptags()
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-if has ("gui_macvim")
-  map <D-O> :CommandT<CR>
-else
-  map <C-O> :CommandT<CR>
-endif
-
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
-map <Leader>t :Tlist<CR>
+map <Leader>T :Tlist<CR>
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
@@ -132,6 +124,11 @@ runtime! macros/matchit.vim
 
 " Set local vimrc filename
 let g:local_vimrc = ".vimrc.local"
+
+" FuzzyFinder
+nmap <Leader>o :FufFileWithCurrentBufferDir<CR>
+nmap <Leader>b :FufBuffer<CR>
+nmap <Leader>t :FufTaggedFile<CR>
 
 
 
