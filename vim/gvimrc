@@ -1,6 +1,8 @@
 set guioptions-=T " Disable toolbar
 set cursorline " Highlight current line
 
+autocmd FocusGained * CommandTFlush
+autocmd BufWritePost * CommandTFlush
 autocmd VimEnter * call s:VimEnter(expand("<amatch>"))
 
 " If the parameter is a directory, cd into it
