@@ -31,8 +31,7 @@ source virtualenvwrapper.sh
 source /Library/Python/2.6/site-packages/Hop-1.0-py2.6.egg/hop/hop.bash
 
 # Node
-export PATH=$HOME/.local/node/bin:$PATH
-export NODE_PATH=$HOME/.local/lib/node:$HOME/local/node/lib/node_modules
+export NODE_PATH=/usr/local/lib/node_modules
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
