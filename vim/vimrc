@@ -92,6 +92,61 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+noremap <leader><space> :noh<cr>:call clearmatches()<cr>
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Don't move on *
+nnoremap * *<c-o>
+
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+
+" Heresy
+inoremap <c-a> <esc>I
+inoremap <c-e> <esc>A
+
+" Fix linewise visual selection of various text objects
+nnoremap VV V
+nnoremap Vit vitVkoj
+nnoremap Vat vatV
+nnoremap Vab vabV
+nnoremap VaB vaBV
+
+noremap  <F1> :set invfullscreen<CR>
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+
+" Fuck you too, manual key.
+nnoremap K <nop>
+
+" Stop it, hash key.
+inoremap # X<BS>#
+
+" Change case
+nnoremap <C-u> gUiw
+inoremap <C-u> <esc>gUiwea
+
+" Indent Guides {{{
+let g:indentguides_state = 0
+function! IndentGuides() " {{{
+    if g:indentguides_state
+        let g:indentguides_state = 0
+        2match None
+    else
+        let g:indentguides_state = 1
+        execute '2match IndentGuides /\%(\_^\s*\)\@<=\%(\%'.(0*&sw+1).'v\|\%'.(1*&sw+1).'v\|\%'.(2*&sw+1).'v\|\%'.(3*&sw+1).'v\|\%'.(4*&sw+1).'v\|\%'.(5*&sw+1).'v\|\%'.(6*&sw+1).'v\|\%'.(7*&sw+1).'v\)\s/'
+    endif
+endfunction " }}}
+nnoremap <leader>i :call IndentGuides()<cr>
 
 
 " PLUGINS
@@ -125,6 +180,7 @@ let macvim_hig_shift_movement = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
+map <tab> %
 
 " Set local vimrc filename
 let g:local_vimrc = ".vimrc.local"
