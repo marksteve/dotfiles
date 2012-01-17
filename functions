@@ -1,18 +1,17 @@
 iscd()
 {
   hop Insync
+  if [ -d "$1" ]; then
+    cd $1
+  fi
   workon isyncd-server
 }
 
 isstart()
 {
   iscd
-  supervisord
-}
-
-isctl()
-{
-  iscd
+  supervisord > /dev/null 2>&1 &
+  sleep 5
   supervisorctl
 }
 

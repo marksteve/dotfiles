@@ -74,10 +74,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
 " Unimpaired configuration
 " Bubble single lines
 nmap <C-Up> [e
@@ -85,6 +81,9 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" Indent-aware paste
+nnoremap <leader>p p`[v`]=
 
 " Remember last location in file
 if has("autocmd")
@@ -135,18 +134,6 @@ inoremap # X<BS>#
 nnoremap <C-u> gUiw
 inoremap <C-u> <esc>gUiwea
 
-" Indent Guides {{{
-let g:indentguides_state = 0
-function! IndentGuides() " {{{
-    if g:indentguides_state
-        let g:indentguides_state = 0
-        2match None
-    else
-        let g:indentguides_state = 1
-        execute '2match IndentGuides /\%(\_^\s*\)\@<=\%(\%'.(0*&sw+1).'v\|\%'.(1*&sw+1).'v\|\%'.(2*&sw+1).'v\|\%'.(3*&sw+1).'v\|\%'.(4*&sw+1).'v\|\%'.(5*&sw+1).'v\|\%'.(6*&sw+1).'v\|\%'.(7*&sw+1).'v\)\s/'
-    endif
-endfunction " }}}
-nnoremap <leader>i :call IndentGuides()<cr>
 
 
 " PLUGINS
@@ -228,6 +215,8 @@ endfunction
 let pyindent_nested_paren="&sw"
 let pyindent_open_paren="&sw"
 
-" Cheetah support
+" Cheetah
 au BufRead,BufNewFile *.tmpl set filetype=html
+" Mako
+au BufRead,BufNewFile *.html set filetype=mako
 
