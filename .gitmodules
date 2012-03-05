@@ -42,3 +42,7 @@
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
   ignore = dirty
+[submodule "vim/bundle/sparkup"]
+	path = vim/bundle/sparkup
+	url = https://github.com/rstacruz/sparkup.git
+  ignore = dirty

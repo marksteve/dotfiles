@@ -1,10 +1,24 @@
 PS1='\u@\h:\w $(vcprompt)\$ '
 
+# Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
 
 # http://www.reddit.com/r/commandline/comments/kbeoe/you_can_make_readline_and_bash_much_more_user/
 bind 'set completion-ignore-case on'
 bind 'set completion-prefix-display-length 2'
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
 for F in exports aliases functions; do
   F=$HOME/.$F
