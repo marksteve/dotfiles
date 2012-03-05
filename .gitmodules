@@ -2,10 +2,6 @@
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
   ignore = dirty
-[submodule "vim/bundle/Command-T"]
-	path = vim/bundle/Command-T
-	url = https://github.com/wincent/Command-T.git
-  ignore = dirty
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
@@ -41,4 +37,8 @@
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+  ignore = dirty
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
   ignore = dirty
