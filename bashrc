@@ -49,3 +49,4 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
+eval "$(rbenv init -)"

@@ -1,39 +1,15 @@
-iscd()
-{
-  hop Insync
-  if [ -d "$1" ]; then
-    cd $1
-  fi
-  workon isyncd-server
-}
-
 isstart()
 {
-  iscd
+  workon isyncd-server
   supervisord > /dev/null 2>&1 &
   sleep 5
   supervisorctl
 }
 
-isupdate()
+test_js()
 {
-  if [ -z "$ISYNCD_PATH" ]; then
-    echo ISYNCD_PATH not set!
-  else
-    if [ -z "$1" ]; then
-      echo Must specify package!
-    else
-      P=$1
-      if [ -z "$2" ]; then
-        B="dev"
-      else
-        B=$2
-      fi
-      echo Updating $P to $B...
-      cd $ISYNCD_PATH/$P/$B
-      hg pull --update
-      python setup.py develop > /dev/null 2>&1
-      echo Done.
-    fi
-  fi
+  jt test -- -s -v tests.test_jasmine_fixtures
+  pushd spec
+  python -m SimpleHTTPServer
+  popd
 }
