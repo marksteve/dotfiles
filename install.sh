@@ -4,7 +4,7 @@ E='\033[1;30m[exists]'
 I='\033[1;32m[installed]'
 R='\033[0m'
 
-for F in bashrc bash_profile exports aliases functions vim; do
+for F in bashrc bash_profile exports aliases functions vim tmux.conf; do
   if [ -e "$HOME/.$F" ]; then
     echo -e .$F $E$R
     read -p "Replace existing? (y/n) " -n 1
