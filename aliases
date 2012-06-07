@@ -4,6 +4,8 @@ alias pbg='pbpaste | gorgeous | cat'
 alias ..='cd ..'
 alias tgz='xargs -I {file} tar -czf {file}.tar.gz {file}'
 alias untgz='xargs -I {file} tar -xzf {file}'
+alias dictate='pbpaste | say'
+alias love="/Applications/love.app/Contents/MacOS/love"
 
 # coreutils
 brew_prefix=`brew --prefix`
