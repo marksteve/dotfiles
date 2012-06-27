@@ -7,5 +7,5 @@ isstart()
 
 backup_to_gdrive()
 {
-  rsync -a --delete /Users/marksteve/Resources /Users/marksteve/Google\ Drive/Backup/Resources
+  rsync -a --delete /Users/marksteve/Resources/ /Users/marksteve/Google\ Drive/Backup/Resources/
 }
