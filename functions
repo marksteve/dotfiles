@@ -1,15 +1,11 @@
 isstart()
 {
-  workon isyncd-server
-  supervisord > /dev/null 2>&1 &
-  sleep 5
-  supervisorctl
+  workon isyncd-next
+  jt conf_server start
+  sudo nginx
 }
 
-test_js()
+backup_to_gdrive()
 {
-  jt test -- -s -v tests.test_jasmine_fixtures
-  pushd spec
-  python -m SimpleHTTPServer
-  popd
+  rsync -a --delete /Users/marksteve/Resources /Users/marksteve/Google\ Drive/Backup/Resources
 }
