@@ -1,14 +1,3 @@
-isstart()
-{
-  workon isyncd-next
-  jt conf_server start
-  sudo nginx
-}
-
-backup_to_gdrive()
-{
-  rsync -a --progress /Users/marksteve/Dropbox/Passwords.kdb /Users/marksteve/Google\ Drive/Backup/Passwords.kdb
-  rsync -a --progress /Users/marksteve/Dropbox/Keys.tc /Users/marksteve/Google\ Drive/Backup/Keys.tc
-  rsync -a --delete --progress /Users/marksteve/Books/ /Users/marksteve/Google\ Drive/Backup/Books/
-  rsync -a --delete --progress /Users/marksteve/Resources/ /Users/marksteve/Google\ Drive/Backup/Resources/
+backup() {
+  tarsnap -c -f projects-`date +%s` ~/Projects
 }
