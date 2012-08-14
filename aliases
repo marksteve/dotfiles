@@ -8,6 +8,7 @@ alias dictate='pbpaste | say'
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 alias genpass="curl -s https://raw.github.com/gist/3140959/0647934e0f7a239a9dda1a1c80a3a2a42b367a2e/genpass.py | python -"
+alias fact="elinks -dump randomfunfacts.com | sed -n '/^|/p' | tr -d \|''"
 
 # coreutils
 brew_prefix=`brew --prefix`

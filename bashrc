@@ -45,3 +45,6 @@ eval "$(rbenv init -)"
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
+# Show a random fact per terminal open
+fact
