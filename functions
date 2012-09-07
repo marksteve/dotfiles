@@ -1,3 +1,5 @@
 backup() {
   tarsnap -c -f projects-`date +%s` ~/Projects
+  tarsnap -c -f dropbox-`date +%s` ~/Dropbox
 }
+
