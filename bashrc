@@ -1,4 +1,4 @@
-PS1='\u@\h:\w $(vcprompt)\$ '
+PS1='\u@\H:\w $(vcprompt)\$ '
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -45,6 +45,3 @@ eval "$(rbenv init -)"
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
-
-# Show a random fact per terminal open
-fact
