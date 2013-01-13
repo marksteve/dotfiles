@@ -45,3 +45,7 @@ eval "$(rbenv init -)"
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
+# brew PIL
+export PYTHONPATH=$PYTHONPATH:$(brew --prefix)/Cellar/pil/1.1.7/lib/python2.7/site-packages
+
