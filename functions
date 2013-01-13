@@ -1,5 +1,9 @@
-backup() {
-  tarsnap -c -f projects-`date +%s` ~/Projects
-  tarsnap -c -f dropbox-`date +%s` ~/Dropbox
+hide_desktop() {
+  defaults write com.apple.finder CreateDesktop -bool false
+  killall Finder
 }
 
+show_desktop() {
+  defaults write com.apple.finder CreateDesktop -bool true
+  killall Finder
+}
