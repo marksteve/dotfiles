@@ -113,6 +113,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+###############################################################################
+
+for F in exports aliases functions; do
+  F=$HOME/.$F
+  [ -e "$F" ] && source $F
+done
+
 # virtualenvwrapper
 source virtualenvwrapper.sh
 
