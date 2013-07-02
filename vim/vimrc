@@ -172,6 +172,12 @@ map <tab> %
 " Set local vimrc filename
 let g:local_vimrc = ".vimrc.local"
 
+" ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/]\.(git|hg|svn|egg-info)$',
+  \ 'file': '\v\.(pyc|DS_Store)$',
+  \ }
+
 
 
 " FILETYPES
@@ -217,6 +223,7 @@ let pyindent_open_paren="&sw"
 
 " Cheetah
 au BufRead,BufNewFile *.tmpl set filetype=html
+
 " Mako
 au BufRead,BufNewFile *.html set filetype=mako
 
