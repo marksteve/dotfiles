@@ -174,7 +174,7 @@ let g:local_vimrc = ".vimrc.local"
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/]\.(git|hg|svn|egg-info)$',
+  \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
   \ }
 
