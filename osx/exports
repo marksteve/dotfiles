@@ -1,5 +1,5 @@
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH
-export ISYNCD_PATH=$HOME/Projects/Insync
+
 export LS_OPTIONS='--color=auto'
 
 # Larger bash history (allow 32³ entries; default is 500)
@@ -8,3 +8,17 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# Node
+export NODE_PATH=/usr/local/lib/node_modules
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# rbenv
+export PATH=$PATH:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+
+# brew PIL
+export PYTHONPATH=$PYTHONPATH:$(brew --prefix)/Cellar/pil/1.1.7/lib/python2.7/site-packages

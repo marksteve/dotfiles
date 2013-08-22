@@ -13,10 +13,6 @@ shopt -s cdspell
 bind 'set completion-ignore-case on'
 bind 'set completion-prefix-display-length 2'
 
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
-
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
@@ -34,18 +30,10 @@ fi
 WORKON_HOME=~/.virtualenvs
 source virtualenvwrapper.sh
 
-# Node
-export NODE_PATH=/usr/local/lib/node_modules
-
 # rbenv
-export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
 # autojump
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
-
-# brew PIL
-export PYTHONPATH=$PYTHONPATH:$(brew --prefix)/Cellar/pil/1.1.7/lib/python2.7/site-packages
-
