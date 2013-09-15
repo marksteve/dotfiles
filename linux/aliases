@@ -1,0 +1,2 @@
+alias node='node --harmony-generators'
+alias ws='workon insync-server'
