@@ -142,8 +142,9 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # nsq
 export PATH=$PATH:/opt/nsq-0.2.19.linux-amd64/bin
 
-# sublime text as default editor
-export EDITOR=subl
+# vim as default editor
+export VISUAL=vim
+export EDITOR=vim
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
