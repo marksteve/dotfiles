@@ -128,9 +128,10 @@ source setup_completeme_key_binding.sh
 
 # powerline-shell
 function _update_ps1() {
-   export PS1="$(powerline-shell.py $?) "
+  export PS1="$(~/.bin/powerline-shell.py $? 2> /dev/null)"
 }
-export PROMPT_COMMAND=_update_ps1
+
+export PROMPT_COMMAND="_update_ps1"
 
 # local bin
 export PATH=$HOME/.local/bin:$PATH
