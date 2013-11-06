@@ -46,10 +46,6 @@
 	path = vim/bundle/sparkup
 	url = https://github.com/rstacruz/sparkup.git
   ignore = dirty
-[submodule "vim/bundle/dwm.vim"]
-	path = vim/bundle/dwm.vim
-	url = https://github.com/spolu/dwm.vim.git
-  ignore = dirty
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -69,4 +65,8 @@
 [submodule "vim/bundle/vim-multiple-cursors"]
 	path = vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+  ignore = dirty
+[submodule "vim/bundle/minibufexpl.vim"]
+	path = vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
   ignore = dirty
