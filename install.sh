@@ -24,10 +24,12 @@ else
   OS='osx'
 fi
 
-for F in bashrc bash_profile exports aliases functions dir_colors; do
+for F in bashrc bash_profile exports aliases functions; do
   install $OS/$F .$F
 done
 
+install dir_colors .dir_colors
 install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
+install tmux.conf .tmux.conf

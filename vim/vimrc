@@ -146,10 +146,6 @@ call pathogen#helptags()
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-map <D-O> :CommandT<CR>
-
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
@@ -177,6 +173,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
   \ }
+let g:ctrlp_working_path_mode = ''
 
 " Multiple cursors
 let g:multi_cursor_use_default_mapping = 0
@@ -184,6 +181,9 @@ let g:multi_cursor_next_key = '<C-d>'
 let g:multi_cursor_prev_key = '<C-p>'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
+
+" python-mode
+let g:pymode_lint_ignore = "E111,E121"
 
 
 
