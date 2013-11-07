@@ -185,6 +185,11 @@ let g:multi_cursor_quit_key = '<Esc>'
 " python-mode
 let g:pymode_lint_ignore = "E111,E121"
 
+" accordion
+nnoremap <C-w>2 :Accordion 2<CR>
+nnoremap <C-w>3 :Accordion 3<CR>
+nnoremap <C-w>0 :AccordionStop<CR>
+
 
 
 " FILETYPES
