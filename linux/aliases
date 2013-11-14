@@ -1,5 +1,2 @@
 alias node='node --harmony-generators'
-alias ws='workon insync-server'
-alias wtoff='xsetwacom --set "Wacom Bamboo 16FG 4x5 Finger touch" touch off'
-alias wton='xsetwacom --set "Wacom Bamboo 16FG 4x5 Finger touch" touch on'
 alias sd=stevedore
