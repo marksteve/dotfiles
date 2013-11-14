@@ -134,7 +134,8 @@ inoremap # X<BS>#
 nnoremap <C-u> gUiw
 inoremap <C-u> <esc>gUiwea
 
-
+" Don't prompt when files are externally changed
+set autoread
 
 " PLUGINS
 

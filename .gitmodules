@@ -14,10 +14,6 @@
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
   ignore = dirty
-[submodule "vim/bundle/taglist.vim"]
-	path = vim/bundle/taglist.vim
-	url = https://github.com/vim-scripts/taglist.vim.git
-  ignore = dirty
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -38,10 +34,6 @@
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
   ignore = dirty
-[submodule "vim/bundle/sparkup"]
-	path = vim/bundle/sparkup
-	url = https://github.com/rstacruz/sparkup.git
-  ignore = dirty
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -54,14 +46,6 @@
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
   ignore = dirty
-[submodule "vim/bundle/vim-golang"]
-	path = vim/bundle/vim-golang
-	url = https://github.com/jnwhiteh/vim-golang.git
-  ignore = dirty
-[submodule "vim/bundle/vim-multiple-cursors"]
-	path = vim/bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-  ignore = dirty
 [submodule "vim/bundle/minibufexpl.vim"]
 	path = vim/bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
@@ -69,3 +53,6 @@
 [submodule "vim/bundle/vim-accordion"]
 	path = vim/bundle/vim-accordion
 	url = https://github.com/mattboehm/vim-accordion.git
+[submodule "vim/bundle/emmet-vim"]
+	path = vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
