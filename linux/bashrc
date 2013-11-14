@@ -120,39 +120,25 @@ for F in exports aliases functions; do
   [ -e "$F" ] && source $F
 done
 
-# virtualenvwrapper
-source virtualenvwrapper.sh
-
-# completeme
-source setup_completeme_key_binding.sh
-
-# powerline-shell
-function _update_ps1() {
-  export PS1="$(~/.bin/powerline-shell.py $? 2> /dev/null)"
-}
-
-export PROMPT_COMMAND="_update_ps1"
-
-# local bin
-export PATH=$HOME/.local/bin:$PATH
+# .bin
+export PATH=$PATH:$HOME/.bin
 
 # go
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/Projects/Go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-# nsq
-export PATH=$PATH:/opt/nsq-0.2.19.linux-amd64/bin
 
 # vim as default editor
 export VISUAL=vim
 export EDITOR=vim
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# virtualenvwrapper
+if [ -f "$(which virtualenvwrapper.sh)" ]; then
+  source virtualenvwrapper.sh
+fi
 
-# android-studio
-export PATH=$PATH:/opt/android-studio/bin
-
-# snes9x
-export PATH=$PATH:/opt/snes9x-1.43
+# insync env variables
+export ISYNCD_ENV=DEV
+export ISYNCD_SCONF_HOST=$CONF_SERVER_PORT_7962_TCP_ADDR
+export ISYNCD_SCONF_PORT=$CONF_SERVER_PORT_7962_TCP_PORT
 
