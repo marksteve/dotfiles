@@ -65,3 +65,6 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/vim-isort"]
+	path = vim/bundle/vim-isort
+	url = https://github.com/fisadev/vim-isort.git

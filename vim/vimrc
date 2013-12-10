@@ -9,7 +9,8 @@ set nofoldenable
 
 " Default color scheme
 syntax on
-color molokai
+set background=dark
+colorscheme base16-default
 
 " Set encoding
 set encoding=utf-8
