@@ -115,6 +115,18 @@ fi
 
 ###############################################################################
 
+# Sane bash options
+shopt -s nocaseglob
+shopt -s histappend
+shopt -s cdspell
+bind 'set completion-ignore-case on'
+bind 'set completion-prefix-display-length 2'
+export PROMPT_DIRTRIM=2
+
+# SSH hostnames autocomplete
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+
 # 256 colors
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
   export TERM=xterm-256color
@@ -124,8 +136,6 @@ for F in exports aliases functions; do
   F=$HOME/.$F
   [ -e "$F" ] && source $F
 done
-
-export PROMPT_DIRTRIM=2
 
 # .bin
 export PATH=$PATH:$HOME/.bin
