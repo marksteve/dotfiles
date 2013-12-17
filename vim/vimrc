@@ -184,9 +184,6 @@ nnoremap <C-w>2 :Accordion 2<CR>
 nnoremap <C-w>3 :Accordion 3<CR>
 nnoremap <C-w>0 :AccordionStop<CR>
 
-" mbe
-map <Leader><tab> :MBEFocus<CR>
-
 
 " FILETYPES
 
