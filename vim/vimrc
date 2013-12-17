@@ -153,9 +153,6 @@ call pathogen#helptags()
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
-
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
