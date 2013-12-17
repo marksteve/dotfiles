@@ -138,6 +138,10 @@ inoremap <C-u> <esc>gUiwea
 " Don't prompt when files are externally changed
 set autoread
 
+" Auto close scratch
+autocmd CursorMovedI *  if pumvisible() == 0|silent! pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
+
 
 " PLUGINS
 
