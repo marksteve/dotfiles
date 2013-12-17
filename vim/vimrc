@@ -55,6 +55,9 @@ set modelines=10
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+" http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
+set hidden
+
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
@@ -70,10 +73,6 @@ cmap W! w !sudo tee % >/dev/null
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
@@ -153,11 +152,6 @@ call pathogen#helptags()
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
-map <Leader>t :Tlist<CR>
-
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
@@ -184,6 +178,13 @@ let g:pymode_lint_checker = "pylint"
 nnoremap <C-w>2 :Accordion 2<CR>
 nnoremap <C-w>3 :Accordion 3<CR>
 nnoremap <C-w>0 :AccordionStop<CR>
+
+" nerdtree
+autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <Leader>t :NERDTreeToggle<CR>
+map <Leader>f :NERDTreeFind<CR>
 
 
 " FILETYPES
