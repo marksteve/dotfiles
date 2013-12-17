@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort.git
+[submodule "vim/bundle/kwbdi.vim"]
+	path = vim/bundle/kwbdi.vim
+	url = https://github.com/vim-scripts/kwbdi.vim
