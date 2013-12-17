@@ -186,6 +186,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <Leader>t :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
 
+" vim-isort
+au BufWritePre *.py :Isort
 
 " FILETYPES
 
@@ -197,9 +199,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
-
-" Sort python imports
-au BufWritePre *.py :Isort
 
 " Go
 filetype off
