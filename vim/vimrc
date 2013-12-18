@@ -150,17 +150,12 @@ nnoremap <C-l> <C-w>l
 
 " PLUGINS
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
-
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
@@ -176,10 +171,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_working_path_mode = ''
 
-" python-mode
-let g:pymode_lint_ignore = "E111,E121,W0311,E0611,F0401"
-let g:pymode_lint_checker = "pylint"
-
 " accordion
 nnoremap <C-w>2 :Accordion 2<CR>
 nnoremap <C-w>3 :Accordion 3<CR>
@@ -191,6 +182,13 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 
 " vim-isort
 au BufWritePre *.py :Isort
+
+" syntastic
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_python_checkers=['python', 'pep8']
+let g:syntastic_python_pep8_args='--ignore=E111,E121,W391'
+
 
 " FILETYPES
 

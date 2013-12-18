@@ -34,10 +34,6 @@
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
   ignore = dirty
-[submodule "vim/bundle/python-mode"]
-	path = vim/bundle/python-mode
-	url = https://github.com/klen/python-mode.git
-  ignore = dirty
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -69,3 +65,12 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/vim-python-combined"]
+	path = vim/bundle/vim-python-combined
+	url = https://github.com/mitsuhiko/vim-python-combined.git
+[submodule "vim/bundle/vim-jinja"]
+	path = vim/bundle/vim-jinja
+	url = https://github.com/mitsuhiko/vim-jinja.git
+[submodule "vim/bundle/vim-rst"]
+	path = vim/bundle/vim-rst
+	url = https://github.com/mitsuhiko/vim-rst.git
