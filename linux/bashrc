@@ -137,6 +137,9 @@ for F in exports aliases functions; do
   [ -e "$F" ] && source $F
 done
 
+# current git branch
+command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
+
 # .bin
 export PATH=$PATH:$HOME/.bin
 
