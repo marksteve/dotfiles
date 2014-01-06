@@ -186,7 +186,7 @@ au BufWritePre *.py :Isort
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers=['python', 'pep8']
+let g:syntastic_python_checkers=['python', 'pep8', 'pyflakes']
 let g:syntastic_python_pep8_args='--ignore=E111,E121,W391'
 
 
