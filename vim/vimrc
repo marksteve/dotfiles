@@ -24,11 +24,11 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set textwidth=100
+set textwidth=80
 set list listchars=tab:\ \ ,trail:·
 set scrolloff=5
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
-au BufWinEnter * call matchadd('ErrorMsg', '\%>100v.\+', -1) " Column Marker
+au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " Searching
