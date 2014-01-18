@@ -180,9 +180,6 @@ nnoremap <C-w>0 :AccordionStop<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
-" vim-isort
-au BufWritePre *.py :Isort
-
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
