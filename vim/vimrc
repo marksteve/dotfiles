@@ -184,7 +184,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_python_checkers=['pylint']
-let g:syntastic_python_pylint_post_args='--disable=C0111,W0311'
+let g:syntastic_python_pylint_post_args='--disable=C0111,W0311,E1101'
 
 
 " FILETYPES
