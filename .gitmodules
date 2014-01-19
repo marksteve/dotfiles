@@ -74,3 +74,6 @@
 [submodule "vim/bundle/vim-rst"]
 	path = vim/bundle/vim-rst
 	url = https://github.com/mitsuhiko/vim-rst.git
+[submodule "vim/bundle/pytest.vim"]
+	path = vim/bundle/pytest.vim
+	url = https://github.com/alfredodeza/pytest.vim.git
