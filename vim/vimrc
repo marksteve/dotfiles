@@ -58,6 +58,9 @@ set directory=~/.vim/backup
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
 set hidden
 
+" Long lines are not broken in insert mode
+set formatoptions+=l
+
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
