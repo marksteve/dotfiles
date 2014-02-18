@@ -25,7 +25,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set textwidth=80
-set list listchars=tab:\ \ ,trail:·
 set scrolloff=5
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
 au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
@@ -57,9 +56,6 @@ set directory=~/.vim/backup
 
 " http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
 set hidden
-
-" Long lines are not broken in insert mode
-set formatoptions+=l
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on

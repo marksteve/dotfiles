@@ -77,3 +77,9 @@
 [submodule "vim/bundle/pytest.vim"]
 	path = vim/bundle/pytest.vim
 	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "vim/bundle/vim-sensible"]
+	path = vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "vim/bundle/vim-sleuth"]
+	path = vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
