@@ -33,3 +33,4 @@ install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
+install Xresources .Xresources
