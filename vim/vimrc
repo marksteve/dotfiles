@@ -2,7 +2,8 @@ set nocompatible
 
 set number
 set ruler
-set visualbell " Disable beep
+set noerrorbells
+set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
 set ttyfast " ???
 set nofoldenable
