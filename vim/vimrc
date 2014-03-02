@@ -11,7 +11,7 @@ set nofoldenable
 " Default color scheme
 syntax on
 set background=dark
-colorscheme base16-tomorrow
+colorscheme solarized
 
 " Set encoding
 set encoding=utf-8
