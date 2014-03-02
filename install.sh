@@ -33,5 +33,5 @@ install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
-install xsession .xsession
+install Xsession .Xsession
 install Xresources .Xresources
