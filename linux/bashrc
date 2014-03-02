@@ -124,15 +124,9 @@ export PROMPT_DIRTRIM=2
 # SSH hostnames autocomplete
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
-
-# 256 colors
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-  export TERM=xterm-256color
-fi
-
 for F in exports aliases functions; do
-  F=$HOME/.$F
-  [ -e "$F" ] && source $F
+    F=$HOME/.$F
+    [ -e "$F" ] && source $F
 done
 
 # current git branch
@@ -152,7 +146,7 @@ export EDITOR=vim
 
 # virtualenvwrapper
 if [ -f "$(which virtualenvwrapper.sh)" ]; then
-  source virtualenvwrapper.sh
+    source virtualenvwrapper.sh
 fi
 
 # insync env variables

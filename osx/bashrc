@@ -23,7 +23,7 @@ done
 
 # dircolors
 if [ "$TERM" != "dumb" ]; then
-  eval `dircolors ~/.dir_colors`
+  eval `dircolors ~/.dircolors`
 fi
 
 # Added by bootstrap.sh of isyncd.

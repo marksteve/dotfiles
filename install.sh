@@ -28,7 +28,7 @@ for F in bashrc bash_profile exports aliases functions; do
   install $OS/$F .$F
 done
 
-install dir_colors .dir_colors
+install dircolors .dircolors
 install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
