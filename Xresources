@@ -1,6 +1,3 @@
-URxvt.scrollstyle: plain
-URxvt.font: xft:Ubuntu Mono:pixelize=16:antialias=false:autohint=false
-
 ! Solarized color scheme for the X Window System
 !
 ! http://ethanschoonover.com/solarized
