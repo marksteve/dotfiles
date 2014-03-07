@@ -35,3 +35,4 @@ install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
 install Xsession .Xsession
 install Xresources .Xresources
+install ackrc .ackrc
