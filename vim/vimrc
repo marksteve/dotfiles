@@ -28,6 +28,7 @@ set expandtab
 set textwidth=80
 set scrolloff=5
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
+set formatoptions+=l
 au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
