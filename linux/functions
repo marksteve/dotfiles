@@ -1,0 +1,3 @@
+function attic_backup {
+  attic create --stats ~/Backup::$(date +%s)$(realpath "$1") $1
+}
