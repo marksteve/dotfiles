@@ -1,3 +1,7 @@
-function attic_backup {
-  attic create --stats ~/Backup::$(date +%s)$(realpath "$1") $1
+function attic-backup {
+  attic create --stats ~/Backup::$(realpath "$1"):$(date -u +%s) $1
+}
+
+function tarsnap-backup {
+  sudo tarsnap -v -c -f $(realpath "$1"):$(date -u +%s) $1
 }
