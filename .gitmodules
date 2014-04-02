@@ -87,3 +87,6 @@
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	ignore = dirty
+[submodule "vim/bundle/brolink.vim"]
+	path = vim/bundle/brolink.vim
+	url = https://github.com/jaxbot/brolink.vim.git
