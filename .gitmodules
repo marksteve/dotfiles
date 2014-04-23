@@ -50,9 +50,6 @@
 [submodule "vim/bundle/gocode"]
 	path = vim/bundle/gocode
 	url = https://github.com/Blackrush/vim-gocode.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort.git
