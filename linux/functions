@@ -5,3 +5,8 @@ function attic-backup {
 function tarsnap-backup {
   sudo tarsnap -v -c -f $(realpath "$1"):$(date -u +%s) $1
 }
+
+function docker-python {
+  docker run -t -i -v `pwd`:/src -w /src --rm marksteve/python /bin/bash -il
+}
+
