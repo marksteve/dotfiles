@@ -167,7 +167,7 @@ map <tab> %
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist)$',
+  \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist|node_modules|bower_components)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
   \ }
 let g:ctrlp_working_path_mode = ''
