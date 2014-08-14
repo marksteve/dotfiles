@@ -135,7 +135,7 @@ done
 command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
 
 # .bin
-export PATH=$PATH:$HOME/.bin
+export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 
 # go
 export GOROOT=/usr/local/go
@@ -152,6 +152,5 @@ if [ -f "$(which virtualenvwrapper.sh)" ]; then
 fi
 
 # insync env variables
-export ISYNCD_ENV=DEV
-export ISYNCD_SCONF_HOST=$CONF_SERVER_PORT_7962_TCP_ADDR
-export ISYNCD_SCONF_PORT=$CONF_SERVER_PORT_7962_TCP_PORT
+export INSYNCIO_ENV=DEV
+
