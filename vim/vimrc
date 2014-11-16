@@ -192,6 +192,10 @@ let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
 " brolink.vim
 au BufWritePost *.scss :BLReloadCSS
 
+" yankring
+let g:yankring_replace_n_pkey = ''
+let g:yankring_replace_n_nkey = ''
+
 
 " FILETYPES
 
