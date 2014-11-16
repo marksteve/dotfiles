@@ -55,7 +55,7 @@
 	url = https://github.com/fisadev/vim-isort.git
 [submodule "vim/bundle/kwbdi.vim"]
 	path = vim/bundle/kwbdi.vim
-	url = https://github.com/vim-scripts/kwbdi.vim
+	url = https://github.com/vim-scripts/kwbdi.vim.git
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
