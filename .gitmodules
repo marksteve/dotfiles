@@ -114,3 +114,6 @@
 	path = vim/bundle/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
 	ignore = dirty
+[submodule "vim/bundle/py_jump.vim"]
+	path = vim/bundle/py_jump.vim
+	url = https://github.com/vim-scripts/py_jump.vim.git
