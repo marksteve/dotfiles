@@ -41,45 +41,59 @@
 [submodule "vim/bundle/vim-accordion"]
 	path = vim/bundle/vim-accordion
 	url = https://github.com/mattboehm/vim-accordion.git
+	ignore = dirty
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+	ignore = dirty
 [submodule "vim/bundle/editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+	ignore = dirty
 [submodule "vim/bundle/gocode"]
 	path = vim/bundle/gocode
 	url = https://github.com/Blackrush/vim-gocode.git
+	ignore = dirty
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
 	url = https://github.com/fisadev/vim-isort.git
+	ignore = dirty
 [submodule "vim/bundle/kwbdi.vim"]
 	path = vim/bundle/kwbdi.vim
 	url = https://github.com/vim-scripts/kwbdi.vim.git
+	ignore = dirty
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+	ignore = dirty
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+	ignore = dirty
 [submodule "vim/bundle/vim-python-combined"]
 	path = vim/bundle/vim-python-combined
 	url = https://github.com/mitsuhiko/vim-python-combined.git
+	ignore = dirty
 [submodule "vim/bundle/vim-jinja"]
 	path = vim/bundle/vim-jinja
 	url = https://github.com/mitsuhiko/vim-jinja.git
+	ignore = dirty
 [submodule "vim/bundle/vim-rst"]
 	path = vim/bundle/vim-rst
 	url = https://github.com/mitsuhiko/vim-rst.git
+	ignore = dirty
 [submodule "vim/bundle/pytest.vim"]
 	path = vim/bundle/pytest.vim
 	url = https://github.com/alfredodeza/pytest.vim.git
+	ignore = dirty
 [submodule "vim/bundle/vim-sensible"]
 	path = vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+	ignore = dirty
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+	ignore = dirty
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
@@ -87,3 +101,12 @@
 [submodule "vim/bundle/brolink.vim"]
 	path = vim/bundle/brolink.vim
 	url = https://github.com/jaxbot/brolink.vim.git
+	ignore = dirty
+[submodule "vim/bundle/YankRing.vim"]
+	path = vim/bundle/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git
+	ignore = dirty
+[submodule "vim/bundle/vim-indent-object"]
+	path = vim/bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+	ignore = dirty
