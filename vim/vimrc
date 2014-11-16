@@ -1,15 +1,10 @@
 set nocompatible
 
-set number
-set ruler
 set noerrorbells
 set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
-set ttyfast " ???
-set nofoldenable
 
 " Default color scheme
-syntax on
 set background=dark
 colorscheme molokai
 
@@ -20,44 +15,18 @@ set encoding=utf-8
 set fileformats=unix,dos,mac
 
 " Whitespace stuff
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
 set textwidth=80
-set scrolloff=5
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
 set formatoptions+=l
 au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
 " Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
-
-" Status bar
-set laststatus=2
-
-" Show (partial) command in the status line
-set showcmd
+" set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Use modeline overrides
 set modeline
 set modelines=10
-
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
-" http://stackoverflow.com/questions/102384/using-vims-tabs-like-buffers
-set hidden
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on

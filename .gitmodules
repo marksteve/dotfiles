@@ -117,3 +117,6 @@
 [submodule "vim/bundle/py_jump.vim"]
 	path = vim/bundle/py_jump.vim
 	url = https://github.com/vim-scripts/py_jump.vim.git
+[submodule "vim/bundle/vim-opinion"]
+	path = vim/bundle/vim-opinion
+	url = https://github.com/rstacruz/vim-opinion.git
