@@ -1,4 +1,7 @@
-PS1='\u@\H:\w $(vcprompt)\$ '
+for F in exports aliases functions; do
+  F=$HOME/.$F
+  [ -e "$F" ] && source $F
+done
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -16,24 +19,18 @@ bind 'set completion-prefix-display-length 2'
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
-for F in exports aliases functions; do
-  F=$HOME/.$F
-  [ -e "$F" ] && source $F
-done
-
-# dircolors
-if [ "$TERM" != "dumb" ]; then
-  eval `dircolors ~/.dircolors`
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
-# Added by bootstrap.sh of isyncd.
-WORKON_HOME=~/.virtualenvs
-source virtualenvwrapper.sh
+# git branch in prompt
+command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
 
-# rbenv
-eval "$(rbenv init -)"
-
-# autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
+# boot2docker
+if [ $(boot2docker status) == "running" ]; then
+  $(boot2docker shellinit)
 fi
+
+# Android SDK
+export ANDROID_HOME=/usr/local/opt/android-sdk

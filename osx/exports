@@ -1,4 +1,5 @@
-export LS_OPTIONS='--color=auto'
+export PS1="\u@\h:\w\n\\$ "
+export LS_OPTIONS="--color=auto"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -13,7 +14,12 @@ export LANG="en_US"
 
 # Node
 export NODE_PATH=/usr/local/lib/node_modules
-PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/usr/local/share/npm/bin
 
-# brew PIL
-export PYTHONPATH=$PYTHONPATH:$(brew --prefix)/Cellar/pil/1.1.7/lib/python2.7/site-packages
+# .bin
+export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
+
+# vim as default editor
+export VISUAL=vim
+export EDITOR=vim
+
