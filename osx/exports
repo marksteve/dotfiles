@@ -23,3 +23,6 @@ export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 export VISUAL=vim
 export EDITOR=vim
 
+# GOPATH
+export GOPATH=/usr/local/go
+export PATH=$PATH:/usr/local/go/bin
