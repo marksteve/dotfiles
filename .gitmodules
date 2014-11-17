@@ -120,3 +120,6 @@
 [submodule "vim/bundle/vim-opinion"]
 	path = vim/bundle/vim-opinion
 	url = https://github.com/rstacruz/vim-opinion.git
+[submodule "vim/bundle/vim-buftabline"]
+	path = vim/bundle/vim-buftabline
+	url = https://github.com/ap/vim-buftabline.git
