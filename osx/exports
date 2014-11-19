@@ -12,16 +12,19 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-# Node
-export NODE_PATH=/usr/local/lib/node_modules
-export PATH=$PATH:/usr/local/share/npm/bin
+# vim as default editor
+export VISUAL=vim
+export EDITOR=vim
 
 # .bin
 export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 
-# vim as default editor
-export VISUAL=vim
-export EDITOR=vim
+# Node
+export NODE_PATH=/usr/local/lib/node_modules
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# User Python
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
 
 # GOPATH
 export GOPATH=/usr/local/go
