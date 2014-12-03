@@ -111,11 +111,14 @@ set autoread
 autocmd CursorMovedI *  if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
-" quicker window switching
+" Quicker window switching
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Copy to clipboard
+set clipboard=unnamed
 
 
 " PLUGINS
