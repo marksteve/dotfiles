@@ -157,6 +157,7 @@ let g:syntastic_check_on_open=1
 " let g:syntastic_python_pylint_post_args='--disable=C0111,W0311,E1101'
 let g:syntastic_python_checkers=['frosted', 'pep8']
 let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
+let g:syntastic_javascript_checkers=['jsxhint']
 
 " brolink.vim
 au BufWritePost *.scss :BLReloadCSS
