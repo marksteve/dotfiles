@@ -1,3 +1,3 @@
 function tarsnap-backup {
-  tarsnap -v -c -f $(realpath "$1"):$(date -u +%s) $1
+  tarsnap -v --humanize-numbers -c -f $(realpath "$1"):$(date -u +%s) $1
 }
