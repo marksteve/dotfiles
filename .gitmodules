@@ -126,3 +126,6 @@
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "vim/bundle/Spacegray.vim"]
+	path = vim/bundle/Spacegray.vim
+	url = https://github.com/ajh17/Spacegray.vim.git
