@@ -27,10 +27,5 @@ fi
 # git branch in prompt
 command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
 
-# boot2docker
-if [ $(boot2docker status) == "running" ]; then
-  $(boot2docker shellinit)
-fi
-
 # virtualenvwrapper
 source virtualenvwrapper.sh
