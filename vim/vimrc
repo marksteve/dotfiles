@@ -7,8 +7,8 @@ set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
-set background=dark
-colorscheme spacegray
+set background=light
+colorscheme jellybeans
 
 " Set encoding
 set encoding=utf-8
