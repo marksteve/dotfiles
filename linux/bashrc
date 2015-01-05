@@ -115,42 +115,30 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Sane bash options
-shopt -s nocaseglob
-shopt -s histappend
-shopt -s cdspell
-bind 'set completion-ignore-case on'
-bind 'set completion-prefix-display-length 2'
-export PROMPT_DIRTRIM=2
-
-# SSH hostnames autocomplete
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
-
 for F in exports aliases functions; do
-    F=$HOME/.$F
-    [ -e "$F" ] && source $F
+  F=$HOME/.$F
+  [ -e "$F" ] && source $F
 done
 
-# current git branch
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# http://www.reddit.com/r/commandline/comments/kbeoe/you_can_make_readline_and_bash_much_more_user/
+bind 'set completion-ignore-case on'
+bind 'set completion-prefix-display-length 2'
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+# git branch in prompt
 command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
 
-# .bin
-export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
-
-# go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/Projects/Go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-# vim as default editor
-export VISUAL=vim
-export EDITOR=vim
-
 # virtualenvwrapper
-if [ -f "$(which virtualenvwrapper.sh)" ]; then
-    source virtualenvwrapper.sh
-fi
-
-# insync env variables
-export INSYNCIO_ENV=DEV
+source virtualenvwrapper.sh
 

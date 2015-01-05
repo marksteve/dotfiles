@@ -1,4 +1,3 @@
 alias ..="cd .."
-alias cdgh="cd ~/Projects/Github/marksteve"
-alias brolink="node ~/.vim/bundle/brolink.vim/brolink/brolink.js"
-alias docker-ttl="docker run -v /usr/bin/docker:/bin/docker -v /run/docker.sock:/run/docker.sock keeb/docker-ttl"
+alias ls="ls -G"
+alias l="ls -al"
