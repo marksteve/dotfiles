@@ -27,3 +27,6 @@ export PATH=$PATH:$HOME/Library/Python/2.7/bin
 # GOPATH
 export GOPATH=/usr/local/go
 export PATH=$PATH:/usr/local/go/bin
+
+# Android SDK
+export ANDROID_HOME=/usr/local/opt/android-sdk

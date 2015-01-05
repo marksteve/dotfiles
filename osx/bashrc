@@ -32,5 +32,3 @@ if [ $(boot2docker status) == "running" ]; then
   $(boot2docker shellinit)
 fi
 
-# Android SDK
-export ANDROID_HOME=/usr/local/opt/android-sdk
