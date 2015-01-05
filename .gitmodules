@@ -117,15 +117,36 @@
 [submodule "vim/bundle/py_jump.vim"]
 	path = vim/bundle/py_jump.vim
 	url = https://github.com/vim-scripts/py_jump.vim.git
+	ignore = dirty
 [submodule "vim/bundle/vim-opinion"]
 	path = vim/bundle/vim-opinion
 	url = https://github.com/rstacruz/vim-opinion.git
+	ignore = dirty
 [submodule "vim/bundle/vim-buftabline"]
 	path = vim/bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+	ignore = dirty
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+	ignore = dirty
 [submodule "vim/bundle/Spacegray.vim"]
 	path = vim/bundle/Spacegray.vim
 	url = https://github.com/ajh17/Spacegray.vim.git
+	ignore = dirty
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
+[submodule "vim/bundle/molokai"]
+	path = vim/bundle/molokai
+	url = https://github.com/tomasr/molokai.git
+	ignore = dirty
+[submodule "vim/bundle/jellybeans.vim"]
+	path = vim/bundle/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim.git
+	ignore = dirty
+[submodule "vim/bundle/badwolf"]
+	path = vim/bundle/badwolf
+	url = https://github.com/sjl/badwolf.git
+	ignore = dirty
