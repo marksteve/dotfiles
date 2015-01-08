@@ -150,3 +150,7 @@
 	path = vim/bundle/badwolf
 	url = https://github.com/sjl/badwolf.git
 	ignore = dirty
+[submodule "vim/bundle/rename.vim"]
+	path = vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim.git
+	ignore = dirty
