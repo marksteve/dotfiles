@@ -1,2 +1,5 @@
 alias ..="cd .."
 alias l="ls -al"
+alias git="hub"
+alias dc="docker-compose"
+alias dm="docker-machine"
