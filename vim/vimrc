@@ -184,6 +184,9 @@ au BufWritePost *.scss :BLReloadCSS
 let g:yankring_replace_n_pkey = ''
 let g:yankring_replace_n_nkey = ''
 
+" indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+
 
 " FILETYPES
 

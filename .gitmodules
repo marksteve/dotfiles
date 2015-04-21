@@ -154,3 +154,6 @@
 	path = vim/bundle/rename.vim
 	url = https://github.com/danro/rename.vim.git
 	ignore = dirty
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
