@@ -1,3 +1,6 @@
 alias ..="cd .."
 alias ls="ls -G"
 alias l="ls -al"
+alias fig="docker-compose"
+alias fig-prod="docker-compose -f docker-compose-prod.yml"
+alias cask-repo="cd "$(brew --repository)"/Library/Taps/caskroom/homebrew-cask"
