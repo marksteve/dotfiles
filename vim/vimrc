@@ -1,4 +1,55 @@
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'Blackrush/vim-gocode'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'airblade/vim-gitgutter'
+Plug 'ajh17/Spacegray.vim'
+Plug 'alfredodeza/pytest.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ap/vim-buftabline'
+Plug 'bkad/CamelCaseMotion'
+Plug 'danro/rename.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fisadev/vim-isort'
+Plug 'groenewege/vim-less'
+Plug 'jaxbot/brolink.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'mattboehm/vim-accordion'
+Plug 'mattn/emmet-vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'mileszs/ack.vim'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'mitsuhiko/vim-python-combined'
+Plug 'mitsuhiko/vim-rst'
+Plug 'nanotech/jellybeans.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rstacruz/vim-opinion'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/badwolf'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'vim-scripts/kwbdi.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/py_jump.vim'
+
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/unite.vim'
+Plug 'rstacruz/vim-fastunite'
+
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/unite-outline'
+Plug 'tsukkee/unite-tag'
+
+call plug#end()
 
 set nocompatible
 
@@ -29,6 +80,9 @@ au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 " Use modeline overrides
 set modeline
 set modelines=10
+
+" Use , as leader key
+let mapleader = ","
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -122,21 +176,6 @@ nnoremap <C-l> <C-w>l
 " Copy to clipboard
 set clipboard=unnamed
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  " bind \ (backward slash) to grep shortcut
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-endif
-
 
 " PLUGINS
 
@@ -153,6 +192,7 @@ runtime! macros/matchit.vim
 map <tab> %
 
 " ctrlp
+let g:ctrlp_map = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist|node_modules|bower_components)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
@@ -171,8 +211,6 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=1
-" let g:syntastic_python_checkers=['pylint']
-" let g:syntastic_python_pylint_post_args='--disable=C0111,W0311,E1101'
 let g:syntastic_python_checkers=['frosted', 'pep8']
 let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
 let g:syntastic_javascript_checkers=['jsxhint']
@@ -184,8 +222,26 @@ au BufWritePost *.scss :BLReloadCSS
 let g:yankring_replace_n_pkey = ''
 let g:yankring_replace_n_nkey = ''
 
+" ag
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  " bind \ (backward slash) to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
+
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+
+" unite
+map <C-p> [unite]p
 
 
 " FILETYPES
