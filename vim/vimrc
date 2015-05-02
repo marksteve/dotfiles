@@ -42,12 +42,6 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/unite.vim'
-Plug 'rstacruz/vim-fastunite'
-
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/unite-outline'
-Plug 'tsukkee/unite-tag'
 
 call plug#end()
 
@@ -80,9 +74,6 @@ au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 " Use modeline overrides
 set modeline
 set modelines=10
-
-" Use , as leader key
-let mapleader = ","
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -192,7 +183,6 @@ runtime! macros/matchit.vim
 map <tab> %
 
 " ctrlp
-let g:ctrlp_map = ''
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist|node_modules|bower_components)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
@@ -239,9 +229,6 @@ endif
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
-
-" unite
-map <C-p> [unite]p
 
 
 " FILETYPES

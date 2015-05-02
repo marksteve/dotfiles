@@ -2,3 +2,4 @@
 .netrwhist
 **/**/**/doc/tags
 vim/backup
+vim/plugged
