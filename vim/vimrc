@@ -75,6 +75,9 @@ au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 set modeline
 set modelines=10
 
+" Use <space> as leader key
+let mapleader = "\<space>"
+
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
@@ -165,7 +168,18 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Copy to clipboard
-set clipboard=unnamed
+set clipboard+=unnamedplus
+
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
 
 
 " PLUGINS
