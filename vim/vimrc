@@ -40,8 +40,9 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/kwbdi.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
-
+Plug 'mhinz/vim-sayonara'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'justincampbell/vim-eighties'
 
 call plug#end()
 
@@ -243,6 +244,10 @@ endif
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+
+" sayonara
+nnoremap <leader>q :Sayonara<cr>
+nnoremap <leader>Q :Sayonara!<cr>
 
 
 " FILETYPES
