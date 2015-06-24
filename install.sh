@@ -24,7 +24,7 @@ else
   OS='osx'
 fi
 
-for F in bashrc bash_profile exports aliases functions; do
+for F in zshrc bashrc bash_profile exports aliases functions; do
   install $OS/$F .$F
 done
 
