@@ -26,3 +26,11 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
+
+# docker
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=$HOME/.docker
+export DOCKER_HOST="tcp://127.0.0.1:2376"
+
+# heroku
+export PATH="/usr/local/heroku/bin:$PATH"
