@@ -44,7 +44,7 @@ Plug 'mhinz/vim-sayonara'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'justincampbell/vim-eighties'
 Plug 'rstacruz/vim-closer'
-Plug 'rstacruz/vim-hyperstyle'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
