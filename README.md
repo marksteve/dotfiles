@@ -11,6 +11,7 @@ cd dotfiles
 ### Homebrew
 
 ```sh
+brew tap homebrew/services
 brew tap marksteve/personal
 brew install \
   ack \
@@ -23,8 +24,7 @@ brew install \
   ngrok \
   node \
   realpath \
-  tarsnap \
-  terraform
+  tarsnap
 brew install caskroom/cask/brew-cask
 ```
 
@@ -32,7 +32,6 @@ brew install caskroom/cask/brew-cask
 
 ```sh
 brew cask install \
-  boot2docker \
   caffeine \
   dropbox \
   firefox \
@@ -40,16 +39,14 @@ brew cask install \
   google-chrome \
   imageoptim \
   iterm2 \
-  jumpcut \
   keepassx \
   licecap \
   mplayerx \
-  plotdevice \
   slack \
   spectacle \
   spotify \
   steam \
-  utorrent
+  transmission
 ```
 
 ### Python
