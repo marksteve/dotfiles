@@ -19,12 +19,16 @@ brew install \
   git \
   gnupg \
   go \
+  hub \
   macvim \
   mercurial \
   ngrok \
   node \
   realpath \
-  tarsnap
+  tarsnap \
+  the_silver_searcher \
+  tig \
+  zsh
 brew install caskroom/cask/brew-cask
 ```
 
@@ -37,11 +41,14 @@ brew cask install \
   firefox \
   github \
   google-chrome \
+  handbrake \
   imageoptim \
   iterm2 \
   keepassx \
   licecap \
+  lunchy \
   mplayerx \
+  sidestep \
   slack \
   spectacle \
   spotify \
