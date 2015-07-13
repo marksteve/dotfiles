@@ -43,8 +43,8 @@ Plug 'vim-scripts/py_jump.vim'
 Plug 'mhinz/vim-sayonara'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'justincampbell/vim-eighties'
-Plug 'rstacruz/vim-closer'
 Plug 'tpope/vim-dispatch'
+Plug 'wincent/terminus'
 
 call plug#end()
 
