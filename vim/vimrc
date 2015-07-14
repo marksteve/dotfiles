@@ -78,6 +78,12 @@ au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 set modeline
 set modelines=10
 
+" Copy to clipboard
+set clipboard+=unnamedplus
+
+" Use bash
+set shell=bash
+
 " Use <space> as leader key
 let mapleader = "\<space>"
 
@@ -169,9 +175,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Copy to clipboard
-set clipboard+=unnamedplus
 
 
 " PLUGINS
