@@ -5,37 +5,37 @@ eval (python -m virtualfish)
 # Exports #
 ###########
 
-set -x LS_OPTIONS="--color=auto"
+set -xg LS_OPTIONS "--color auto"
 
 # Prefer US English and use UTF-8
-set -x LC_ALL="en_US.UTF-8"
-set -x LANG="en_US"
+set -xg LC_ALL "en_US.UTF-8"
+set -xg LANG "en_US"
 
 # vim as default editor
-set -x VISUAL=vim
-set -x EDITOR=vim
+set -xg VISUAL vim
+set -xg EDITOR vim
 
 # .bin
-set -x PATH=$PATH:$HOME/.bin:$HOME/.local/bin
+set -xg PATH $PATH:$HOME/.bin:$HOME/.local/bin
 
 # Node
-set -x NODE_PATH=/usr/local/lib/node_modules
-set -x PATH=$PATH:/usr/local/share/npm/bin
+set -xg NODE_PATH /usr/local/lib/node_modules
+set -xg PATH $PATH:/usr/local/share/npm/bin
 
 # GOPATH
-set -x GOPATH=$HOME/go
-set -x PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+set -xg GOPATH $HOME/go
+set -xg PATH $PATH:/usr/local/go/bin:$GOPATH/bin
 
 # rbenv
-set -x PATH=$HOME/.rbenv/bin:$PATH
+set -xg PATH $HOME/.rbenv/bin:$PATH
 
 # docker
-set -x DOCKER_TLS_VERIFY=1
-set -x DOCKER_CERT_PATH=$HOME/.docker
-set -x DOCKER_HOST="tcp://127.0.0.1:2376"
+set -xg DOCKER_TLS_VERIFY 1
+set -xg DOCKER_CERT_PATH $HOME/.docker
+set -xg DOCKER_HOST "tcp://127.0.0.1:2376"
 
 # heroku
-set -x PATH="/usr/local/heroku/bin:$PATH"
+set -xg PATH "/usr/local/heroku/bin:$PATH"
 
 ###########
 # Aliases #
