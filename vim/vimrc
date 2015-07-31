@@ -45,6 +45,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'justincampbell/vim-eighties'
 Plug 'tpope/vim-dispatch'
 Plug 'wincent/terminus'
+Plug 'wincent/ferret'
 
 call plug#end()
 
@@ -79,7 +80,9 @@ set modeline
 set modelines=10
 
 " Copy to clipboard
-set clipboard+=unnamedplus
+if has('unnamedplus')
+  set clipboard+=unnamedplus
+endif
 
 " Use bash
 set shell=bash
@@ -220,6 +223,7 @@ au BufWritePost *.scss :BLReloadCSS
 " yankring
 let g:yankring_replace_n_pkey = ''
 let g:yankring_replace_n_nkey = ''
+let g:yankring_clipboard_monitor = 0
 
 " ag
 if executable('ag')
