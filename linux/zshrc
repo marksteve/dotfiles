@@ -3,7 +3,7 @@ source $HOME/Dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen theme wezm
-antigen bundle git
+antigen bundle gitfast
 antigen bundle colorize
 antigen bundle copydir
 antigen bundle copyfile
@@ -35,4 +35,3 @@ eval "$(rbenv init -)"
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
