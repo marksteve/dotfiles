@@ -1,3 +1,7 @@
 tarsnap-backup() {
   tarsnap -v --humanize-numbers -c -f $(realpath "$1"):$(date -u +%s) $1
 }
+
+borg-backup() {
+  borg create --stats /media/sf_Backups/bacharu::$(basename $1):$(date +%s) $1
+}
