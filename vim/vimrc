@@ -12,7 +12,6 @@ Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
-Plug 'jaxbot/brolink.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
 Plug 'mattboehm/vim-accordion'
@@ -216,9 +215,6 @@ let g:syntastic_check_on_open=1
 let g:syntastic_python_checkers=['frosted', 'pep8']
 let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
 let g:syntastic_javascript_checkers=['eslint']
-
-" brolink.vim
-au BufWritePost *.scss :BLReloadCSS
 
 " yankring
 let g:yankring_replace_n_pkey = ''
