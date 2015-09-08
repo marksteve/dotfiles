@@ -1,0 +1,150 @@
+---
+taps:
+- caskroom/cask
+- homebrew/binary
+- homebrew/dupes
+- homebrew/python
+- homebrew/science
+- homebrew/services
+- homebrew/versions
+- marksteve/personal
+- mopidy/mopidy
+- neovim/neovim
+- thoughtbot/formulae
+
+brew:
+- ack 2.14
+- autoconf 2.69
+- automake 1.15
+- bash-completion 1.3
+- bazaar 2.6.0
+- bison 3.0.4
+- boost 1.58.0
+- boost-python 1.58.0
+- brew-backup HEAD
+- brew-cask 0.56.0
+- cairo 1.14.2_1
+- cmake 3.1.0 3.1.2 3.3.1
+- cscope 15.8a
+- docker 1.5.0 1.6.0
+- eigen 3.2.4
+- ffmpeg 2.5.3
+- fish 2.1.2
+- flow 0.1.1 0.1.6 0.2.0
+- fontconfig 2.11.1
+- fpp 0.5.5
+- freetype 2.6_1
+- gcc 5.2.0
+- gdbm 1.11
+- gdk-pixbuf 2.30.8
+- gettext 0.19.4 0.19.5.1
+- git 2.1.3 2.2.1 2.3.0
+- glfw3 3.1
+- glib 2.44.1
+- gmp 6.0.0a
+- gnupg 1.4.18_1
+- go 1.4 1.4.1 1.4.2
+- gobject-introspection 1.44.0
+- harfbuzz 0.9.40
+- heroku-toolbelt 3.21.4
+- hub HEAD
+- icdiff 1.7.1
+- icu4c 55.1
+- ilmbase 2.2.0
+- imagemagick 6.9.0-3
+- isl 0.14.1
+- jpeg 8d
+- jq 1.4
+- lame 3.99.5
+- libffi 3.0.13
+- libmpc 1.0.3
+- libpng 1.6.18
+- libspotify 12.1.51
+- libtiff 4.0.4
+- libtool 2.4.6
+- libvo-aacenc 0.1.2
+- libyaml 0.1.6_1
+- lsyncd 2.1.5_2
+- lua 5.2.3_1
+- macvim 7.4-73_1
+- mercurial 3.2.1 3.3
+- mitmproxy 0.10.1 0.11.1
+- mpfr 3.1.3
+- neovim HEAD
+- ngrok 1.7
+- nmap 6.47
+- numpy 1.9.2_1
+- opencv 2.4.11_2
+- openexr 2.2.0
+- openssl 1.0.1j 1.0.1j_1 1.0.2 1.0.2a-1
+- pango 1.36.8
+- pcre 8.36
+- pick 1.1.1
+- pixman 0.32.6
+- pkg-config 0.28
+- portaudio 19.20140130
+- postgresql 9.4.0 9.4.1
+- pv 1.5.7
+- pwgen 2.07
+- pypy 2.5.1
+- python3 3.4.3
+- readline 6.3.8
+- realpath 0.1
+- redis 2.8.19
+- rsync 3.1.1
+- sqlite 3.8.7.4 3.8.8.2 3.8.8.3
+- syncthing 0.11.0
+- tarsnap 1.0.35
+- the_silver_searcher 0.28.0 0.29.1
+- tig 2.1
+- watchman 3.0.0
+- wget 1.16.1
+- x264 r2455 r2495
+- xvid 1.3.3
+- xz 5.2.1
+- youtube-dl 2014.12.06.1 2015.02.09.3
+- zsh 5.0.7
+
+cask:
+- airdroid 3.1.4
+- android-file-transfer latest
+- bfxr latest
+- caffeine 1.1.1
+- colloquy 2.4.3
+- colorpicker-skalacolor 2.0
+- consul 0.5.2
+- cyberduck 4.7.2
+- disk-inventory-x 1.0
+- docker-machine 0.4.1
+- drobo-dashboard 2.6.9_74648
+- dropbox latest
+- encryptr 1.2.0
+- firefox 40.0.3
+- front latest
+- gitup latest
+- google-chrome latest
+- handbrake 0.10.2
+- hex-fiend 2.3.0
+- imageoptim 1.6.0
+- insync 1.2.16.35181
+- iterm2 2.1.1
+- java 1.8.0_60-b27
+- keepassx 2.0-beta1
+- keyboardcleantool latest
+- licecap 1.25
+- lunchy 0.1.6
+- monotype-skyfonts (!) 
+- mplayerx 1.1.0-1854
+- noizio 1.1
+- numi latest
+- onyx latest
+- openemu 1.0.4
+- plex-home-theater 1.4.1.469-47a90f01
+- plotdevice 0.10.0
+- screenflick latest
+- sidestep 1.4.1
+- skype latest
+- slack 1.1.3
+- spectacle 1.0
+- spotify latest
+- transmission 2.84

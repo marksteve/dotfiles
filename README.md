@@ -8,54 +8,6 @@ cd dotfiles
 
 ## OSX
 
-### Homebrew
-
-```sh
-brew tap homebrew/services
-brew tap marksteve/personal
-brew install \
-  ack \
-  bash-completion \
-  git \
-  gnupg \
-  go \
-  hub \
-  macvim \
-  mercurial \
-  ngrok \
-  node \
-  realpath \
-  tarsnap \
-  the_silver_searcher \
-  tig \
-  zsh
-brew install caskroom/cask/brew-cask
-```
-
-### Cask
-
-```sh
-brew cask install \
-  caffeine \
-  dropbox \
-  firefox \
-  github \
-  google-chrome \
-  handbrake \
-  imageoptim \
-  iterm2 \
-  keepassx \
-  licecap \
-  lunchy \
-  mplayerx \
-  sidestep \
-  slack \
-  spectacle \
-  spotify \
-  steam \
-  transmission
-```
-
 ### Python
 
 ```sh
