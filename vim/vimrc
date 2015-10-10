@@ -1,21 +1,19 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'Blackrush/vim-gocode'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'airblade/vim-gitgutter'
-Plug 'ajh17/Spacegray.vim'
 Plug 'alfredodeza/pytest.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
+Plug 'Blackrush/vim-gocode'
 Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
+Plug 'justincampbell/vim-eighties'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
-Plug 'mattboehm/vim-accordion'
 Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-sayonara'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
 Plug 'mitsuhiko/vim-jinja'
@@ -24,10 +22,8 @@ Plug 'mitsuhiko/vim-rst'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rstacruz/vim-opinion'
-Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'sjl/badwolf'
-Plug 'tomasr/molokai'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -35,16 +31,12 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'vim-scripts/kwbdi.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
-Plug 'mhinz/vim-sayonara'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'justincampbell/vim-eighties'
-Plug 'tpope/vim-dispatch'
-Plug 'wincent/terminus'
+Plug 'vim-scripts/YankRing.vim'
 Plug 'wincent/ferret'
+Plug 'wincent/terminus'
 
 call plug#end()
 
@@ -55,7 +47,7 @@ set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
-set background=light
+set background=dark
 colorscheme jellybeans
 
 " Set encoding
@@ -72,7 +64,7 @@ au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " Tab completion
-" set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Use modeline overrides
 set modeline
@@ -87,7 +79,7 @@ endif
 set shell=bash
 
 " Use <space> as leader key
-let mapleader = "\<space>"
+let mapleader="\<space>"
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -187,7 +179,7 @@ nnoremap <C-l> <C-w>l
 set noequalalways
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
+let macvim_hig_shift_movement=1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
@@ -198,16 +190,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v(\.git|\.hg|\.svn|\.egg-info|build|dist|node_modules|bower_components)$',
   \ 'file': '\v\.(pyc|DS_Store)$',
   \ }
-let g:ctrlp_working_path_mode = ''
-
-" accordion
-nnoremap <C-w>2 :Accordion 2<CR>
-nnoremap <C-w>3 :Accordion 3<CR>
-nnoremap <C-w>0 :AccordionStop<CR>
-
-" nerdtree
-nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
+let g:ctrlp_working_path_mode=''
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -217,9 +200,9 @@ let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
 let g:syntastic_javascript_checkers=['eslint']
 
 " yankring
-let g:yankring_replace_n_pkey = ''
-let g:yankring_replace_n_nkey = ''
-let g:yankring_clipboard_monitor = 0
+let g:yankring_replace_n_pkey=''
+let g:yankring_replace_n_nkey=''
+let g:yankring_clipboard_monitor=0
 
 " ag
 if executable('ag')
@@ -227,10 +210,10 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching=0
 
   " bind \ (backward slash) to grep shortcut
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -262,4 +245,5 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-let g:gocode_gofmt_tabs = ' -tabs=true'
+let g:gocode_gofmt_tabs=' -tabs=true'
+
