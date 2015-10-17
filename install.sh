@@ -35,3 +35,4 @@ install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
 install ackrc .ackrc
 install gitignore .gitignore
+install tigrc .tigrc
