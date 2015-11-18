@@ -726,6 +726,13 @@
 	<real>1.0900000333786011</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x68-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>[104;5u</string>
+		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
 			<key>Action</key>
@@ -1226,13 +1233,6 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x7f</string>
-				</dict>
-				<key>0x68-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[104;5u</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
