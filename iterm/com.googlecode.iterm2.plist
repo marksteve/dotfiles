@@ -726,13 +726,6 @@
 	<real>1.0900000333786011</real>
 	<key>GlobalKeyMap</key>
 	<dict>
-		<key>0x68-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>10</integer>
-			<key>Text</key>
-			<string>[104;5u</string>
-		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
 			<key>Action</key>
@@ -906,11 +899,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>415 146 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 -1 1435 873 0 0 1440 877 </string>
+	<string>2 0 1435 872 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2 21 1435 851 0 0 1440 877 </string>
+	<string>2 32 1435 840 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2 10 1435 862 0 0 1440 877 </string>
+	<string>2 21 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>2 10 1435 862 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1135,7 +1128,7 @@
 				<real>0.17647059261798859</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -1650,7 +1643,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>455529092.36006403</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>469362919.353055</real>
+	<real>469613338.89154398</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1717,7 +1710,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-18T02:23:01Z</date>
+	<date>2015-11-19T08:08:55Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
