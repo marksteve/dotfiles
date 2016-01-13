@@ -3,7 +3,6 @@ source $HOME/Dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen theme wezm
-antigen bundle gitfast
 antigen bundle colorize
 antigen bundle copydir
 antigen bundle copyfile
