@@ -2,3 +2,10 @@ tarsnap-backup() {
   tarsnap -v --humanize-numbers -c -f $(realpath "$1"):$(date -u +%s) $1
 }
 
+gencode() {
+  LEN=$1
+  shift
+  COUNT=$1
+  shift
+  pwgen $LEN $COUNT | xargs -n 1 -I % echo $@%
+}
