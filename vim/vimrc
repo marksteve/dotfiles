@@ -20,7 +20,6 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
 Plug 'nanotech/jellybeans.vim'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rstacruz/vim-opinion'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -37,6 +36,7 @@ Plug 'vim-scripts/py_jump.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
+Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
 
@@ -48,7 +48,7 @@ set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
 set background=dark
-colorscheme jellybeans
+colorscheme spacegray
 
 " Set encoding
 set encoding=utf-8
