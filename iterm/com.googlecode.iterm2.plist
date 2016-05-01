@@ -895,13 +895,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>231 37 445 77 0 0 1440 877 </string>
+	<string>301 238 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>415 146 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 15 1433 851 0 0 1440 877 </string>
+	<string>3 21 1433 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2 186 665 676 0 0 1440 877 </string>
+	<string>3 32 1433 840 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>2 21 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1631,7 +1631,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.5</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -1640,10 +1640,12 @@
 			<string>/Users/marksteve</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>455529092.36006403</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>478782872.50693297</real>
+	<real>483265964.064964</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1710,7 +1712,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-04T02:31:24Z</date>
+	<date>2016-04-25T07:58:56Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
