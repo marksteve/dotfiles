@@ -29,3 +29,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Android SDK
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Homebrew
+export HOMEBREW_GITHUB_API_TOKEN=5b3cc1cfa2fc90e5eacd75daaeaafa457a5f6654
