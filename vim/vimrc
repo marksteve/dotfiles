@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ajh17/Spacegray.vim'
 Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
@@ -9,21 +10,19 @@ Plug 'danro/rename.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
-Plug 'justincampbell/vim-eighties'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-sayonara'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'mileszs/ack.vim'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
-Plug 'nanotech/jellybeans.vim'
 Plug 'rstacruz/vim-opinion'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
@@ -36,7 +35,6 @@ Plug 'vim-scripts/py_jump.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
-Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
 
@@ -203,21 +201,6 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:yankring_replace_n_pkey=''
 let g:yankring_replace_n_nkey=''
 let g:yankring_clipboard_monitor=0
-
-" ag
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching=0
-
-  " bind \ (backward slash) to grep shortcut
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-endif
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
