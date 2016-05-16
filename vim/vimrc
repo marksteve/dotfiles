@@ -18,8 +18,8 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
+Plug 'neomake/neomake'
 Plug 'rstacruz/vim-opinion'
-Plug 'scrooloose/syntastic'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -192,12 +192,13 @@ if executable('ag')
   let g:ctrlp_use_caching=0
 endif
 
-" syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_python_checkers=['frosted', 'pep8']
-let g:syntastic_python_pep8_post_args='--ignore=E111,E121,W391'
-let g:syntastic_javascript_checkers=['eslint']
+" neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_python_pep8_maker={
+  \ 'args': ['--ignore=E111,E121,W391']
+  \ }
+let g:neomake_python_enabled_makers=['frosted', 'pep8']
+let g:neomake_javascript_enabled_makers=['eslint']
 
 " yankring
 let g:yankring_replace_n_pkey=''
