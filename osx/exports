@@ -22,6 +22,7 @@ export PATH=$PATH:/usr/local/share/npm/bin
 
 # User Python
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
+export PATH=$PATH:$HOME/Library/Python/3.5/bin
 
 # GOPATH
 export GOPATH=/usr/local/go
