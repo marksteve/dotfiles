@@ -726,6 +726,13 @@
 	<real>1.0900000333786011</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x68-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>[104;5u</string>
+		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
 			<key>Action</key>
@@ -895,15 +902,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>301 238 445 77 0 0 1440 877 </string>
+	<string>301 104 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>415 146 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 21 1433 851 0 0 1440 877 </string>
+	<string>2 23 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 32 1433 840 0 0 1440 877 </string>
+	<string>2 26 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2 21 1435 851 0 0 1440 877 </string>
+	<string>2 23 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>2 21 1435 851 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1461,11 +1468,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>FiraCode-Regular 18</string>
+			<string>mononoki-Regular 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCode-Regular 18</string>
+			<string>mononoki-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1645,7 +1652,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>455529092.36006403</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>483265964.064964</real>
+	<real>485238430.33780903</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1712,7 +1719,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-25T07:58:56Z</date>
+	<date>2016-05-18T09:28:21Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
