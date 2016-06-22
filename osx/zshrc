@@ -1,7 +1,7 @@
 # antigen
 source $HOME/Dotfiles/antigen/antigen.zsh
-antigen use oh-my-zsh
 
+antigen use oh-my-zsh
 antigen theme wezm
 antigen bundle colorize
 antigen bundle copydir
@@ -9,7 +9,7 @@ antigen bundle copyfile
 antigen bundle ssh-agent
 antigen bundle gpg-agent
 
-antigen bundle rimraf/k
+antigen bundle supercrabtree/k
 
 antigen apply
 
@@ -22,7 +22,6 @@ done
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # added by travis gem
 [ -f /Users/marksteve/.travis/travis.sh ] && source /Users/marksteve/.travis/travis.sh
