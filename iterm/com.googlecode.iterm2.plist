@@ -909,21 +909,21 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>395 269 445 77 0 0 1440 877 </string>
+	<string>395 135 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>415 233 606 456 0 0 1440 877 </string>
+	<string>415 291 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 7 1435 867 0 0 1440 877 </string>
+	<string>3 11 1433 860 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2 7 1435 867 0 0 1440 877 </string>
+	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2 1 1435 873 0 0 1440 877 </string>
+	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2 22 1435 852 0 0 1440 877 </string>
+	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2 -1 1435 873 0 0 1440 877 </string>
+	<string>3 11 1433 860 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>2 10 1435 862 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -1477,11 +1477,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>mononoki-Regular 14</string>
+			<string>OperatorMono-Book 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>mononoki-Regular 18</string>
+			<string>OperatorMono-Book 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1662,6 +1662,8 @@
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncSuppressAnnyoingBellOffer</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>486489224.90393102</real>
 	<key>NoSyncTimeOfLastPromo</key>
@@ -1736,7 +1738,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-19T07:41:12Z</date>
+	<date>2016-06-29T05:25:43Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
