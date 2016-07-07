@@ -7,7 +7,6 @@ antigen bundle colorize
 antigen bundle copydir
 antigen bundle copyfile
 antigen bundle ssh-agent
-antigen bundle gpg-agent
 
 antigen bundle supercrabtree/k
 
