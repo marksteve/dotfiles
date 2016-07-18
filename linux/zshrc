@@ -2,17 +2,18 @@
 source $HOME/Dotfiles/antigen/antigen.zsh
 antigen use oh-my-zsh
 
+antigen use oh-my-zsh
 antigen theme wezm
-antigen bundle gitfast
 antigen bundle colorize
 antigen bundle copydir
 antigen bundle copyfile
 antigen bundle ssh-agent
-antigen bundle tmux
-
-antigen bundle rimraf/k
 
 antigen apply
+
+# asdf
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
 
 # imports
 for F in exports aliases functions; do
@@ -20,18 +21,12 @@ for F in exports aliases functions; do
   [ -e "$F" ] && source $F
 done
 
-# virtualenvwrapper
-source virtualenvwrapper.sh
-
 # Fix ssh-agent not working on tmux reattach
 if [[ -S "$SSH_AUTH_SOCK" && ! -h "$SSH_AUTH_SOCK" ]]; then
   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock;
 fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
 
-# rbenv
-eval "$(rbenv init -)"
+# added by travis gem
+[ -f /Users/marksteve/.travis/travis.sh ] && source /Users/marksteve/.travis/travis.sh
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

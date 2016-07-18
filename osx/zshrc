@@ -12,15 +12,16 @@ antigen bundle supercrabtree/k
 
 antigen apply
 
+# asdf
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
+
 # imports
 for F in exports aliases functions; do
   F=$HOME/.$F
   [ -e "$F" ] && source $F
 done
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # added by travis gem
 [ -f /Users/marksteve/.travis/travis.sh ] && source /Users/marksteve/.travis/travis.sh
+
