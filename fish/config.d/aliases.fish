@@ -1,6 +1,0 @@
-alias ..="cd .."
-alias l="ls -al"
-alias git="hub"
-alias fig="docker-compose"
-alias fig-prod="docker-compose -f docker-compose-prod.yml"
-alias fig-test="docker-compose -f docker-compose-test.yml"
