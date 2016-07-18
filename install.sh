@@ -34,6 +34,7 @@ install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
 install ackrc .ackrc
+install gitconfig .gitconfig
 install gitignore .gitignore
 install tigrc .tigrc
 install tarsnaprc .tarsnaprc
