@@ -863,6 +863,14 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>6</string>
+	<key>NSColorPanelMode.modal</key>
+	<integer>13370000</integer>
+	<key>NSColorPanelToolbarIsShown.modal</key>
+	<integer>1</integer>
+	<key>NSColorPanelVisibleSwatchRows.modal</key>
+	<integer>2</integer>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -908,22 +916,30 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>357 327 224 325 0 0 1440 877 </string>
+	<key>NSWindow Frame NSColorPanel.modal</key>
+	<string>592 485 256 261 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>395 135 445 77 0 0 1440 877 </string>
+	<string>459 238 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>415 291 606 456 0 0 1440 877 </string>
+	<string>415 407 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>252 249 918 495 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 11 1433 860 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3 19 1433 852 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>3 28 1433 843 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>3 11 1433 860 0 0 1440 877 </string>
+	<string>3 419 665 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>2 10 1435 862 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -1656,6 +1672,10 @@
 			<string>/Users/marksteve</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>6F086B2A-26F0-4F98-95B5-5051BFF42B10</string>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
@@ -1738,7 +1758,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-29T05:25:43Z</date>
+	<date>2016-07-28T16:12:25Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1749,6 +1769,8 @@
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
+	<key>SkalaPickerTextColourFormat</key>
+	<integer>4</integer>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1794,6 +1816,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.0</string>
+	<string>3.0.5</string>
 </dict>
 </plist>
