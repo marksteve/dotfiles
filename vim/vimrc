@@ -12,6 +12,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
+Plug 'iandoe/vim-osx-colorpicker'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-sayonara'
@@ -21,6 +22,10 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
 Plug 'neomake/neomake'
 Plug 'rstacruz/vim-opinion'
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -30,12 +35,12 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -212,6 +217,14 @@ let g:indent_guides_enable_on_vim_startup = 1
 " sayonara
 nnoremap <leader>q :Sayonara<cr>
 nnoremap <leader>Q :Sayonara!<cr>
+
+" vim-osx-colorpicker
+let g:colorpicker_app = 'iTerm.app'
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#show_docstring = 1
+au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 
 " FILETYPES
