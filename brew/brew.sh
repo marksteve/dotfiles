@@ -26,9 +26,11 @@ brew install bison
 brew install boost
 brew install boost-python
 brew install brew-backup --HEAD
+brew install caddy
 brew install cairo
 brew install choose-gui
 brew install cmake
+brew install consul
 brew install cscope
 brew install devd
 brew install docker
@@ -37,6 +39,7 @@ brew install docker-machine
 brew install doctl
 brew install duplicity
 brew install eigen
+brew install fabio
 brew install ffmpeg
 brew install fish
 brew install flow
@@ -82,6 +85,7 @@ brew install libmpc
 brew install libogg
 brew install libpng
 brew install librsync
+brew install libsass
 brew install libspotify
 brew install libssh2
 brew install libtasn1
@@ -139,6 +143,7 @@ brew install rename
 brew install rethinkdb
 brew install rsync
 brew install ruby
+brew install sassc
 brew install sdl
 brew install sdl2
 brew install sdl_image

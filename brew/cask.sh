@@ -32,6 +32,8 @@ brew cask install krita
 brew cask install licecap
 brew cask install love
 brew cask install lunchy
+brew cask install mojibar
+brew cask install notion
 brew cask install noun-project
 brew cask install numi
 brew cask install onyx
@@ -51,5 +53,7 @@ brew cask install steam
 brew cask install transmission
 brew cask install typora
 brew cask install viber
+brew cask install vlc
+brew cask install webtorrent
 brew cask install wineskin-winery
 brew cask install wkhtmltopdf
