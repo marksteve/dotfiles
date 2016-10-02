@@ -29,7 +29,10 @@ export GOPATH=/usr/local/go
 export PATH=$PATH:/usr/local/go/bin
 
 # Android SDK
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=5b3cc1cfa2fc90e5eacd75daaeaafa457a5f6654
+export PATH=$PATH:/usr/local/sbin
