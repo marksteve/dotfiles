@@ -1,6 +1,7 @@
 ---
 taps:
 - caskroom/cask
+- caskroom/versions
 - homebrew/binary
 - homebrew/core
 - homebrew/dupes
@@ -10,7 +11,7 @@ taps:
 - homebrew/services
 - homebrew/versions
 - infinit/releases
-- marksteve/personal
+- laurent22/massren
 - mopidy/mopidy
 - neovim/neovim
 - thoughtbot/formulae
@@ -18,60 +19,70 @@ taps:
 brew:
 - ack 2.14
 - adns 1.5.0
+- ansible 2.1.1.0
 - autoconf 2.69
 - automake 1.15
 - bash-completion 1.3
 - bazaar 2.6.0_2
 - bison 3.0.4
-- boost 1.60.0_1 1.60.0_2
+- boost 1.61.0_1
 - boost-python 1.60.0
 - brew-backup HEAD
 - caddy 0.9.0
 - cairo 1.14.6_1
+- cctools 855
+- cgal 4.8.1
 - choose-gui 1.0
 - cmake 3.5.2 3.6.0_1
 - consul 0.6.4
+- coreutils 8.25
 - cscope 15.8a
 - devd 0.5
-- docker 1.11.2
-- docker-compose 1.7.0
-- docker-machine 0.7.0
+- distribution 1.2.2
+- docker 1.12.1
+- docker-compose 1.8.0
+- docker-machine 0.8.1
 - doctl 1.1.0
 - duplicity 0.7.06_1
 - eigen 3.2.7 3.2.8
 - fabio 1.2
 - ffmpeg 2.8.4 3.0.2
-- fish 2.2.0
 - flow 0.17.0
 - fontconfig 2.11.1_2
 - fpp 0.6.2
 - freetype 2.6.3
-- fribidi 0.19.7 0.19.7_1
+- freexl 1.0.2
+- fribidi 0.19.7_1
+- fzf 0.13.5
 - gcc 5.3.0
-- gdbm 1.11 1.12
+- gdal 1.11.5
+- gdbm 1.12
 - gdk-pixbuf 2.32.3
-- gettext 0.19.7 0.19.8.1
+- geos 3.5.0
+- gettext 0.19.8.1
+- giflib 4.2.3
 - git 2.6.1 2.7.0 2.9.0
 - glfw3 3.1.2
 - glib 2.46.2
-- gmp 6.1.0 6.1.1
+- gmp 6.1.1
 - gnupg21 2.1.13
 - gnutls 3.4.13
-- go 1.6
+- go 1.6 1.7
 - gobject-introspection 1.46.0_1
 - graphicsmagick 1.3.23_1
 - harfbuzz 1.1.3 1.2.6
 - heroku 3.42.17 3.42.29
 - httpie 0.9.4
-- hub HEAD
+- hub 2.2.8
 - icdiff 1.7.3
-- icu4c 56.1 57.1
+- icu4c 57.1
 - ilmbase 2.2.0
 - imagemagick 6.9.2-4 6.9.3-0
 - infinit 0.5.5
 - isl 0.15
 - jpeg 8d
 - jq 1.5
+- json-c 0.12
 - keybase 1.0.9-0
 - lame 3.99.5
 - ledger 3.1.1_1
@@ -79,32 +90,35 @@ brew:
 - libassuan 2.4.2
 - libffi 3.0.13
 - libgcrypt 1.6.5 1.7.1
+- libgeotiff 1.4.1_1
 - libgpg-error 1.21 1.23
 - libksba 1.3.3 1.3.4
+- liblwgeom 2.1.5_2
 - libmpc 1.0.3
 - libogg 1.3.2
-- libpng 1.6.21 1.6.23
+- libpng 1.6.21 1.6.23 1.6.24
 - librsync 2.0.0
 - libsass 3.3.6
+- libspatialite 4.3.0a_2
 - libspotify 12.1.51
 - libssh2 1.7.0
 - libtasn1 4.8
 - libtermkey 0.18
-- libtiff 4.0.6 4.0.6_1
+- libtiff 4.0.6_2
 - libtool 2.4.6
 - libusb 1.0.20
 - libusb-compat 0.1.5
 - libvo-aacenc 0.1.3
 - libvorbis 1.3.5
-- libxml2 2.9.3
+- libxml2 2.9.4
 - libyaml 0.1.6_1
 - little-cms2 2.7
 - lsyncd 2.1.5_2
 - lua 5.2.4_3
+- lzlib 1.8
 - mariadb 10.1.14
-- mercurial 3.6.2 3.6.3
 - mitmproxy 0.13 0.14.0
-- mpfr 3.1.3 3.1.4
+- mpfr 3.1.4
 - mpv 0.17.0
 - neovim 0.1.4
 - nettle 3.2
@@ -114,13 +128,13 @@ brew:
 - nmap 7.01
 - npth 1.2
 - ntfs-3g 2016.2.22
-- numpy 1.10.4 1.11.1
+- numpy 1.11.1
 - oniguruma 5.9.6
 - opencv3 HEAD
 - openexr 2.2.0
-- openssl 1.0.2g 1.0.2h 1.0.2h_1
+- openssl 1.0.2h_1 1.0.2j
 - pango 1.38.1
-- pcre 8.38
+- pcre 8.39
 - pick 1.2.1
 - pinentry 0.9.7
 - pinentry-mac 0.9.4
@@ -129,95 +143,41 @@ brew:
 - popt 1.16
 - portaudio 19.20140130
 - portmidi 217
-- postgresql 9.4.5 9.5.0
+- postgresql 9.4.5 9.5.4
+- proj 4.9.2
 - pth 2.0.7
 - pv 1.6.0
 - pwgen 2.07
 - py2cairo 1.10.0_1
 - pypy 4.0.1
-- python3 3.5.1 3.5.2
-- readline 6.3.8
-- realpath 0.1
+- python3 3.5.1 3.5.2 3.5.2_2
+- readline 6.3.8 7.0
 - redis 3.0.4 3.0.6
 - rename 1.600
 - rethinkdb 2.3.0 2.3.2
 - rsync 3.1.1
-- ruby 2.3.0
 - sassc 3.3.2
 - sdl 1.2.15
 - sdl2 2.0.4
 - sdl_image 1.2.12_1
 - sdl_mixer 1.2.12
 - sdl_ttf 2.0.11
-- sqlite 3.12.2 3.13.0
+- sfcgal 1.3.0_1
+- sqlite 3.12.2 3.13.0 3.14.1 3.14.2_1
 - sshuttle 0.75
 - syncthing 0.11.26 0.12.16
 - tarsnap 1.0.36.1
 - texi2html 5.0
 - the_silver_searcher 0.31.0
-- tig 2.1.1
-- webp 0.4.4 0.5.1
+- tig 2.1.1 2.2_1
+- webp 0.5.1
 - wget 1.17.1
 - wifi-password 0.1.0
 - wxmac 3.0.2_2
-- x264 r2601 r2668
+- x264 r2668
 - xonsh 0.2.7
 - xvid 1.3.4
 - xz 5.2.2
 - yasm 1.3.0
 - youtube-dl 2015.10.13 2015.11.02 2015.11.24 2016.01.23 2016.05.10 2016.05.16
 - zsh 5.2
-
-cask:
-- adapter 2.1.5
-- android-file-transfer latest
-- awareness 1.1
-- bfxr latest
-- caffeine 1.1.1
-- colloquy 2.4.3
-- colorpicker-skalacolor latest 2.0 2.10
-- cyberduck 4.6.4 5.0.3.20504
-- disk-inventory-x 1.0
-- dropbox latest
-- encryptr 1.1.0 2.0.0
-- enjoyable 1.2
-- firefox 47.0.1
-- google-chrome latest
-- handbrake 0.10.1 0.10.5
-- hex-fiend 2.3.0
-- imagealpha 1.4.0 1.5.0
-- imageoptim 1.6.1
-- iterm2 2.1.4 3.0.4
-- java 1.8.0_92-b14
-- keepassx 2.0 2.0.2
-- keyboardcleantool latest
-- keycastr 0.9.2
-- krita 3.0
-- licecap 1.25
-- love 0.10.0 0.10.1
-- lunchy 0.1.5 0.2.1
-- mojibar 2.2.2
-- notion 0.1.6
-- noun-project 1.1 1.1.3
-- numi latest
-- onyx latest
-- openemu 1.0.4 2.0.2
-- osxfuse 2.8.3
-- pikopixel 1.0b5
-- plex-home-theater 1.3.5.431-7966a4df 1.4.1.469-47a90f01
-- plex-media-server 0.9.15.2.1663-7efd046 1.0.0.2261-a17e99e
-- recordit 1.6.7
-- ricochet 1.1.2
-- sidestep 1.4.1
-- skype latest
-- slack 2.0.3
-- spectacle 1.0.6
-- spotify latest
-- steam latest
-- transmission 2.84 2.92
-- typora 0.9.9.1 0.9.9.5.1
-- viber latest
-- vlc 
-- webtorrent 0.7.2
-- wineskin-winery 1.7
-- wkhtmltopdf 0.12.3
