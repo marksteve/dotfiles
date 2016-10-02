@@ -28,6 +28,7 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
 Plug 'neomake/neomake'
 Plug 'rstacruz/vim-opinion'
+Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -221,6 +222,18 @@ au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
 noremap <C-p> :GFiles<cr>
+noremap <leader>b :Buffers<cr>
+
+" CamelCaseMotion
+
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
 
 
 " FILETYPES
