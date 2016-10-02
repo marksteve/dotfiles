@@ -921,7 +921,7 @@
 	<key>NSWindow Frame NSColorPanel.modal</key>
 	<string>592 485 256 261 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>459 238 445 77 0 0 1440 877 </string>
+	<string>459 104 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>415 407 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -929,15 +929,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>252 249 918 495 0 0 1440 877 </string>
+	<string>252 205 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 28 1433 843 0 0 1440 877 </string>
+	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>3 19 1433 852 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>3 19 1433 852 0 0 1440 877 </string>
+	<string>3 11 1433 860 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>3 419 665 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -1678,6 +1678,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>6F086B2A-26F0-4F98-95B5-5051BFF42B10</string>
+	<key>NoSyncLastTipTime</key>
+	<real>494139878.86082703</real>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
@@ -1690,6 +1692,10 @@
 	<real>455529092.36006403</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>486373572.51497698</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1739,6 +1745,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/marksteve/Dotfiles/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1758,7 +1766,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-28T16:12:25Z</date>
+	<date>2016-08-31T16:40:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1789,7 +1797,8 @@
 	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
+		<string>Paste History</string>
+		<string>Recent Directories</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
@@ -1816,6 +1825,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.5</string>
+	<string>3.0.8</string>
 </dict>
 </plist>
