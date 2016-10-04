@@ -6,13 +6,13 @@ R='\033[0m'
 
 install () {
   if [ -e "$HOME/$2" ]; then
-    echo -e $2 $E$R
+    echo $2 $E$R
     read -p "Replace existing? (y/n) " -n 1
     echo
   fi
   if ([ ! -e "$HOME/$2" ] || [[ $REPLY =~ ^[Yy]$ ]]); then
     rm -r $HOME/$2 > /dev/null 2>&1
-    ln -s `pwd`/$1 $HOME/$2 && echo -e $2 $I$R
+    ln -s `pwd`/$1 $HOME/$2 && echo $2 $I$R
   fi
   echo
 }
@@ -38,3 +38,4 @@ install gitconfig .gitconfig
 install gitignore .gitignore
 install tigrc .tigrc
 install tarsnaprc .tarsnaprc
+install gemrc .gemrc
