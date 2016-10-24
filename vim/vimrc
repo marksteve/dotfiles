@@ -3,10 +3,11 @@ call plug#begin('~/.vim/plugged')
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
+Plug 'airblade/vim-gitgutter'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ajh17/Spacegray.vim'
 Plug 'alfredodeza/pytest.vim'
@@ -21,6 +22,7 @@ Plug 'groenewege/vim-less'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
+Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'mitsuhiko/vim-jinja'
@@ -29,6 +31,7 @@ Plug 'mitsuhiko/vim-rst'
 Plug 'neomake/neomake'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -40,7 +43,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
-Plug 'vim-scripts/YankRing.vim'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
 Plug 'zchee/deoplete-jedi'
@@ -101,8 +103,8 @@ au FileType css set omnifunc=csscomplete#CompleteCSS
 cmap W! w !sudo tee % >/dev/null
 
 " Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-nnoremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Normal mode: <leader>e
+nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
@@ -111,9 +113,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
-
-" Indent-aware paste
-nnoremap <leader>p p`[v`]=
 
 " Remember last location in file
 if has("autocmd")
@@ -200,11 +199,6 @@ let g:neomake_python_pep8_maker={
 let g:neomake_python_enabled_makers=['frosted', 'pep8']
 let g:neomake_javascript_enabled_makers=['eslint']
 
-" yankring
-let g:yankring_replace_n_pkey=''
-let g:yankring_replace_n_nkey=''
-let g:yankring_clipboard_monitor=0
-
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
@@ -225,7 +219,6 @@ noremap <C-p> :GFiles<cr>
 noremap <leader>b :Buffers<cr>
 
 " CamelCaseMotion
-
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
@@ -234,6 +227,10 @@ sunmap w
 sunmap b
 sunmap e
 sunmap ge
+
+" yankstack
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 
 " FILETYPES
@@ -253,6 +250,5 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-
 let g:gocode_gofmt_tabs=' -tabs=true'
 
