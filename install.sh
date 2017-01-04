@@ -24,10 +24,13 @@ else
   OS='osx'
 fi
 
-for F in zshrc bashrc bash_profile exports aliases functions; do
+for F in bashrc bash_profile exports; do
   install $OS/$F .$F
 done
 
+install aliases .aliases
+install functions .functions
+install zshrc .zshrc
 install dircolors .dircolors
 install vim .vim
 install vim/vimrc .vimrc

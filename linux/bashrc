@@ -136,14 +136,3 @@ bind 'set completion-prefix-display-length 2'
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
-# git branch in prompt
-command -v git >/dev/null && PS1="$PS1\$(__git_ps1 '[%s] ')"
-
-# virtualenvwrapper
-source virtualenvwrapper.sh
-
-# Fix ssh-agent not working on tmux reattach
-if [[ -S "$SSH_AUTH_SOCK" && ! -h "$SSH_AUTH_SOCK" ]]; then
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock;
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;

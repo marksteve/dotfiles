@@ -24,3 +24,6 @@ export PATH=$PATH:/usr/local/share/npm/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+# Yarn
+export PATH=$PATH:$HOME/.asdf/installs/nodejs/4.6.0/bin
+
