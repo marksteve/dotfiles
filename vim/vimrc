@@ -5,10 +5,6 @@ function! DoRemote(arg)
 endfunction
 
 Plug 'airblade/vim-gitgutter'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'ajh17/Spacegray.vim'
 Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
@@ -45,6 +41,14 @@ Plug 'vim-scripts/py_jump.vim'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
 Plug 'zchee/deoplete-jedi'
+
+let s:uname = system("uname -s")
+if s:uname == "Darwin"
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+endif
 
 call plug#end()
 

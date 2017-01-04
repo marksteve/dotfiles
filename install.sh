@@ -17,17 +17,13 @@ install () {
   echo
 }
 
-if [[ `uname` == 'Linux' ]]
-then
+if [[ `uname` == 'Linux' ]]; then
   OS='linux'
 else
   OS='osx'
 fi
 
-for F in bashrc bash_profile exports; do
-  install $OS/$F .$F
-done
-
+install $OS/exports .exports
 install aliases .aliases
 install functions .functions
 install zshrc .zshrc

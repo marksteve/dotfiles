@@ -25,3 +25,5 @@ done
 # added by travis gem
 [ -f /Users/marksteve/.travis/travis.sh ] && source /Users/marksteve/.travis/travis.sh
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
