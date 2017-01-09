@@ -27,3 +27,10 @@ done
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# hub
+eval "$(hub alias -s)"
+
+# cargo
+source $HOME/.cargo/env
+
