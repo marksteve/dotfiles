@@ -3,6 +3,7 @@ source $HOME/Dotfiles/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen theme wezm
+
 antigen bundle colorize
 antigen bundle copydir
 antigen bundle copyfile
@@ -27,9 +28,6 @@ done
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# hub
-eval "$(hub alias -s)"
 
 # cargo
 source $HOME/.cargo/env
