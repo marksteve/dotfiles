@@ -24,14 +24,17 @@ for F in exports aliases functions; do
 done
 
 # added by travis gem
-[ -f /Users/marksteve/.travis/travis.sh ] && source /Users/marksteve/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # cargo
-source $HOME/.cargo/env
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 # gcloud
-# source $HOME/.local/google-cloud-sdk/completion.zsh.inc
-source $HOME/.local/google-cloud-sdk/path.zsh.inc
+if [ -d $HOME/.local/google-cloud-sdk ]; then
+  # source $HOME/.local/google-cloud-sdk/completion.zsh.inc
+  source $HOME/.local/google-cloud-sdk/path.zsh.inc
+fi
+
