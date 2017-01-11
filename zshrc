@@ -32,3 +32,6 @@ done
 # cargo
 source $HOME/.cargo/env
 
+# gcloud
+# source $HOME/.local/google-cloud-sdk/completion.zsh.inc
+source $HOME/.local/google-cloud-sdk/path.zsh.inc
