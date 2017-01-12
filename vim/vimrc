@@ -237,6 +237,9 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
+" Wrap markdown
+au BufRead,BufNewFile {*.md,*.markdown} set wrap
+
 " Go
 filetype off
 filetype plugin indent off
