@@ -6,6 +6,7 @@
 [log]
 	decorate = short
 [alias]
+	pull = pull --ff-only
 	l = log --oneline --graph
 [credential]
 	helper = osxkeychain
