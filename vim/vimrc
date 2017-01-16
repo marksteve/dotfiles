@@ -218,6 +218,7 @@ let g:deoplete#sources#jedi#show_docstring = 1
 au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 noremap <C-p> :Files<cr>
 noremap <leader>g :GFiles?<cr>
 noremap <leader>b :Buffers<cr>
