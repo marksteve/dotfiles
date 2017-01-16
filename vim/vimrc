@@ -218,7 +218,8 @@ let g:deoplete#sources#jedi#show_docstring = 1
 au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
-noremap <C-p> :GFiles<cr>
+noremap <C-p> :Files<cr>
+noremap <leader>g :GFiles?<cr>
 noremap <leader>b :Buffers<cr>
 
 " yankstack
