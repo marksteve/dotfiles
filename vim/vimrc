@@ -83,12 +83,10 @@ set modeline
 set modelines=10
 
 " Copy to clipboard
-if has('unnamedplus')
-  set clipboard+=unnamedplus
-endif
+set clipboard+=unnamedplus
 
-" Use bash
-set shell=bash
+" Use zsh as shell
+set shell=zsh
 
 " Use <space> as leader key
 let mapleader="\<space>"
