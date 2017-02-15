@@ -26,6 +26,7 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
 Plug 'neomake/neomake'
+Plug 'posva/vim-vue'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
@@ -89,7 +90,7 @@ set clipboard+=unnamedplus
 " Use zsh as shell
 set shell=zsh
 
-" Use <space> as leader key
+" Use <space> as Leader key
 let mapleader="\<space>"
 
 " Load the plugin and indent settings for the detected filetype
@@ -105,8 +106,8 @@ au FileType css set omnifunc=csscomplete#CompleteCSS
 cmap W! w !sudo tee % >/dev/null
 
 " Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <leader>e
-nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Normal mode: <Leader>e
+nnoremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
@@ -128,7 +129,7 @@ au VimResized * exe "normal! \<c-w>="
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
-noremap <leader><space> :noh<cr>:call clearmatches()<cr>
+noremap <Leader><space> :noh<cr>:call clearmatches()<cr>
 
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
@@ -205,8 +206,8 @@ let g:neomake_javascript_enabled_makers=['standard']
 let g:indent_guides_enable_on_vim_startup = 1
 
 " sayonara
-nnoremap <leader>q :Sayonara<cr>
-nnoremap <leader>Q :Sayonara!<cr>
+nnoremap <Leader>q :Sayonara<cr>
+nnoremap <Leader>Q :Sayonara!<cr>
 
 " vim-osx-colorpicker
 let g:colorpicker_app = 'iTerm.app'
@@ -217,10 +218,10 @@ let g:deoplete#sources#jedi#show_docstring = 1
 au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'pt -g ""'
 noremap <C-p> :Files<cr>
-noremap <leader>g :GFiles?<cr>
-noremap <leader>b :Buffers<cr>
+noremap <Leader>g :GFiles?<cr>
+noremap <Leader>b :Buffers<cr>
 
 " yankstack
 nmap <leader>p <Plug>yankstack_substitute_older_paste
@@ -248,4 +249,7 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 let g:gocode_gofmt_tabs=' -tabs=true'
+
+" Python
+autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
 
