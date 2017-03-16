@@ -713,7 +713,7 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<true/>
+	<false/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -837,6 +837,8 @@
 	<false/>
 	<key>HideTab</key>
 	<true/>
+	<key>HideTabNumber</key>
+	<false/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -914,19 +916,19 @@
 	<key>NSWindow Frame NSColorPanel.modal</key>
 	<string>655 363 256 309 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 307 620 392 0 0 1280 800 </string>
+	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>250 128 918 495 0 0 1280 777 </string>
+	<string>314 212 770 381 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 5 1274 770 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 6 1274 770 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
 	<string>3 7 1274 768 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>3 270 650 502 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>3 23 1274 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1 20 1277 752 0 0 1280 777 </string>
+	<string>3 7 1273 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>3 10 1274 762 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -1737,7 +1739,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-13T18:44:35Z</date>
+	<date>2017-03-13T04:46:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1755,13 +1757,13 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.42650991678237915</real>
+	<real>0</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
 	<key>TabStyle</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
