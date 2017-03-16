@@ -84,9 +84,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set modeline
 set modelines=10
 
-" Copy to clipboard
-set clipboard+=unnamedplus
-
 " Use zsh as shell
 set shell=zsh
 
