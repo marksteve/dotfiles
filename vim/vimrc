@@ -31,6 +31,7 @@ Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
@@ -223,6 +224,9 @@ noremap <Leader>b :Buffers<cr>
 " yankstack
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+" gundo
+nnoremap <leader>u :GundoToggle<CR>
 
 
 " FILETYPES
