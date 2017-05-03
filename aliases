@@ -1,5 +1,4 @@
 alias ..="cd .."
-alias ls="ls -G --color=auto"
+alias ls="ls -G"
 alias l="ls -lah"
 alias vim="nvim"
-alias npm="yarn"
