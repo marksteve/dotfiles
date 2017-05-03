@@ -915,18 +915,20 @@
 	<string>310 270 224 325 0 0 1280 777 </string>
 	<key>NSWindow Frame NSColorPanel.modal</key>
 	<string>655 363 256 309 0 0 1280 777 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>129 430 445 103 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 212 770 381 0 0 1280 777 </string>
+	<string>314 98 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 7 1274 768 0 0 1280 777 </string>
+	<string>1 20 1277 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 270 650 502 0 0 1280 777 </string>
+	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>3 23 1274 752 0 0 1280 777 </string>
+	<string>1 20 1277 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>3 7 1273 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1685,6 +1687,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1739,7 +1743,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-13T04:46:41Z</date>
+	<date>2017-04-03T11:35:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1757,7 +1761,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0</real>
+	<real>0.0</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
