@@ -13,6 +13,12 @@
 [core]
 	excludesfile = /Users/marksteve/.gitignore_global
 	editor = env VIM_MINIMAL=1 nvim
+[diff]
+	tool = icdiff
+[difftool]
+	prompt = false
+[difftool "icdiff"]
+	cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [filter "media"]
 	required = true
 	clean = git media clean %f
