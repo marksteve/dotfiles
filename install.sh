@@ -22,15 +22,24 @@ if [[ `uname` == 'Linux' ]]; then
 else
   OS='osx'
 fi
-
 install $OS/exports .exports
 install aliases .aliases
 install functions .functions
 install zshrc .zshrc
 install dircolors .dircolors
+
+mkdir -p $HOME/.local/bin
+for file in `pwd`/localbin/*
+do
+  if [[ -x $file ]]; then
+    install localbin/$(basename $file) .local/bin/$(basename $file)
+  fi
+done
+
 install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
+
 install tmux.conf .tmux.conf
 install ackrc .ackrc
 install gitconfig .gitconfig
