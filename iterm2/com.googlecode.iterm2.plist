@@ -916,21 +916,21 @@
 	<key>NSWindow Frame NSColorPanel.modal</key>
 	<string>655 363 256 309 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>129 430 445 103 0 0 1280 777 </string>
+	<string>129 322 445 77 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 98 796 473 0 0 1280 777 </string>
+	<string>314 76 918 495 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 20 1277 752 0 0 1280 777 </string>
+	<string>1 7 1277 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1 20 1277 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>3 7 1273 768 0 0 1280 777 </string>
+	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>3 10 1274 762 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -1482,11 +1482,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Dinattf 16</string>
+			<string>Dinattf 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Dinattf 16</string>
+			<string>Dinattf 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1743,7 +1743,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-03T11:35:02Z</date>
+	<date>2017-05-04T06:55:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
