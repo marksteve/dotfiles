@@ -33,6 +33,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export HOMEBREW_GITHUB_API_TOKEN=5b3cc1cfa2fc90e5eacd75daaeaafa457a5f6654
 export PATH=$PATH:/usr/local/sbin
 
-# itermplot
-export MPLBACKEND="module://itermplot"
-export ITERMPLOT=rv
+# flutter
+export PATH=$PATH:/usr/local/flutter/bin
+
