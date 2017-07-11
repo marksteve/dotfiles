@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -922,9 +924,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>314 76 918 495 0 0 1280 777 </string>
+	<string>292 223 770 381 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 7 1277 768 0 0 1280 777 </string>
+	<string>1 25 1277 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -932,7 +934,7 @@
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>3 10 1274 762 0 0 1280 777 </string>
+	<string>1 9 1277 763 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1743,7 +1745,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-04T06:55:02Z</date>
+	<date>2017-07-08T08:45:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
