@@ -12,7 +12,6 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'Blackrush/vim-gocode'
 Plug 'danro/rename.vim'
 Plug 'digitaltoad/vim-pug'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
@@ -21,7 +20,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
-Plug 'michaeljsmith/vim-indent-object'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
@@ -39,6 +37,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tweekmonster/braceless.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
 Plug 'wincent/ferret'
@@ -199,7 +198,7 @@ map <tab> %
 " neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_python_pep8_maker={
-  \ 'args': ['--ignore=E111,E121,W391']
+  \ 'args': ['--ignore=E111,E114,E121,W391']
   \ }
 let g:neomake_python_enabled_makers=['frosted', 'pep8']
 let g:neomake_javascript_enabled_makers=['standard']
@@ -257,4 +256,5 @@ let g:gocode_gofmt_tabs=' -tabs=true'
 
 " Python
 autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
+autocmd FileType python BracelessEnable +indent +highlight
 
