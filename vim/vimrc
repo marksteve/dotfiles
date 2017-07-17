@@ -1,9 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 Plug 'airblade/vim-gitgutter'
 Plug 'ajh17/Spacegray.vim'
 Plug 'alfredodeza/pytest.vim'
@@ -27,7 +23,7 @@ Plug 'neomake/neomake'
 Plug 'posva/vim-vue'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-commentary'
@@ -175,10 +171,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Python provider
-let g:python_host_prog='/usr/local/bin/python'
-let g:python3_host_prog='/usr/local/bin/python3'
 
 
 " PLUGINS
