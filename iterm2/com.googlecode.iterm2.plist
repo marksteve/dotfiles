@@ -853,6 +853,8 @@
 	<integer>0</integer>
 	<key>HotkeyCode</key>
 	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>0</integer>
 	<key>IRMemory</key>
@@ -918,17 +920,17 @@
 	<key>NSWindow Frame NSColorPanel.modal</key>
 	<string>655 363 256 309 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>129 322 445 77 0 0 1280 777 </string>
+	<string>129 188 445 77 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>292 223 770 381 0 0 1280 777 </string>
+	<string>292 53 918 507 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 25 1277 752 0 0 1280 777 </string>
+	<string>0 4 1280 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 9 1277 763 0 0 1280 777 </string>
+	<string>1 345 570 427 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1 20 1277 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1488,7 +1490,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Dinattf 14</string>
+			<string>Dina 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1745,7 +1747,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-08T08:45:11Z</date>
+	<date>2017-07-17T01:31:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1803,9 +1805,11 @@
 	<string></string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.1.beta.5</string>
 </dict>
 </plist>
