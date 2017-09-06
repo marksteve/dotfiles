@@ -250,5 +250,5 @@ let g:gocode_gofmt_tabs=' -tabs=true'
 
 " Python
 autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
-autocmd FileType python BracelessEnable +indent +highlight
+autocmd FileType python BracelessEnable +highlight
 
