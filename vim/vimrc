@@ -25,7 +25,7 @@ Plug 'neomake/neomake'
 Plug 'posva/vim-vue'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-commentary'
@@ -35,7 +35,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'tweekmonster/braceless.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
 Plug 'wincent/ferret'
@@ -250,5 +249,4 @@ let g:gocode_gofmt_tabs=' -tabs=true'
 
 " Python
 autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
-autocmd FileType python BracelessEnable +highlight
 
