@@ -36,3 +36,5 @@ export PATH=$PATH:/usr/local/sbin
 # flutter
 export PATH=$PATH:/usr/local/flutter/bin
 
+# GDAL
+export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
