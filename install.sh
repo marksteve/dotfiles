@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 
 E='\033[1;30m[exists]'
 I='\033[1;32m[installed]'
