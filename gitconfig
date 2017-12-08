@@ -13,7 +13,7 @@
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/marksteve/.gitignore_global
+	excludesfile = /Users/marksteve/.gitignore
 	editor = env VIM_MINIMAL=1 nvim
 [merge]
 	tool = nvim
