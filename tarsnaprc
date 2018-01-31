@@ -4,7 +4,7 @@
 cachedir /usr/local/tarsnap-cache
 
 # Tarsnap key file
-keyfile /Users/marksteve/Secrets/Keys/tarsnap/knife-kun.key
+keyfile /Users/marksteve/.secrets/Keys/tarsnap/knife-kun.key
 
 # Don't archive files which have the nodump flag set
 nodump
