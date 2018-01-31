@@ -10,7 +10,6 @@ Plug 'danro/rename.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fisadev/vim-isort'
-Plug 'gko/vim-coloresque'
 Plug 'groenewege/vim-less'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'kchmck/vim-coffee-script'
@@ -189,11 +188,11 @@ runtime! macros/matchit.vim
 map <tab> %
 
 " neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_python_pep8_maker={
+call neomake#configure#automake('nrw', 1000)
+let g:neomake_python_pycodestyle_maker={
   \ 'args': ['--ignore=E111,E114,E121,W391']
   \ }
-let g:neomake_python_enabled_makers=['frosted', 'pep8']
+let g:neomake_python_enabled_makers=['frosted', 'pycodestyle']
 let g:neomake_javascript_enabled_makers=['standard']
 
 " indent-guides
