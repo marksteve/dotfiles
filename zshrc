@@ -1,17 +1,4 @@
-# antigen
-source $HOME/Dotfiles/antigen/antigen.zsh
-
-antigen use oh-my-zsh
-antigen theme wezm
-
-antigen bundle colorize
-antigen bundle copydir
-antigen bundle copyfile
-antigen bundle ssh-agent
-
-antigen bundle supercrabtree/k
-
-antigen apply
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # asdf
 source $HOME/.asdf/asdf.sh
