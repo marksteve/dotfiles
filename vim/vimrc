@@ -14,7 +14,6 @@ Plug 'groenewege/vim-less'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/vim-emoji'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
@@ -257,11 +256,3 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_default_coefficient = 0.8
 
-" vim-gitgutter
-if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('ok_woman')
-  let g:gitgutter_sign_modified = emoji#for('haircut')
-  let g:gitgutter_sign_removed = emoji#for('no_good')
-  " let g:gitgutter_sign_removed_first_line = emoji#for('')
-  " let g:gitgutter_sign_modified_removed = emoji#for('')
-endif
