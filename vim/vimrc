@@ -14,6 +14,8 @@ Plug 'groenewege/vim-less'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
@@ -53,6 +55,9 @@ endif
 
 call plug#end()
 
+
+" SETTINGS
+
 set nocompatible
 
 set noerrorbells
@@ -87,7 +92,7 @@ set modelines=10
 set shell=zsh
 
 " Use <space> as Leader key
-let mapleader="\<space>"
+let mapleader="\<Space>"
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
@@ -175,20 +180,41 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
-" PLUGINS
-
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
-
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement=1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 map <tab> %
+
+
+" FILETYPES
+
+" Make uses real tabs
+au FileType make set noexpandtab
+
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" Add json syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
+
+" Wrap markdown
+au BufRead,BufNewFile {*.md,*.markdown} set wrap
+
+" Go
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+let g:gocode_gofmt_tabs=' -tabs=true'
+
+" Python
+autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
+
+
+" PLUGINS
 
 " neomake
 call neomake#configure#automake('nrw', 1000)
@@ -220,40 +246,22 @@ noremap <Leader>g :GFiles?<cr>
 noremap <Leader>b :Buffers<cr>
 
 " yankstack
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
+nmap <Leader>p <Plug>yankstack_substitute_older_paste
+nmap <Leader>P <Plug>yankstack_substitute_newer_paste
 
 " gundo
-nnoremap <leader>u :GundoToggle<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 
 " limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_default_coefficient = 0.8
 
-
-" FILETYPES
-
-" Make uses real tabs
-au FileType make set noexpandtab
-
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-
-" Add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
-" Wrap markdown
-au BufRead,BufNewFile {*.md,*.markdown} set wrap
-
-" Go
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
-let g:gocode_gofmt_tabs=' -tabs=true'
-
-" Python
-autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
-
+" vim-gitgutter
+if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('ok_woman')
+  let g:gitgutter_sign_modified = emoji#for('haircut')
+  let g:gitgutter_sign_removed = emoji#for('no_good')
+  " let g:gitgutter_sign_removed_first_line = emoji#for('')
+  " let g:gitgutter_sign_modified_removed = emoji#for('')
+endif
