@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'ajh17/Spacegray.vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
@@ -65,7 +65,7 @@ set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
 set background=dark
-colorscheme spacegray
+colorscheme solarized
 
 " Set encoding
 set encoding=utf-8
