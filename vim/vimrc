@@ -12,6 +12,8 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
 Plug 'iandoe/vim-osx-colorpicker'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
@@ -223,6 +225,11 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+" limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_default_coefficient = 0.8
 
 
 " FILETYPES
