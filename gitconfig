@@ -1,6 +1,7 @@
 [user]
 	name = Mark Steve Samson
 	email = hello@marksteve.com
+	signingkey = 26675B54DFC1C9A1
 [push]
 	default = simple
 [log]
@@ -8,8 +9,6 @@
 [alias]
 	pull = pull --ff-only
 	l = log --oneline --graph
-	# http://caiustheory.com/git-git-git-git-git/
-	git = !exec git
 [credential]
 	helper = osxkeychain
 [core]
