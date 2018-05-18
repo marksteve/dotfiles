@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
@@ -18,6 +17,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
+Plug 'marksteve/base16-tm'
 Plug 'mattn/emmet-vim'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
@@ -65,7 +65,10 @@ set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
 set background=dark
-colorscheme solarized
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " Set encoding
 set encoding=utf-8
