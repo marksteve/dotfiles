@@ -1,2 +1,4 @@
-golang 1.8.1
+golang 1.9.6
 nodejs 8.10.0
+ruby 2.5.1
+rust 1.25.0
