@@ -1,4 +1,4 @@
 .DS_Store
+.envrc
 venv/
 node_modules/
-
