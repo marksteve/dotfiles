@@ -4,37 +4,37 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+aiofiles==0.3.2           # via sanic
 alabaster==0.7.11         # via sphinx
 appnope==0.1.0            # via ipython
 arrow==0.12.1
-awscli==1.15.51
 babel==2.6.0              # via sphinx
 backcall==0.1.0           # via ipython
+binaryornot==0.4.4        # via cookiecutter
 bleach==2.1.3             # via nbconvert
-botocore==1.10.50         # via awscli, s3transfer
-cached-property==1.4.3    # via docker-compose
 certifi==2018.4.16        # via dulwich, requests
-chardet==3.0.4            # via requests
-click==6.7                # via csvdiff, flask
-colorama==0.3.9           # via awscli
+chardet==3.0.4            # via binaryornot, requests
+click-default-group==1.2  # via datasette
+click==6.7                # via click-default-group, cookiecutter, csvdiff, datasette, flask
+cookiecutter==1.6.0
 csvdiff==0.3.3
 cycler==0.10.0            # via matplotlib
+datasette==0.23.2
 decorator==4.3.0          # via ipython, traitlets
-docker-compose==1.21.2
-docker-pycreds==0.3.0     # via docker
-docker==3.4.1             # via docker-compose
-dockerpty==0.4.1          # via docker-compose
-docopt==0.6.2             # via docker-compose, grip
-docutils==0.14            # via awscli, botocore, sphinx
-dulwich==0.19.4           # via klaus
+docopt==0.6.2             # via grip
+docutils==0.14            # via sphinx
+dulwich==0.19.5           # via klaus
 entrypoints==0.2.3        # via nbconvert
 flask==1.0.2              # via grip, klaus
 frosted==1.4.1
+future==0.16.0            # via cookiecutter
 grip==4.5.2
 html5lib==1.0.1           # via bleach
 httpauth==0.3             # via klaus
+httptools==0.0.11         # via sanic
 humanize==0.5.1           # via klaus
-idna==2.6                 # via requests
+hupper==1.0               # via datasette
+idna==2.7                 # via requests
 imagesize==1.0.0          # via sphinx
 ipykernel==4.8.2          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
 ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
@@ -43,9 +43,9 @@ ipywidgets==7.2.1         # via jupyter
 isort==4.3.4
 itsdangerous==0.24        # via flask
 jedi==0.12.1              # via ipython
-jinja2==2.10              # via flask, nbconvert, notebook, sphinx
-jmespath==0.9.3           # via botocore
-jsonschema==2.6.0         # via csvdiff, docker-compose, nbformat
+jinja2-time==0.2.0        # via cookiecutter
+jinja2==2.10              # via cookiecutter, datasette, flask, jinja2-time, nbconvert, notebook, sphinx
+jsonschema==2.6.0         # via csvdiff, nbformat
 jupyter-client==5.2.3     # via ipykernel, jupyter-console, notebook, qtconsole
 jupyter-console==5.2.0    # via jupyter
 jupyter-core==4.4.0       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
@@ -59,41 +59,44 @@ mistune==0.8.3            # via nbconvert
 nbconvert==5.3.1          # via jupyter, notebook
 nbformat==4.4.0           # via ipywidgets, nbconvert, notebook
 notebook==5.5.0           # via jupyter, widgetsnbextension
-numpy==1.14.5             # via matplotlib
+numpy==1.14.5             # via matplotlib, pandas
 packaging==17.1           # via sphinx
+pandas==0.23.3
 pandocfilters==1.4.2      # via nbconvert
-parso==0.3.0              # via jedi
+parso==0.3.1              # via jedi
 path-and-address==2.0.1   # via grip
 pexpect==4.6.0            # via ipython
 pickleshare==0.7.4        # via ipython
 pies==2.6.7               # via frosted
+pint==0.8.1               # via datasette
+pluggy==0.6.0             # via datasette
+poyo==0.4.1               # via cookiecutter
 prompt-toolkit==1.0.15    # via ipython, jupyter-console
 ptyprocess==0.6.0         # via pexpect, terminado
-pyasn1==0.4.3             # via rsa
 pygments==2.2.0           # via grip, ipython, jupyter-console, klaus, nbconvert, qtconsole, sphinx
 pyparsing==2.2.0          # via matplotlib, packaging
-python-dateutil==2.7.3    # via arrow, botocore, jupyter-client, matplotlib
-pytz==2018.5              # via babel, matplotlib
-pyyaml==3.12              # via awscli, docker-compose
-pyzmq==17.0.0             # via jupyter-client, notebook
+python-dateutil==2.7.3    # via arrow, jupyter-client, matplotlib, pandas
+pytz==2018.5              # via babel, matplotlib, pandas
+pyzmq==17.1.0             # via jupyter-client, notebook
 qtconsole==4.3.1          # via jupyter
-requests==2.18.4          # via docker, docker-compose, grip, sphinx
-rsa==3.4.2                # via awscli
-s3transfer==0.1.13        # via awscli
+requests==2.19.1          # via cookiecutter, grip, sphinx
+sanic==0.7.0              # via datasette
 send2trash==1.5.0         # via notebook
 simplegeneric==0.8.1      # via ipython
-six==1.11.0               # via bleach, csvdiff, cycler, docker, docker-compose, docker-pycreds, dockerpty, html5lib, klaus, matplotlib, packaging, prompt-toolkit, python-dateutil, sphinx, traitlets, websocket-client
+six==1.11.0               # via bleach, csvdiff, cycler, html5lib, klaus, matplotlib, packaging, prompt-toolkit, python-dateutil, sphinx, traitlets
 snowballstemmer==1.2.1    # via sphinx
 sphinx==1.7.5
 sphinxcontrib-websupport==1.1.0  # via sphinx
 terminado==0.8.1          # via notebook
 testpath==0.3.1           # via nbconvert
-texttable==0.9.1          # via docker-compose
-tornado==5.0.2            # via ipykernel, jupyter-client, notebook, terminado
+tornado==5.1              # via ipykernel, jupyter-client, notebook, terminado
 traitlets==4.3.2          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
-urllib3==1.22             # via dulwich, requests
+ujson==1.35               # via sanic
+urllib3==1.23             # via dulwich, requests
+uvloop==0.11.0            # via sanic
 wcwidth==0.1.7            # via prompt-toolkit
 webencodings==0.5.1       # via html5lib
-websocket-client==0.48.0  # via docker, docker-compose
+websockets==5.0.1         # via sanic
 werkzeug==0.14.1          # via flask
+whichcraft==0.4.1         # via cookiecutter
 widgetsnbextension==3.2.1  # via ipywidgets

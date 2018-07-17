@@ -1,11 +1,12 @@
 arrow
-awscli
+cookiecutter
 csvdiff
-docker-compose
+datasette
 frosted
 grip
 isort
 jupyter
 klaus
 matplotlib
+pandas
 sphinx
