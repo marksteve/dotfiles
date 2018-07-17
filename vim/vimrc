@@ -23,7 +23,8 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
-Plug 'neomake/neomake'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
@@ -40,6 +41,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/py_jump.vim'
+Plug 'w0rp/ale'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
 Plug 'zchee/deoplete-jedi'
@@ -198,9 +200,6 @@ au FileType make set noexpandtab
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
-" Add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
 " Wrap markdown
 au BufRead,BufNewFile {*.md,*.markdown} set wrap
 
@@ -218,13 +217,17 @@ autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
 
 " PLUGINS
 
-" neomake
-call neomake#configure#automake('nrw', 1000)
-let g:neomake_python_pycodestyle_maker={
-  \ 'args': ['--ignore=E111,E114,E121,W391']
+" ale
+let g:ale_linters = {
+  \ 'javascript': ['standard'],
+  \ 'json': ['fixjson'],
+  \ 'python': ['pycodestyle'],
   \ }
-let g:neomake_python_enabled_makers=['frosted', 'pycodestyle']
-let g:neomake_javascript_enabled_makers=['standard']
+let g:ale_fixers = {
+  \ 'javascript': ['standard'],
+  \ 'json': ['fixjson'],
+  \ }
+let g:ale_python_pycodestyle_options = '--ignore=E111,E114,E121,W391'
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
