@@ -1,12 +1,16 @@
 arrow
+beautifulsoup4
 cookiecutter
 csvdiff
 datasette
-frosted
+ety
+git-sweep
 grip
 isort
 jupyter
 klaus
 matplotlib
+neovim
 pandas
+python-language-server[pyflakes,pycodestyle,pydocstyle,mccabe]
 sphinx
