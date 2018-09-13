@@ -22,7 +22,7 @@ export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 
 # Python
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
-export PATH=$PATH:$HOME/Library/Python/3.6/bin
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 # Android SDK
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -38,3 +38,8 @@ export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 # Cargo
 export PATH=$PATH:$HOME/.cargo/bin/
 
+# pyenv
+export PYENV_ROOT=$HOME/.pyenv
+
+# Qt
+export PATH=/usr/local/opt/qt/bin:$PATH
