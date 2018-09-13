@@ -211,9 +211,6 @@ filetype plugin indent on
 syntax on
 let g:gocode_gofmt_tabs=' -tabs=true'
 
-" Python
-autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
-
 
 " PLUGINS
 
@@ -221,13 +218,12 @@ autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
 let g:ale_linters = {
   \ 'javascript': ['standard'],
   \ 'json': ['fixjson'],
-  \ 'python': ['pycodestyle'],
+  \ 'python': ['pyls'],
   \ }
 let g:ale_fixers = {
   \ 'javascript': ['standard'],
   \ 'json': ['fixjson'],
   \ }
-let g:ale_python_pycodestyle_options = '--ignore=E111,E114,E121,W391'
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
