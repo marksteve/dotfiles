@@ -258,3 +258,6 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_default_coefficient = 0.8
 
+" vim-isort
+let g:vim_isort_python_version = 'python3'
+
