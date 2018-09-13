@@ -42,3 +42,5 @@ eval "$(fasd --init auto)"
 # iterm2
 source ~/.iterm2_shell_integration.zsh
 
+# pyenv
+eval "$(pyenv init -)"
