@@ -4,7 +4,6 @@ cookiecutter
 csvdiff
 datasette
 ety
-git-sweep
 grip
 isort
 jupyter
@@ -13,4 +12,5 @@ matplotlib
 neovim
 pandas
 python-language-server[pyflakes,pycodestyle,pydocstyle,mccabe]
+sh
 sphinx
