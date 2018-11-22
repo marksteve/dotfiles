@@ -44,3 +44,9 @@ source ~/.iterm2_shell_integration.zsh
 
 # pyenv
 eval "$(pyenv init -)"
+
+# hub
+eval "$(hub alias -s)"
+
+# pm2
+eval "$(pm2 completion)"
