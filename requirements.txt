@@ -6,48 +6,60 @@
 #
 aiofiles==0.4.0           # via sanic
 alabaster==0.7.12         # via sphinx
+ansible==2.7.2
 appnope==0.1.0            # via ipython
 arrow==0.12.1
+asn1crypto==0.24.0        # via cryptography
+aspy.yaml==1.1.1          # via pre-commit
 babel==2.6.0              # via sphinx
 backcall==0.1.0           # via ipython
+bcrypt==3.1.4             # via paramiko
 beautifulsoup4==4.6.3
 binaryornot==0.4.4        # via cookiecutter
 bleach==3.0.2             # via nbconvert
+cached-property==1.5.1    # via pre-commit
 certifi==2018.10.15       # via dulwich, requests
+cffi==1.11.5              # via bcrypt, cryptography, pynacl
+cfgv==1.1.0               # via pre-commit
 chardet==3.0.4            # via binaryornot, requests
 click-default-group==1.2  # via datasette
 click==6.7                # via click-default-group, cookiecutter, csvdiff, datasette, flask
+colorama==0.4.0
 colorful==0.4.2           # via ety
 cookiecutter==1.6.0
+cryptography==2.4.2       # via ansible, paramiko
 csvdiff==0.3.3
 cycler==0.10.0            # via matplotlib
-datasette==0.25
+datasette==0.25.1
 decorator==4.3.0          # via ipython, traitlets
 defusedxml==0.5.0         # via nbconvert
 docopt==0.6.2             # via grip
 docutils==0.14            # via sphinx
-dulwich==0.19.6           # via klaus
+dulwich==0.19.9           # via klaus
 entrypoints==0.2.3        # via nbconvert
 ety==1.3.1
 flask==1.0.2              # via grip, klaus
-future==0.16.0            # via cookiecutter, python-jsonrpc-server, python-language-server
-greenlet==0.4.15          # via neovim
+future==0.17.1            # via cookiecutter, python-jsonrpc-server, python-language-server
+greenlet==0.4.15          # via pynvim
 grip==4.5.2
 httpauth==0.3             # via klaus
 httptools==0.0.11         # via sanic
 humanize==0.5.1           # via klaus
 hupper==1.0               # via datasette
-idna==2.7                 # via requests
+identify==1.1.7           # via pre-commit
+idna==2.7                 # via cryptography, requests
 imagesize==1.1.0          # via sphinx
+importlib-metadata==0.6   # via pre-commit
+importlib-resources==1.0.2  # via pre-commit
 ipykernel==5.1.0          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
 ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
-ipython==7.0.1            # via ipykernel, ipywidgets, jupyter-console
+ipython==7.1.1            # via ipykernel, ipywidgets, jupyter-console
 ipywidgets==7.4.2         # via jupyter
 isort==4.3.4
-itsdangerous==0.24        # via flask
+itsdangerous==1.1.0       # via flask
 jedi==0.13.1              # via ipython, python-language-server
 jinja2-time==0.2.0        # via cookiecutter
-jinja2==2.10              # via cookiecutter, datasette, flask, jinja2-time, nbconvert, notebook, sphinx
+jinja2==2.10              # via ansible, cookiecutter, datasette, flask, jinja2-time, nbconvert, notebook, sphinx
 jsonschema==2.6.0         # via csvdiff, nbformat
 jupyter-client==5.2.3     # via ipykernel, jupyter-console, notebook, qtconsole
 jupyter-console==6.0.0    # via jupyter
@@ -56,60 +68,71 @@ jupyter==1.0.0
 kiwisolver==1.0.1         # via matplotlib
 klaus==1.3.0
 markdown==3.0.1           # via grip
-markupsafe==1.0           # via jinja2
-matplotlib==3.0.0
+markupsafe==1.1.0         # via jinja2
+matplotlib==3.0.2
 mccabe==0.6.1             # via python-language-server
 mistune==0.8.4            # via nbconvert
-msgpack==0.5.6            # via neovim
+msgpack==0.5.6            # via pynvim
 nbconvert==5.4.0          # via jupyter, notebook
-nbformat==4.4.0           # via ipywidgets, nbconvert, notebook
-neovim==0.2.6
-notebook==5.7.0           # via jupyter, widgetsnbextension
-numpy==1.15.2             # via matplotlib, pandas
+nbformat==4.4.0           # via ipywidgets, nbconvert, nbstripout, notebook
+nbstripout==0.3.3
+nodeenv==1.3.3            # via pre-commit
+notebook==5.7.2           # via jupyter, widgetsnbextension
+numpy==1.15.4             # via matplotlib, pandas
 packaging==18.0           # via sphinx
 pandas==0.23.4
 pandocfilters==1.4.2      # via nbconvert
+paramiko==2.4.2           # via ansible
 parso==0.3.1              # via jedi
 path-and-address==2.0.1   # via grip
 pexpect==4.6.0            # via ipython
 pickleshare==0.7.5        # via ipython
+pillow==5.3.0
 pint==0.8.1               # via datasette
 pluggy==0.8.0             # via datasette, python-language-server
 poyo==0.4.2               # via cookiecutter
+pre-commit==1.12.0
 prometheus-client==0.4.2  # via notebook
-prompt-toolkit==2.0.6     # via ipython, jupyter-console
+prompt-toolkit==2.0.7     # via ipython, jupyter-console
 ptyprocess==0.6.0         # via pexpect, terminado
+pyasn1==0.4.4             # via paramiko
 pycodestyle==2.4.0        # via python-language-server
+pycparser==2.19           # via cffi
 pydocstyle==3.0.0         # via python-language-server
 pyflakes==2.0.0           # via python-language-server
 pygments==2.2.0           # via grip, ipython, jupyter-console, klaus, nbconvert, qtconsole, sphinx
-pyparsing==2.2.2          # via matplotlib, packaging
-python-dateutil==2.7.3    # via arrow, jupyter-client, matplotlib, pandas
+pynacl==1.3.0             # via paramiko
+pynvim==0.3.1
+pyparsing==2.3.0          # via matplotlib, packaging
+python-dateutil==2.7.5    # via arrow, jupyter-client, matplotlib, pandas
 python-jsonrpc-server==0.0.2  # via python-language-server
 python-language-server[mccabe,pycodestyle,pydocstyle,pyflakes]==0.21.2
-pytz==2018.5              # via babel, pandas
+pytz==2018.7              # via babel, pandas
+pyyaml==3.13              # via ansible, aspy.yaml, pre-commit
 pyzmq==17.1.2             # via jupyter-client, notebook
-qtconsole==4.4.2          # via jupyter
-requests==2.19.1          # via cookiecutter, grip, sphinx
+qtconsole==4.4.3          # via jupyter
+requests==2.20.1          # via cookiecutter, grip, sphinx
 sanic==0.7.0              # via datasette
 send2trash==1.5.0         # via notebook
 sh==1.12.14
-simplegeneric==0.8.1      # via ipython
-six==1.11.0               # via bleach, csvdiff, cycler, ety, klaus, packaging, prompt-toolkit, pydocstyle, python-dateutil, sphinx, traitlets
+six==1.11.0               # via bcrypt, bleach, cfgv, cryptography, csvdiff, cycler, ety, klaus, packaging, pre-commit, prompt-toolkit, pydocstyle, pynacl, python-dateutil, sphinx, structlog, traitlets
 snowballstemmer==1.2.1    # via pydocstyle, sphinx
-sphinx==1.8.1
+sphinx==1.8.2
 sphinxcontrib-websupport==1.1.0  # via sphinx
+structlog==18.2.0
 terminado==0.8.1          # via notebook
 testpath==0.4.2           # via nbconvert
+toml==0.10.0              # via pre-commit
 tornado==5.1.1            # via ipykernel, jupyter-client, notebook, terminado
 traitlets==4.3.2          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
 treelib==1.5.3            # via ety
 ujson==1.35               # via sanic
-urllib3==1.23             # via dulwich, requests
-uvloop==0.11.2            # via sanic
+urllib3==1.24.1           # via dulwich, requests
+uvloop==0.11.3            # via sanic
+virtualenv==16.1.0        # via pre-commit
 wcwidth==0.1.7            # via prompt-toolkit
 webencodings==0.5.1       # via bleach
-websockets==6.0           # via sanic
+websockets==7.0           # via sanic
 werkzeug==0.14.1          # via flask
 whichcraft==0.5.2         # via cookiecutter
 widgetsnbextension==3.4.2  # via ipywidgets

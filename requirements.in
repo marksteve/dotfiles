@@ -1,5 +1,7 @@
+ansible
 arrow
 beautifulsoup4
+colorama
 cookiecutter
 csvdiff
 datasette
@@ -9,8 +11,12 @@ isort
 jupyter
 klaus
 matplotlib
-neovim
+nbstripout
 pandas
+pillow
+pre-commit
+pynvim
 python-language-server[pyflakes,pycodestyle,pydocstyle,mccabe]
 sh
 sphinx
+structlog
