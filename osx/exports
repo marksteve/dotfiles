@@ -43,3 +43,6 @@ export PYENV_ROOT=$HOME/.pyenv
 
 # Qt
 export PATH=/usr/local/opt/qt/bin:$PATH
+
+# Node
+export PATH=/usr/local/opt/node@8/bin:$PATH
