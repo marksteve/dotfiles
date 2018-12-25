@@ -1,0 +1,144 @@
+{
+  "dependencies": {
+    "101": {
+      "version": "1.6.3",
+      "from": "101",
+      "resolved": "https://registry.npmjs.org/101/-/101-1.6.3.tgz"
+    },
+    "@neutrinojs/create-project": {
+      "version": "8.3.0",
+      "from": "@neutrinojs/create-project",
+      "resolved": "https://registry.npmjs.org/@neutrinojs/create-project/-/create-project-8.3.0.tgz"
+    },
+    "@storybook/cli": {
+      "version": "3.4.11",
+      "from": "@storybook/cli",
+      "resolved": "https://registry.npmjs.org/@storybook/cli/-/cli-3.4.11.tgz"
+    },
+    "babel-cli": {
+      "version": "6.26.0",
+      "from": "babel-cli",
+      "resolved": "https://registry.npmjs.org/babel-cli/-/babel-cli-6.26.0.tgz"
+    },
+    "bumped": {
+      "version": "0.10.11",
+      "from": "bumped",
+      "resolved": "https://registry.npmjs.org/bumped/-/bumped-0.10.11.tgz"
+    },
+    "create-react-app": {
+      "version": "2.1.1",
+      "from": "create-react-app@latest",
+      "resolved": "https://registry.npmjs.org/create-react-app/-/create-react-app-2.1.1.tgz"
+    },
+    "firebase-tools": {
+      "version": "5.1.1",
+      "from": "firebase-tools",
+      "resolved": "https://registry.npmjs.org/firebase-tools/-/firebase-tools-5.1.1.tgz"
+    },
+    "fixjson": {
+      "version": "1.1.0",
+      "from": "fixjson",
+      "resolved": "https://registry.npmjs.org/fixjson/-/fixjson-1.1.0.tgz"
+    },
+    "gatsby-cli": {
+      "version": "2.4.3",
+      "from": "gatsby-cli",
+      "resolved": "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-2.4.3.tgz"
+    },
+    "geojson-flatten": {
+      "version": "0.2.2",
+      "from": "geojson-flatten",
+      "resolved": "https://registry.npmjs.org/geojson-flatten/-/geojson-flatten-0.2.2.tgz"
+    },
+    "mermaid.cli": {
+      "version": "0.5.1",
+      "from": "mermaid.cli",
+      "resolved": "https://registry.npmjs.org/mermaid.cli/-/mermaid.cli-0.5.1.tgz"
+    },
+    "ndjson-cli": {
+      "version": "0.3.1",
+      "from": "ndjson-cli",
+      "resolved": "https://registry.npmjs.org/ndjson-cli/-/ndjson-cli-0.3.1.tgz"
+    },
+    "nodemon": {
+      "version": "1.18.4",
+      "from": "nodemon",
+      "resolved": "https://registry.npmjs.org/nodemon/-/nodemon-1.18.4.tgz"
+    },
+    "now": {
+      "version": "12.0.1",
+      "from": "now@latest",
+      "resolved": "https://registry.npmjs.org/now/-/now-12.0.1.tgz"
+    },
+    "npm": {
+      "version": "6.4.1",
+      "from": "npm",
+      "resolved": "https://registry.npmjs.org/npm/-/npm-6.4.1.tgz"
+    },
+    "parcel-bundler": {
+      "version": "1.10.3",
+      "from": "parcel-bundler",
+      "resolved": "https://registry.npmjs.org/parcel-bundler/-/parcel-bundler-1.10.3.tgz"
+    },
+    "pm2": {
+      "version": "3.2.2",
+      "from": "pm2",
+      "resolved": "https://registry.npmjs.org/pm2/-/pm2-3.2.2.tgz"
+    },
+    "powerbi-visuals-tools": {
+      "version": "2.1.1",
+      "from": "powerbi-visuals-tools",
+      "resolved": "https://registry.npmjs.org/powerbi-visuals-tools/-/powerbi-visuals-tools-2.1.1.tgz"
+    },
+    "prettier-standard": {
+      "version": "8.0.1",
+      "from": "prettier-standard",
+      "resolved": "https://registry.npmjs.org/prettier-standard/-/prettier-standard-8.0.1.tgz"
+    },
+    "rollup": {
+      "version": "0.66.6",
+      "from": "rollup",
+      "resolved": "https://registry.npmjs.org/rollup/-/rollup-0.66.6.tgz"
+    },
+    "standard": {
+      "version": "12.0.1",
+      "from": "standard@latest",
+      "resolved": "https://registry.npmjs.org/standard/-/standard-12.0.1.tgz"
+    },
+    "stylelint": {
+      "version": "9.9.0",
+      "from": "stylelint",
+      "resolved": "https://registry.npmjs.org/stylelint/-/stylelint-9.9.0.tgz"
+    },
+    "stylelint-config-recommended-scss": {
+      "version": "3.2.0",
+      "from": "stylelint-config-recommended-scss",
+      "resolved": "https://registry.npmjs.org/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-3.2.0.tgz"
+    },
+    "stylelint-config-standard": {
+      "version": "18.2.0",
+      "from": "stylelint-config-standard",
+      "resolved": "https://registry.npmjs.org/stylelint-config-standard/-/stylelint-config-standard-18.2.0.tgz"
+    },
+    "stylelint-rscss": {
+      "version": "0.4.0",
+      "from": "stylelint-rscss",
+      "resolved": "https://registry.npmjs.org/stylelint-rscss/-/stylelint-rscss-0.4.0.tgz"
+    },
+    "stylelint-scss": {
+      "version": "3.4.3",
+      "from": "stylelint-scss",
+      "resolved": "https://registry.npmjs.org/stylelint-scss/-/stylelint-scss-3.4.3.tgz"
+    },
+    "svgo": {
+      "version": "1.1.1",
+      "from": "svgo",
+      "resolved": "https://registry.npmjs.org/svgo/-/svgo-1.1.1.tgz"
+    },
+    "topojson": {
+      "version": "3.0.2",
+      "from": "topojson",
+      "resolved": "https://registry.npmjs.org/topojson/-/topojson-3.0.2.tgz"
+    }
+  }
+}
