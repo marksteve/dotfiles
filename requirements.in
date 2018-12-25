@@ -7,6 +7,7 @@ csvdiff
 datasette
 ety
 grip
+gunicorn[gevent]
 isort
 jupyter
 klaus
@@ -16,7 +17,9 @@ pandas
 pillow
 pre-commit
 pynvim
-python-language-server[pyflakes,pycodestyle,pydocstyle,mccabe]
+python-language-server[rope,pyflakes,pycodestyle,pydocstyle,mccabe]
+pyls-isort
+pyls-black
 sh
 sphinx
 structlog
