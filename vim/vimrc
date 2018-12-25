@@ -1,38 +1,39 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'
-Plug 'alfredodeza/pytest.vim'
-Plug 'ap/vim-buftabline'
-Plug 'bkad/CamelCaseMotion'
-Plug 'Blackrush/vim-gocode'
-Plug 'danro/rename.vim'
+" Themes
+Plug 'marksteve/base16-tm'
+
+" Syntax
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
-Plug 'fisadev/vim-isort'
 Plug 'groenewege/vim-less'
-Plug 'iandoe/vim-osx-colorpicker'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/vim-peekaboo'
+Plug 'hashivim/vim-terraform'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
-Plug 'marksteve/base16-tm'
-Plug 'mattn/emmet-vim'
-Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'mhinz/vim-sayonara'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mitsuhiko/vim-rst'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'alfredodeza/pytest.vim'
+Plug 'ap/vim-buftabline'
+Plug 'bkad/CamelCaseMotion'
+Plug 'danro/rename.vim'
+Plug 'iandoe/vim-osx-colorpicker'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-peekaboo'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'mhinz/vim-sayonara'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-db'
+Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
@@ -40,11 +41,9 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/py_jump.vim'
 Plug 'w0rp/ale'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
-Plug 'zchee/deoplete-jedi'
 
 let s:uname = system("uname -s")
 if s:uname == "Darwin"
@@ -102,8 +101,6 @@ let mapleader="\<Space>"
 filetype plugin indent on
 
 " Autocomplete
-au FileType python set omnifunc=pythoncomplete#Complete
-au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 au FileType html set omnifunc=htmlcomplete#CompleteTags
 au FileType css set omnifunc=csscomplete#CompleteCSS
 
@@ -134,7 +131,7 @@ au VimResized * exe "normal! \<c-w>="
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
-noremap <Leader><space> :noh<cr>:call clearmatches()<cr>
+noremap <Leader><Space> :noh<CR>:call clearmatches()<CR>
 
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
@@ -209,55 +206,60 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-let g:gocode_gofmt_tabs=' -tabs=true'
+
+" Python
+let g:python_host_prog = '/usr/bin/python2.7'
+let g:python3_host_prog = '/Users/marksteve/.pyenv/shims/python3'
 
 
 " PLUGINS
 
-" ale
-let g:ale_linters = {
-  \ 'javascript': ['standard'],
-  \ 'json': ['fixjson'],
-  \ 'python': ['pyls'],
-  \ }
-let g:ale_fixers = {
-  \ 'javascript': ['standard'],
-  \ 'json': ['fixjson'],
-  \ }
-
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
-" sayonara
-nnoremap <Leader>q :Sayonara<cr>
-nnoremap <Leader>Q :Sayonara!<cr>
+" Sayonara
+nnoremap <Leader>q :Sayonara<CR>
+nnoremap <Leader>Q :Sayonara!<CR>
 
-" vim-osx-colorpicker
+" colorpicker
 let g:colorpicker_app = 'iTerm.app'
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 1
 au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
 let $FZF_DEFAULT_COMMAND = 'pt -g ""'
-noremap <C-p> :Files<cr>
-noremap <Leader>g :GFiles?<cr>
-noremap <Leader>b :Buffers<cr>
+noremap <C-p> :Files<CR>
+noremap <Leader>g :GFiles?<CR>
+noremap <Leader>b :Buffers<CR>
 
 " yankstack
 nmap <Leader>p <Plug>yankstack_substitute_older_paste
 nmap <Leader>P <Plug>yankstack_substitute_newer_paste
 
-" gundo
+" Gundo
 nnoremap <Leader>u :GundoToggle<CR>
 
-" limelight
+" Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_default_coefficient = 0.8
 
-" vim-isort
-let g:vim_isort_python_version = 'python3'
-
+" ALE
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+  \ 'python': ['pyls'],
+  \ 'javascript': ['standard'],
+  \ 'css': ['stylelint'],
+  \ 'sass': ['stylelint'],
+  \ 'scss': ['stylelint'],
+  \ }
+let g:ale_fixers = {
+  \ 'python': ['pyls'],
+  \ 'javascript': ['prettier-standard'],
+  \ 'json': ['fixjson'],
+  \ }
+let g:sass_stylelint_use_global = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
