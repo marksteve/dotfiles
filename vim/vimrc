@@ -242,22 +242,31 @@ let g:limelight_default_coefficient = 0.8
 
 " ALE
 let g:ale_completion_enabled = 1
-let g:ale_open_list = 1
+let g:ale_sign_column_always = 1
+
 let g:ale_linters = {
   \ 'python': ['pyls'],
   \ 'javascript': ['standard'],
   \ 'css': ['stylelint'],
   \ 'sass': ['stylelint'],
   \ 'scss': ['stylelint'],
+  \ 'go': ['golint'],
   \ }
+let g:css_stylelint_use_global = 1
+let g:sass_stylelint_use_global = 1
+let g:scss_stylelint_use_global = 1
+
 let g:ale_fixers = {
-  \ 'python': ['pyls'],
+  \ 'python': ['black', 'isort'],
   \ 'javascript': ['prettier-standard'],
   \ 'json': ['fixjson'],
+  \ 'css': ['prettier'],
+  \ 'sass': ['prettier'],
+  \ 'scss': ['prettier'],
+  \ 'go': ['gofmt', 'goimports'],
   \ }
-let g:sass_stylelint_use_global = 1
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:stylelint_use_global = 1
+let g:javascript_prettier_use_global = 1
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
