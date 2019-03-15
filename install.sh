@@ -50,4 +50,5 @@ install tigrc .tigrc
 install tarsnaprc .tarsnaprc
 install gemrc .gemrc
 install tool-versions .tool-versions
+install pycodestyle .config/pycodestyle
 install gpg-agent.conf .gnupg/gpg-agent.conf
