@@ -23,6 +23,7 @@ Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
 Plug 'iandoe/vim-osx-colorpicker'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -44,14 +45,6 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'w0rp/ale'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
-
-let s:uname = system("uname -s")
-if s:uname == "Darwin"
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
 
 call plug#end()
 
@@ -230,9 +223,7 @@ au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
 let $FZF_DEFAULT_COMMAND = 'pt -g ""'
-noremap <C-p> :Files<CR>
-noremap <Leader>g :GFiles?<CR>
-noremap <Leader>b :Buffers<CR>
+noremap <C-p> :FZF<CR>
 
 " yankstack
 nmap <Leader>p <Plug>yankstack_substitute_older_paste
