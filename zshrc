@@ -49,5 +49,5 @@ eval "$(pyenv virtualenv-init -)"
 # hub
 eval "$(hub alias -s)"
 
-# pm2
-eval "$(pm2 completion)"
+# envchain
+export $(envchain github env)
