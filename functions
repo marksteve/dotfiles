@@ -10,6 +10,15 @@ gencode() {
   pwgen $LEN $COUNT | xargs -n 1 -I % echo $@%
 }
 
+enable-oslogin() {
+  PROJECT=$1
+  INSTANCE=$2
+  gcloud --project $PROJECT \
+    compute instances \
+    add-metadata $INSTANCE \
+    --metadata enable-oslogin=TRUE
+}
+
 tm-repo() {
   git config user.email marksteve@thinkingmachin.es
   git config commit.gpgsign true
