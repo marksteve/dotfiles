@@ -44,6 +44,7 @@ source ~/.iterm2_shell_integration.zsh
 
 # pyenv
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # hub
 eval "$(hub alias -s)"
