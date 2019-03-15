@@ -5,6 +5,16 @@
       "from": "101",
       "resolved": "https://registry.npmjs.org/101/-/101-1.6.3.tgz"
     },
+    "@aws-amplify/cli": {
+      "version": "0.1.41",
+      "from": "@aws-amplify/cli",
+      "resolved": "https://registry.npmjs.org/@aws-amplify/cli/-/cli-0.1.41.tgz"
+    },
+    "@google/clasp": {
+      "version": "2.0.1",
+      "from": "@google/clasp",
+      "resolved": "https://registry.npmjs.org/@google/clasp/-/clasp-2.0.1.tgz"
+    },
     "@neutrinojs/create-project": {
       "version": "8.3.0",
       "from": "@neutrinojs/create-project",
@@ -25,10 +35,25 @@
       "from": "bumped",
       "resolved": "https://registry.npmjs.org/bumped/-/bumped-0.10.11.tgz"
     },
+    "canvas-sketch-cli": {
+      "version": "1.4.3",
+      "from": "canvas-sketch-cli",
+      "resolved": "https://registry.npmjs.org/canvas-sketch-cli/-/canvas-sketch-cli-1.4.3.tgz"
+    },
     "create-react-app": {
-      "version": "2.1.1",
+      "version": "2.1.5",
       "from": "create-react-app@latest",
-      "resolved": "https://registry.npmjs.org/create-react-app/-/create-react-app-2.1.1.tgz"
+      "resolved": "https://registry.npmjs.org/create-react-app/-/create-react-app-2.1.5.tgz"
+    },
+    "documentation": {
+      "version": "9.2.1",
+      "from": "documentation",
+      "resolved": "https://registry.npmjs.org/documentation/-/documentation-9.2.1.tgz"
+    },
+    "eleventy": {
+      "version": "0.2.0",
+      "from": "eleventy",
+      "resolved": "https://registry.npmjs.org/eleventy/-/eleventy-0.2.0.tgz"
     },
     "firebase-tools": {
       "version": "5.1.1",
@@ -49,6 +74,21 @@
       "version": "0.2.2",
       "from": "geojson-flatten",
       "resolved": "https://registry.npmjs.org/geojson-flatten/-/geojson-flatten-0.2.2.tgz"
+    },
+    "jsdoc": {
+      "version": "3.5.5",
+      "from": "jsdoc",
+      "resolved": "https://registry.npmjs.org/jsdoc/-/jsdoc-3.5.5.tgz"
+    },
+    "mapshaper": {
+      "version": "0.4.107",
+      "from": "mapshaper",
+      "resolved": "https://registry.npmjs.org/mapshaper/-/mapshaper-0.4.107.tgz"
+    },
+    "mdx-deck": {
+      "version": "1.8.2",
+      "from": "mdx-deck",
+      "resolved": "https://registry.npmjs.org/mdx-deck/-/mdx-deck-1.8.2.tgz"
     },
     "mermaid.cli": {
       "version": "0.5.1",
@@ -71,9 +111,9 @@
       "resolved": "https://registry.npmjs.org/now/-/now-12.0.1.tgz"
     },
     "npm": {
-      "version": "6.4.1",
+      "version": "6.5.0",
       "from": "npm",
-      "resolved": "https://registry.npmjs.org/npm/-/npm-6.4.1.tgz"
+      "resolved": "https://registry.npmjs.org/npm/-/npm-6.5.0.tgz"
     },
     "parcel-bundler": {
       "version": "1.10.3",
@@ -90,15 +130,20 @@
       "from": "powerbi-visuals-tools",
       "resolved": "https://registry.npmjs.org/powerbi-visuals-tools/-/powerbi-visuals-tools-2.1.1.tgz"
     },
+    "prettier": {
+      "version": "1.15.3",
+      "from": "prettier",
+      "resolved": "https://registry.npmjs.org/prettier/-/prettier-1.15.3.tgz"
+    },
     "prettier-standard": {
       "version": "8.0.1",
       "from": "prettier-standard",
       "resolved": "https://registry.npmjs.org/prettier-standard/-/prettier-standard-8.0.1.tgz"
     },
     "rollup": {
-      "version": "0.66.6",
+      "version": "1.4.1",
       "from": "rollup",
-      "resolved": "https://registry.npmjs.org/rollup/-/rollup-0.66.6.tgz"
+      "resolved": "https://registry.npmjs.org/rollup/-/rollup-1.4.1.tgz"
     },
     "standard": {
       "version": "12.0.1",
@@ -109,6 +154,11 @@
       "version": "9.9.0",
       "from": "stylelint",
       "resolved": "https://registry.npmjs.org/stylelint/-/stylelint-9.9.0.tgz"
+    },
+    "stylelint-config-recommended": {
+      "version": "2.1.0",
+      "from": "stylelint-config-recommended",
+      "resolved": "https://registry.npmjs.org/stylelint-config-recommended/-/stylelint-config-recommended-2.1.0.tgz"
     },
     "stylelint-config-recommended-scss": {
       "version": "3.2.0",
@@ -139,6 +189,16 @@
       "version": "3.0.2",
       "from": "topojson",
       "resolved": "https://registry.npmjs.org/topojson/-/topojson-3.0.2.tgz"
+    },
+    "topojson-server": {
+      "version": "3.0.0",
+      "from": "topojson-server",
+      "resolved": "https://registry.npmjs.org/topojson-server/-/topojson-server-3.0.0.tgz"
+    },
+    "yarn": {
+      "version": "1.13.0",
+      "from": "yarn@latest",
+      "resolved": "https://registry.npmjs.org/yarn/-/yarn-1.13.0.tgz"
     }
   }
 }
