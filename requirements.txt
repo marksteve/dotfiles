@@ -6,141 +6,188 @@
 #
 aiofiles==0.4.0           # via sanic
 alabaster==0.7.12         # via sphinx
-ansible==2.7.5
+ansible==2.7.8
 appdirs==1.4.3            # via black
 appnope==0.1.0            # via ipython
-arrow==0.12.1
+arrow==0.13.1
 asn1crypto==0.24.0        # via cryptography
-aspy.yaml==1.1.1          # via pre-commit
-attrs==18.2.0             # via black
+aspy.yaml==1.2.0          # via pre-commit
+atomicwrites==1.3.0       # via pytest
+attrs==19.1.0             # via automat, black, jsonschema, magic-wormhole, pytest, service-identity, twisted
+autobahn[twisted]==19.2.1  # via magic-wormhole
+automat==0.7.0            # via magic-wormhole, twisted, txtorcon
 babel==2.6.0              # via sphinx
 backcall==0.1.0           # via ipython
-bcrypt==3.1.5             # via paramiko
-beautifulsoup4==4.6.3
+bcrypt==3.1.6             # via paramiko
+beautifulsoup4==4.7.1
 binaryornot==0.4.4        # via cookiecutter
-black==18.9b0             # via pyls-black
-bleach==3.0.2             # via nbconvert
-cached-property==1.5.1    # via pre-commit
+black==18.9b0
+bleach==3.1.0             # via nbconvert, readme-renderer
+cachetools==3.1.0         # via google-auth
 certifi==2018.11.29       # via dulwich, requests
-cffi==1.11.5              # via bcrypt, cryptography, pynacl
-cfgv==1.1.0               # via pre-commit
+cffi==1.12.2              # via bcrypt, cryptography, pynacl
+cfgv==1.5.0               # via pre-commit
 chardet==3.0.4            # via binaryornot, requests
 click-default-group==1.2  # via datasette
-click==6.7                # via black, click-default-group, cookiecutter, csvdiff, datasette, flask
+click==6.7                # via black, click-default-group, cookiecutter, csvdiff, datasette, flask, magic-wormhole, ray
 colorama==0.4.1
-colorful==0.4.4           # via ety
+colorful==0.5.0           # via ety
+constantly==15.1.0        # via twisted
 cookiecutter==1.6.0
-cryptography==2.4.2       # via ansible, paramiko
+cryptography==2.6.1       # via ansible, paramiko, pyopenssl, service-identity
 csvdiff==0.3.3
 cycler==0.10.0            # via matplotlib
-datasette==0.25.2
-decorator==4.3.0          # via ipython, traitlets
+datasette==0.27
+decorator==4.3.2          # via ipython, traitlets
 defusedxml==0.5.0         # via nbconvert
 docopt==0.6.2             # via grip
-docutils==0.14            # via sphinx
-dulwich==0.19.9           # via klaus
-entrypoints==0.2.3        # via nbconvert
+docutils==0.14            # via readme-renderer, sphinx
+dulwich==0.19.11          # via klaus
+entrypoints==0.3          # via keyring, nbconvert
 ety==1.3.1
+filelock==3.0.10          # via ray
 flask==1.0.2              # via grip, klaus
+flatbuffers==1.10         # via ray
+funcsigs==1.0.2           # via ray
 future==0.17.1            # via cookiecutter, python-jsonrpc-server, python-language-server
-gevent==1.3.7             # via gunicorn
+gevent==1.4.0             # via gunicorn
+google-api-core==1.8.0    # via google-cloud-bigquery, google-cloud-core
+google-auth==1.6.3        # via google-api-core
+google-cloud-bigquery==1.10.0
+google-cloud-core==0.29.1  # via google-cloud-bigquery
+google-resumable-media==0.3.2  # via google-cloud-bigquery
+googleapis-common-protos==1.5.8  # via google-api-core
 greenlet==0.4.15          # via gevent, pynvim
 grip==4.5.2
 gunicorn[gevent]==19.9.0
+hkdf==0.0.3               # via magic-wormhole, spake2
 httpauth==0.3             # via klaus
-httptools==0.0.11         # via sanic
-humanize==0.5.1           # via klaus
+httptools==0.0.13         # via sanic
+humanize==0.5.1           # via klaus, magic-wormhole
 hupper==1.0               # via datasette
-identify==1.1.7           # via pre-commit
-idna==2.8                 # via cryptography, requests
+hyperlink==18.0.0         # via twisted
+identify==1.4.0           # via pre-commit
+idna==2.8                 # via hyperlink, requests, twisted
 imagesize==1.1.0          # via sphinx
-importlib-metadata==0.7   # via pre-commit
+importlib-metadata==0.8   # via pre-commit
 importlib-resources==1.0.2  # via pre-commit
+incremental==17.5.0       # via twisted, txtorcon
 ipykernel==5.1.0          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
 ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
-ipython==7.2.0            # via ipykernel, ipywidgets, jupyter-console
+ipython==7.3.0            # via ipykernel, ipywidgets, jupyter-console
 ipywidgets==7.4.2         # via jupyter
-isort==4.3.4
+isort==4.3.12
 itsdangerous==1.1.0       # via flask
-jedi==0.13.2              # via ipython, python-language-server
+jedi==0.13.3              # via ipython, python-language-server
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.10              # via ansible, cookiecutter, datasette, flask, jinja2-time, nbconvert, notebook, sphinx
-jsonschema==2.6.0         # via csvdiff, nbformat
+jsonschema==3.0.1         # via csvdiff, nbformat
 jupyter-client==5.2.4     # via ipykernel, jupyter-console, notebook, qtconsole
 jupyter-console==6.0.0    # via jupyter
 jupyter-core==4.4.0       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
 jupyter==1.0.0
+keyring==18.0.0
 kiwisolver==1.0.1         # via matplotlib
 klaus==1.3.0
+magic-wormhole==0.11.2
 markdown==3.0.1           # via grip
-markupsafe==1.1.0         # via jinja2
-matplotlib==3.0.2
+markupsafe==1.1.1         # via jinja2
+matplotlib==3.0.3
 mccabe==0.6.1             # via python-language-server
 mistune==0.8.4            # via nbconvert
-msgpack==0.6.0            # via pynvim
-nbconvert==5.4.0          # via jupyter, notebook
+modin==0.4.0
+more-itertools==6.0.0     # via pytest
+msgpack==0.6.1            # via pynvim
+nbconvert==5.4.1          # via jupyter, notebook
 nbformat==4.4.0           # via ipywidgets, nbconvert, nbstripout, notebook
 nbstripout==0.3.3
 nodeenv==1.3.3            # via pre-commit
-notebook==5.7.4           # via jupyter, widgetsnbextension
-numpy==1.15.4             # via matplotlib, pandas
-packaging==18.0           # via sphinx
-pandas==0.23.4
+notebook==5.7.5           # via jupyter, widgetsnbextension
+numpy==1.15.0             # via matplotlib, modin, pandas, pyarrow, ray
+packaging==19.0           # via sphinx
+pandas==0.24.1
 pandocfilters==1.4.2      # via nbconvert
 paramiko==2.4.2           # via ansible
-parso==0.3.1              # via jedi
+parso==0.3.4              # via jedi
 path-and-address==2.0.1   # via grip
 pexpect==4.6.0            # via ipython
 pickleshare==0.7.5        # via ipython
-pillow==5.3.0
+pillow==5.4.1
 pint==0.8.1               # via datasette
-pluggy==0.8.0             # via datasette, python-language-server
+pkginfo==1.5.0.1          # via twine
+pluggy==0.9.0             # via datasette, pytest, python-language-server
 poyo==0.4.2               # via cookiecutter
-pre-commit==1.13.0
-prometheus-client==0.5.0  # via notebook
-prompt-toolkit==2.0.7     # via ipython, jupyter-console
+pre-commit==1.14.4
+prometheus-client==0.6.0  # via notebook
+prompt-toolkit==2.0.9     # via ipython, jupyter-console
+protobuf==3.7.0           # via google-api-core, googleapis-common-protos
 ptyprocess==0.6.0         # via pexpect, terminado
-pyasn1==0.4.4             # via paramiko
-pycodestyle==2.4.0        # via python-language-server
+py==1.8.0                 # via pytest
+pyarrow==0.12.1
+pyasn1-modules==0.2.4     # via google-auth, service-identity
+pyasn1==0.4.5             # via paramiko, pyasn1-modules, rsa, service-identity
+pycodestyle==2.5.0        # via python-language-server
 pycparser==2.19           # via cffi
 pydocstyle==3.0.0         # via python-language-server
-pyflakes==2.0.0           # via python-language-server
-pygments==2.3.1           # via grip, ipython, jupyter-console, klaus, nbconvert, qtconsole, sphinx
-pyls-black==0.3.0
-pyls-isort==0.1.1
-pynacl==1.3.0             # via paramiko
-pynvim==0.3.1
-pyparsing==2.3.0          # via matplotlib, packaging
-python-dateutil==2.7.5    # via arrow, jupyter-client, matplotlib, pandas
-python-jsonrpc-server==0.0.2  # via python-language-server
-python-language-server[mccabe,pycodestyle,pydocstyle,pyflakes,rope]==0.21.4
-pytz==2018.7              # via babel, pandas
-pyyaml==3.13              # via ansible, aspy.yaml, pre-commit
-pyzmq==17.1.2             # via jupyter-client, notebook
+pyflakes==2.1.1           # via python-language-server
+pygments==2.3.1           # via grip, ipython, jupyter-console, klaus, nbconvert, qtconsole, readme-renderer, sphinx
+pyhamcrest==1.9.0         # via twisted
+pynacl==1.3.0             # via magic-wormhole, paramiko
+pynvim==0.3.2
+pyopenssl==19.0.0         # via twisted
+pyparsing==2.3.1          # via matplotlib, packaging
+pyrsistent==0.14.11       # via jsonschema
+pysocks==1.6.8            # via requests
+pytest==4.3.0             # via ray
+python-dateutil==2.8.0    # via arrow, jupyter-client, matplotlib, pandas
+python-jsonrpc-server==0.1.2  # via python-language-server
+python-language-server[mccabe,pycodestyle,pydocstyle,pyflakes,rope]==0.24.0
+pytz==2018.9              # via babel, google-api-core, pandas
+pyyaml==3.13              # via ansible, aspy.yaml, pre-commit, ray
+pyzmq==18.0.1             # via jupyter-client, notebook
 qtconsole==4.4.3          # via jupyter
-requests==2.21.0          # via cookiecutter, grip, sphinx
-rope==0.11.0              # via python-language-server
+ray==0.6.2                # via modin
+readme-renderer==24.0     # via twine
+redis==3.2.0              # via ray
+requests-toolbelt==0.9.1  # via twine
+requests[socks]==2.21.0
+rope==0.12.0              # via python-language-server
+rsa==4.0                  # via google-auth
 sanic==0.7.0              # via datasette
 send2trash==1.5.0         # via notebook
+service-identity==18.1.0  # via twisted
 sh==1.12.14
-six==1.12.0               # via bcrypt, bleach, cfgv, cryptography, csvdiff, cycler, ety, klaus, packaging, pre-commit, prompt-toolkit, pydocstyle, pynacl, python-dateutil, sphinx, structlog, traitlets
+six==1.12.0               # via autobahn, automat, bcrypt, bleach, cfgv, cryptography, csvdiff, cycler, ety, google-api-core, google-auth, google-resumable-media, jsonschema, klaus, magic-wormhole, packaging, pre-commit, prompt-toolkit, protobuf, pyarrow, pydocstyle, pyhamcrest, pynacl, pyopenssl, pyrsistent, pytest, python-dateutil, ray, readme-renderer, sphinx, structlog, traitlets, txaio
 snowballstemmer==1.2.1    # via pydocstyle, sphinx
-sphinx==1.8.2
+soupsieve==1.8            # via beautifulsoup4
+spake2==0.8               # via magic-wormhole
+sphinx==1.8.4
 sphinxcontrib-websupport==1.1.0  # via sphinx
-structlog==18.2.0
+structlog==19.1.0
 terminado==0.8.1          # via notebook
 testpath==0.4.2           # via nbconvert
-toml==0.10.0              # via black, pre-commit, pyls-black
-tornado==5.1.1            # via ipykernel, jupyter-client, notebook, terminado
+toml==0.10.0              # via black, pre-commit
+tornado==6.0.1            # via ipykernel, jupyter-client, notebook, terminado
+tqdm==4.31.1              # via magic-wormhole, twine
 traitlets==4.3.2          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
 treelib==1.5.3            # via ety
+twine==1.13.0
+twisted[tls]==18.9.0      # via autobahn, magic-wormhole, txtorcon
+txaio==18.8.1             # via autobahn
+txtorcon==19.0.0          # via magic-wormhole
+typing==3.6.6             # via modin
 ujson==1.35               # via sanic
 urllib3==1.24.1           # via dulwich, requests
-uvloop==0.11.3            # via sanic
-virtualenv==16.1.0        # via pre-commit
+uvloop==0.12.1            # via sanic
+virtualenv==16.4.3        # via pre-commit
 wcwidth==0.1.7            # via prompt-toolkit
 webencodings==0.5.1       # via bleach
 websockets==7.0           # via sanic
 werkzeug==0.14.1          # via flask
+wheel==0.33.1
 whichcraft==0.5.2         # via cookiecutter
 widgetsnbextension==3.4.2  # via ipywidgets
+xlrd==1.2.0
+yapf==0.26.0
+zipp==0.3.3               # via importlib-metadata
+zope.interface==4.6.0     # via autobahn, twisted, txtorcon
