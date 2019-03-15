@@ -9,3 +9,8 @@ gencode() {
   shift
   pwgen $LEN $COUNT | xargs -n 1 -I % echo $@%
 }
+
+tm-repo() {
+  git config user.email marksteve@thinkingmachin.es
+  git config commit.gpgsign true
+}
