@@ -71,10 +71,10 @@ set encoding=utf-8
 set fileformats=unix,dos,mac
 
 " Whitespace stuff
-set textwidth=80
+set textwidth=88
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
 set formatoptions+=l
-au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1) " Column Marker
+au BufWinEnter * call matchadd('ErrorMsg', '\%>88v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " Tab completion
