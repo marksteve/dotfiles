@@ -51,3 +51,4 @@ eval "$(hub alias -s)"
 
 # envchain
 export $(envchain github env)
+export $(envchain twine env)
