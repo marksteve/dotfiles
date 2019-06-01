@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'marksteve/base16-tm'
 
 " Syntax
+Plug 'dart-lang/dart-vim-plugin'
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
 Plug 'groenewege/vim-less'
@@ -33,6 +34,7 @@ Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'sjl/gundo.vim'
+Plug 'thosakwe/vim-flutter'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
@@ -270,3 +272,9 @@ let g:javascript_prettier_use_global = 1
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
+
+" vim-flutter
+nnoremap <Leader>fa :FlutterRun<CR>
+nnoremap <Leader>fq :FlutterQuit<CR>
+nnoremap <Leader>fr :FlutterHotReload<CR>
+nnoremap <Leader>fR :FlutterHotRestart<CR>

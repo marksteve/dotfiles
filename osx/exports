@@ -25,12 +25,10 @@ export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 # Android SDK
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=/Volumes/Seagate/Android/sdk
 
 # Flutter
-export PATH=$PATH:/usr/local/flutter/bin
+export PATH=$PATH:$HOME/.local/flutter/bin
 
 # GDAL
 export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
