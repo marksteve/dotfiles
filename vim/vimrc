@@ -25,6 +25,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -229,6 +230,10 @@ au FileType ruby let b:deoplete_disable_auto_complete = 1
 " fzf
 let $FZF_DEFAULT_COMMAND = 'pt -g ""'
 noremap <C-p> :FZF<CR>
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+nmap <Leader>b :Buffers<CR>
 
 " yankstack
 nmap <Leader>p <Plug>yankstack_substitute_older_paste
