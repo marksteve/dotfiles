@@ -1,0 +1,4 @@
+#!/bin/bash
+op list items --include-trash > items-list.json
+cat items-list.json | jq -r '.[].uuid' | parallel -j 10 op get item --include-trash | jq -s . > items.json
+
