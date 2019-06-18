@@ -1,8 +1,10 @@
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # asdf
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
+if [ -d $HOME/.asdf ]; then
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+fi
 
 # imports
 for F in exports aliases functions; do
@@ -34,21 +36,27 @@ if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
 fi
 
 # direnv
-eval "$(direnv hook zsh)"
+command -v direnv 2>/dev/null && eval "$(direnv hook zsh)"
 
 # fasd
-eval "$(fasd --init auto)"
+command -v fasd 2>/dev/null && eval "$(fasd --init auto)"
 
 # iterm2
-source ~/.iterm2_shell_integration.zsh
+[ -f $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
 
 # pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if command -v pyenv 2>/dev/null; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 # hub
-eval "$(hub alias -s)"
+command -v hub 2>/dev/null && eval "$(hub alias -s)"
 
 # envchain
-export $(envchain github env)
-export $(envchain twine env)
+if command -v envchain 2>/dev/null; then
+  export $(envchain github env)
+  export $(envchain twine env)
+fi
+
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
