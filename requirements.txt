@@ -133,7 +133,6 @@ pyflakes==2.1.1           # via python-language-server
 pygments==2.3.1           # via grip, ipython, jupyter-console, klaus, nbconvert, qtconsole, readme-renderer, sphinx
 pyhamcrest==1.9.0         # via twisted
 pynacl==1.3.0             # via magic-wormhole, paramiko
-pynvim==0.3.2
 pyopenssl==19.0.0         # via twisted
 pyparsing==2.3.1          # via matplotlib, packaging
 pyrsistent==0.14.11       # via jsonschema

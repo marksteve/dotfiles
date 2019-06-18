@@ -33,7 +33,6 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
-Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'sjl/gundo.vim'
 Plug 'thosakwe/vim-flutter'
 Plug 'tpope/vim-commentary'
@@ -183,6 +182,11 @@ let macvim_hig_shift_movement=1
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 map <tab> %
+
+" copy to the system clipboard
+if has("clipboard")
+  set clipboard=unnamed
+endif
 
 
 " FILETYPES

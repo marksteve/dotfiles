@@ -22,7 +22,6 @@ pandas
 pillow
 pre-commit
 pyarrow
-pynvim
 python-language-server[rope,pyflakes,pycodestyle,pydocstyle,mccabe]
 requests[socks]
 sh
