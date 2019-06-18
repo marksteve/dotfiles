@@ -1,5 +1,6 @@
 ansible
 arrow
+awscli
 beautifulsoup4
 black
 colorama
@@ -19,6 +20,7 @@ matplotlib
 modin
 nbstripout
 pandas
+pandas-gbq
 pillow
 pre-commit
 pyarrow
@@ -26,6 +28,7 @@ python-language-server[rope,pyflakes,pycodestyle,pydocstyle,mccabe]
 requests[socks]
 sh
 sphinx
+sshuttle
 structlog
 twine
 wheel
