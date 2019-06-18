@@ -36,25 +36,25 @@ if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
 fi
 
 # direnv
-command -v direnv 2>/dev/null && eval "$(direnv hook zsh)"
+command -v direnv >/dev/null && eval "$(direnv hook zsh)"
 
 # fasd
-command -v fasd 2>/dev/null && eval "$(fasd --init auto)"
+command -v fasd >/dev/null && eval "$(fasd --init auto)"
 
 # iterm2
 [ -f $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
 
 # pyenv
-if command -v pyenv 2>/dev/null; then
+if command -v pyenv >/dev/null; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
 
 # hub
-command -v hub 2>/dev/null && eval "$(hub alias -s)"
+command -v hub >/dev/null && eval "$(hub alias -s)"
 
 # envchain
-if command -v envchain 2>/dev/null; then
+if command -v envchain >/dev/null; then
   export $(envchain github env)
   export $(envchain twine env)
 fi
