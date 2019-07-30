@@ -59,4 +59,9 @@ if command -v envchain >/dev/null; then
   export $(envchain twine env)
 fi
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+# gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+  eval $(gnome-keyring-daemon --start)
+  export SSH_AUTH_SOCK
+fi
+
