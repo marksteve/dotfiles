@@ -231,7 +231,7 @@ let g:deoplete#enable_at_startup = 1
 au FileType ruby let b:deoplete_disable_auto_complete = 1
 
 " fzf
-let $FZF_DEFAULT_COMMAND = 'pt -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob="!.git/*"'
 noremap <C-p> :FZF<CR>
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
