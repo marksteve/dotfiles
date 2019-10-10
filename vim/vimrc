@@ -7,9 +7,12 @@ Plug 'marksteve/base16-tm'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'digitaltoad/vim-pug'
 Plug 'elixir-lang/vim-elixir'
+Plug 'evanleck/vim-svelte'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'groenewege/vim-less'
+Plug 'guns/vim-clojure-static'
 Plug 'hashivim/vim-terraform'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'lepture/vim-jinja'
@@ -18,6 +21,7 @@ Plug 'mitsuhiko/vim-rst'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+Plug 'StanAngeloff/php.vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/pytest.vim'
@@ -62,7 +66,6 @@ set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
 
 " Default color scheme
-set termguicolors
 set background=dark
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
@@ -183,9 +186,9 @@ runtime! macros/matchit.vim
 map <tab> %
 
 " copy to the system clipboard
-if has("clipboard")
-  set clipboard=unnamed
-endif
+" if has("clipboard")
+"   set clipboard=unnamed
+" endif
 
 
 " FILETYPES
@@ -212,6 +215,16 @@ let g:python3_host_prog = '/Users/marksteve/.pyenv/shims/python3'
 
 " JavaScript
 let g:javascript_plugin_jsdoc = 1
+
+" Clojure
+let g:clojure_align_multiline_strings = 1
+let g:clojure_align_subforms = 1
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+let g:rainbow#blacklist = [15, 7, 8]
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType clojure RainbowParentheses
+augroup END
 
 
 " PLUGINS
@@ -260,6 +273,7 @@ let g:ale_linters = {
   \ 'sass': ['stylelint'],
   \ 'scss': ['stylelint'],
   \ 'go': ['golint'],
+  \ 'svelte': ['prettier'],
   \ }
 let g:ale_fixers = {
   \ 'python': ['black', 'isort'],
@@ -269,6 +283,7 @@ let g:ale_fixers = {
   \ 'sass': ['prettier'],
   \ 'scss': ['prettier'],
   \ 'go': ['gofmt', 'goimports'],
+  \ 'svelte': ['prettier'],
   \ }
 let g:css_stylelint_use_global = 1
 let g:sass_stylelint_use_global = 1
@@ -289,3 +304,4 @@ nnoremap <Leader>fR :FlutterHotRestart<CR>
 " vim-go
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+
