@@ -55,8 +55,7 @@ command -v hub >/dev/null && eval "$(hub alias -s)"
 
 # envchain
 if command -v envchain >/dev/null; then
-  export $(envchain github env)
-  export $(envchain twine env)
+  export $(envchain github env | grep GITHUB_TOKEN)
 fi
 
 # gnome-keyring
