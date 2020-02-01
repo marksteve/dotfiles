@@ -1,10 +1,10 @@
 ### Recommended options
 
 # Tarsnap cache directory
-cachedir /usr/local/tarsnap-cache
+cachedir /home/marksteve/.cache/tarsnap
 
 # Tarsnap key file
-keyfile /Users/marksteve/.secrets/tarsnap/knife-kun.key
+keyfile /home/marksteve/.secrets/tarsnap/knife-kun.key
 
 # Don't archive files which have the nodump flag set
 nodump
