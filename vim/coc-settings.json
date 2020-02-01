@@ -1,0 +1,7 @@
+{
+  "python.formatting.provider": "black",
+  "javascript.format.enabled": false,
+  "typescript.format.enabled": false,
+  "tslint.jsEnable": true,
+  "prettier.tslintIntegration": true
+}

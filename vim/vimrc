@@ -23,20 +23,20 @@ Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'StanAngeloff/php.vim'
 
+" Plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
-Plug 'ervandew/supertab'
 Plug 'iandoe/vim-osx-colorpicker'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
-Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'sjl/gundo.vim'
@@ -50,10 +50,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
-Plug 'w0rp/ale'
 Plug 'wincent/ferret'
 Plug 'wincent/terminus'
-
 call plug#end()
 
 
@@ -86,6 +84,7 @@ au BufWinEnter * call matchadd('ErrorMsg', '\%>88v.\+', -1) " Column Marker
 au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace
 
 " Tab completion
+let g:SuperTabDefaultCompletionType = "context"
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Use modeline overrides
@@ -239,10 +238,6 @@ nnoremap <Leader>Q :Sayonara!<CR>
 " colorpicker
 let g:colorpicker_app = 'iTerm.app'
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-au FileType ruby let b:deoplete_disable_auto_complete = 1
-
 " fzf
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob="!.git/*"'
 noremap <C-p> :FZF<CR>
@@ -251,10 +246,6 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 nmap <Leader>b :Buffers<CR>
 
-" yankstack
-nmap <Leader>p <Plug>yankstack_substitute_older_paste
-nmap <Leader>P <Plug>yankstack_substitute_newer_paste
-
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
 
@@ -262,35 +253,6 @@ nnoremap <Leader>u :GundoToggle<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_default_coefficient = 0.8
-
-" ALE
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-  \ 'python': ['pyls'],
-  \ 'javascript': ['standard'],
-  \ 'css': ['stylelint'],
-  \ 'sass': ['stylelint'],
-  \ 'scss': ['stylelint'],
-  \ 'go': ['golint'],
-  \ 'svelte': ['prettier'],
-  \ }
-let g:ale_fixers = {
-  \ 'python': ['black', 'isort'],
-  \ 'javascript': ['prettier-standard'],
-  \ 'json': ['fixjson'],
-  \ 'css': ['prettier'],
-  \ 'sass': ['prettier'],
-  \ 'scss': ['prettier'],
-  \ 'go': ['gofmt', 'goimports'],
-  \ 'svelte': ['prettier'],
-  \ }
-let g:css_stylelint_use_global = 1
-let g:sass_stylelint_use_global = 1
-let g:scss_stylelint_use_global = 1
-let g:stylelint_use_global = 1
-let g:javascript_prettier_use_global = 1
-nnoremap <Leader>f :ALEFix<CR>
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
@@ -305,3 +267,54 @@ nnoremap <Leader>fR :FlutterHotRestart<CR>
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+" coc.nvim
+
+" Better display for messages
+set cmdheight=2
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>ff  <Plug>(coc-format)
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" Remap for CocCommand
+nmap <leader>c :CocCommand<cr>
+
+" coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
