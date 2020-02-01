@@ -7,4 +7,4 @@ python: requirements.txt
 	pip-sync --user
 
 requirements.txt: requirements.in
-	pip-compile requirements.in > requirements.txt
+	pip-compile --no-index requirements.in > requirements.txt
