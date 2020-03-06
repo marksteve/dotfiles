@@ -1,11 +1,14 @@
 awscli
 black
 boto
+diagrams
+fastparquet
 grip
 isort
 jupyter
 kapitan
 keyring
+pandas
 pre-commit
 pylint
 tmuxp

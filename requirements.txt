@@ -5,74 +5,83 @@
 #    pip-compile --no-index requirements.in
 #
 addict==2.2.1             # via kapitan
-appdirs==1.4.3            # via black
+appdirs==1.4.3            # via black, virtualenv
 aspy.yaml==1.3.0          # via pre-commit
 astroid==2.3.3            # via pylint
 attrs==19.3.0             # via black, jsonschema
-awscli==1.17.9
+awscli==1.18.0
 backcall==0.1.0           # via ipython
 black==19.10b0
 bleach==3.1.0             # via nbconvert, readme-renderer
-boto3==1.11.9             # via kapitan
+boto3==1.12.0             # via kapitan
 boto==2.49.0
-botocore==1.14.9          # via awscli, boto3, s3transfer
+botocore==1.15.0          # via awscli, boto3, s3transfer
 cachetools==4.0.0         # via google-auth
 certifi==2019.11.28       # via requests
-cffi==1.13.2              # via cryptography, kapitan
-cfgv==2.0.1               # via pre-commit
+cffi==1.14.0              # via cryptography, kapitan
+cfgv==3.0.0               # via pre-commit
 chardet==3.0.4            # via requests
 click==7.0                # via black, flask, tmuxp
-colorama==0.4.1           # via awscli, tmuxp
+colorama==0.4.3           # via awscli, tmuxp
 cryptography==2.8         # via kapitan, secretstorage
 decorator==4.4.1          # via ipython, traitlets
 defusedxml==0.6.0         # via nbconvert
+diagrams==0.3.0
+distlib==0.3.0            # via virtualenv
 docker==4.1.0             # via kapitan
 docopt==0.6.2             # via grip
 docutils==0.15.2          # via awscli, botocore, readme-renderer
 entrypoints==0.3          # via nbconvert
+fastparquet==0.3.3
+filelock==3.0.12          # via virtualenv
 flask==1.1.1              # via grip
-gitdb2==2.0.6             # via gitpython
+gitdb2==3.0.0             # via gitpython
 gitpython==3.0.5          # via kapitan
 google-api-python-client==1.7.11  # via kapitan
 google-auth-httplib2==0.0.3  # via google-api-python-client
-google-auth==1.11.0       # via google-api-python-client, google-auth-httplib2
+google-auth==1.11.2       # via google-api-python-client, google-auth-httplib2
+graphviz==0.13.2          # via diagrams
 grip==4.5.2
 httplib2==0.17.0          # via google-api-python-client, google-auth-httplib2
 hvac==0.9.6               # via kapitan
 identify==1.4.11          # via pre-commit
 idna==2.8                 # via requests
-importlib-metadata==1.5.0  # via jsonschema, keyring, pre-commit, twine
+importlib-metadata==1.5.0  # via jsonschema, keyring, pre-commit, twine, virtualenv
 ipykernel==5.1.4          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
 ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
-ipython==7.11.1           # via ipykernel, ipywidgets, jupyter-console
+ipython==7.12.0           # via ipykernel, ipywidgets, jupyter-console
 ipywidgets==7.5.1         # via jupyter
 isort==4.3.21
 itsdangerous==1.1.0       # via flask
 jedi==0.16.0              # via ipython
 jeepney==0.4.2            # via keyring, secretstorage
-jinja2==2.11.1            # via flask, kapitan, nbconvert, notebook
+jinja2==2.11.1            # via diagrams, flask, kapitan, nbconvert, notebook
 jmespath==0.9.4           # via boto3, botocore
 jsonnet==0.14.0           # via kapitan
 jsonschema==3.2.0         # via kapitan, nbformat
 jupyter-client==5.3.4     # via ipykernel, jupyter-console, notebook, qtconsole
 jupyter-console==6.1.0    # via jupyter
-jupyter-core==4.6.1       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
+jupyter-core==4.6.2       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
 jupyter==1.0.0
 kapitan==0.26.1
 kaptan==0.5.12            # via tmuxp
 keyring==21.1.0
 lazy-object-proxy==1.4.3  # via astroid
 libtmux==0.8.2            # via tmuxp
-markdown==3.1.1           # via grip
+llvmlite==0.31.0          # via numba
+markdown==3.2.1           # via grip
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via pylint
 mistune==0.8.4            # via nbconvert
 nbconvert==5.6.1          # via jupyter, notebook
 nbformat==5.0.4           # via ipywidgets, nbconvert, notebook
-nodeenv==1.3.4            # via pre-commit
+nodeenv==1.3.5            # via pre-commit
 notebook==6.0.3           # via jupyter, widgetsnbextension
+numba==0.48.0             # via fastparquet
+numpy==1.18.1             # via fastparquet, numba, pandas
+pandas==1.0.1
 pandocfilters==1.4.2      # via nbconvert
-parso==0.6.0              # via jedi
+parso==0.6.1              # via jedi
 path-and-address==2.0.1   # via grip
 pathspec==0.7.0           # via black, yamllint
 pexpect==4.8.0            # via ipython
@@ -89,8 +98,9 @@ pygments==2.5.2           # via grip, ipython, jupyter-console, nbconvert, qtcon
 pylint==2.4.4
 pyparsing==2.4.6          # via kapitan
 pyrsistent==0.15.7        # via jsonschema
-python-dateutil==2.8.1    # via botocore, jupyter-client
+python-dateutil==2.8.1    # via botocore, jupyter-client, pandas
 python-gnupg==0.4.5       # via kapitan
+pytz==2019.3              # via pandas
 pyyaml==5.2               # via aspy.yaml, awscli, kapitan, kaptan, pre-commit, yamllint
 pyzmq==18.1.1             # via jupyter-client, notebook
 qtconsole==4.6.0          # via jupyter
@@ -100,32 +110,33 @@ requests-toolbelt==0.9.1  # via twine
 requests==2.22.0          # via docker, grip, hvac, kapitan, requests-toolbelt, twine
 rfc3987==1.3.8            # via kapitan
 rsa==3.4.2                # via awscli, google-auth
-s3transfer==0.3.2         # via awscli, boto3
+s3transfer==0.3.3         # via awscli, boto3
 secretstorage==3.1.2      # via keyring
 send2trash==1.5.0         # via notebook
-six==1.14.0               # via astroid, bleach, cfgv, cryptography, docker, google-api-python-client, google-auth, hvac, jsonschema, kapitan, pyrsistent, python-dateutil, readme-renderer, traitlets, websocket-client
+six==1.14.0               # via astroid, bleach, cryptography, docker, fastparquet, google-api-python-client, google-auth, hvac, jsonschema, kapitan, pyrsistent, python-dateutil, readme-renderer, thrift, traitlets, virtualenv, websocket-client
 smmap2==2.0.5             # via gitdb2
 terminado==0.8.3          # via notebook
 testpath==0.4.4           # via nbconvert
+thrift==0.13.0            # via fastparquet
 tmuxp==1.5.4
 toml==0.10.0              # via black, pre-commit
 tornado==6.0.3            # via ipykernel, jupyter-client, notebook, terminado
-tqdm==4.42.0              # via twine
+tqdm==4.42.1              # via twine
 traitlets==4.3.3          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
 twine==3.1.1
 typed-ast==1.4.1          # via astroid, black
 uritemplate==3.0.1        # via google-api-python-client
 urllib3==1.25.8           # via botocore, requests
-virtualenv==16.7.9        # via pre-commit
+virtualenv==20.0.4        # via pre-commit
 wcwidth==0.1.8            # via prompt-toolkit
 webencodings==0.5.1       # via bleach
 websocket-client==0.57.0  # via docker
-werkzeug==0.16.1          # via flask
+werkzeug==1.0.0           # via flask
 wheel==0.34.2
 widgetsnbextension==3.5.1  # via ipywidgets
 wrapt==1.11.2             # via astroid
 yamllint==1.20.0          # via kapitan
-zipp==2.1.0               # via importlib-metadata
+zipp==2.2.0               # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==45.1.0        # via google-auth, ipython, jsonschema, markdown, twine
+# setuptools==45.2.0        # via google-auth, ipython, jsonschema, markdown, numba, twine
