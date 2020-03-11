@@ -13,7 +13,6 @@
 	helper = osxkeychain
 [core]
 	excludesFile = /Users/marksteve/.gitignore
-	editor = env VIM_MINIMAL=1 nvim
 [merge]
 	tool = smerge
 [mergetool "nvim"]
