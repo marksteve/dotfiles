@@ -10,13 +10,11 @@
 	pull = pull --ff-only
 	l = log --oneline --graph
 [credential]
-	helper = osxkeychain
+	helper = cache
 [core]
-	excludesFile = /Users/marksteve/.gitignore
+	excludesFile = /home/marksteve/.gitignore
 [merge]
 	tool = smerge
-[mergetool "nvim"]
-	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [diff]
 	tool = icdiff
 [difftool]
