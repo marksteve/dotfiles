@@ -9,5 +9,7 @@ alias v="f -e vim"
 alias mount-secrets="gocryptfs ~/.secrets.enc ~/.secrets"
 alias unmount-secrets="fusermount -u ~/.secrets"
 
+alias mount-notes="utahfs-client -cfg ~/.secrets/utahfs.yaml -mount ~/Notes 2>&1 &"
+
 alias av="source venv/bin/activate"
 alias da="direnv allow"
