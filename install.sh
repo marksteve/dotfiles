@@ -23,6 +23,7 @@ else
   OS='osx'
 fi
 
+# Shell config
 install $OS/exports .exports
 install aliases .aliases
 install functions .functions
@@ -30,6 +31,7 @@ install zshrc .zshrc
 install zpreztorc .zpreztorc
 install dircolors .dircolors
 
+# Local bins
 mkdir -p $HOME/.local/bin
 for file in `pwd`/localbin/*
 do
@@ -38,10 +40,21 @@ do
   fi
 done
 
+# Systemd units
+mkdir -p $HOME/.config/systemd/user
+for file in `pwd`/systemd/*
+do
+  if [[ -x $file ]]; then
+    install systemd/$(basename $file) .config/systemd/user/$(basename $file)
+  fi
+done
+
+# Vim config
 install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
 
+# Misc
 install tmux.conf .tmux.conf
 install ackrc .ackrc
 install gitconfig .gitconfig
