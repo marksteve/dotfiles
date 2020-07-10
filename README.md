@@ -34,3 +34,10 @@ git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 ./install.sh
 ```
+
+## Python
+
+```
+pip3 install --user pipx
+cat requirements.in | xargs -I '{}' pipx install {}
+```
