@@ -241,11 +241,6 @@ nmap <Leader>b :Buffers<CR>
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
 
-" Limelight
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-let g:limelight_default_coefficient = 0.8
-
 " vim-terraform
 let g:terraform_fmt_on_save = 1
 
