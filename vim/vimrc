@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-" Themes
-Plug 'marksteve/base16-tm'
+" Theme
+Plug 'ntk148v/vim-horizon'
 
 " Language-specific
 Plug 'alfredodeza/pytest.vim'
@@ -54,18 +54,15 @@ call plug#end()
 
 " SETTINGS
 
+set termguicolors
+
+colorscheme horizon
+
 set nocompatible
 
 set noerrorbells
 set novisualbell
 set gcr=a:blinkon0 " Disable blinking cursor
-
-" Default color scheme
-set background=dark
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
 
 " Set encoding
 set encoding=utf-8
