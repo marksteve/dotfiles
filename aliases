@@ -11,3 +11,4 @@ alias unmount-secrets="fusermount -u ~/.secrets"
 
 alias av="source venv/bin/activate"
 alias da="direnv allow"
+alias tf="terraform"
