@@ -178,10 +178,8 @@ nnoremap <C-l> <C-w>l
 runtime! macros/matchit.vim
 map <tab> %
 
-" copy to the system clipboard
-" if has("clipboard")
-"   set clipboard=unnamed
-" endif
+" Use system clipboard
+set clipboard=unnamedplus
 
 
 " FILETYPES
