@@ -65,3 +65,4 @@ install gemrc .gemrc
 install tool-versions .tool-versions
 install pycodestyle .config/pycodestyle
 install gpg-agent.conf .gnupg/gpg-agent.conf
+install code/settings.json .config/Code/User/settings.json

@@ -1,0 +1,17 @@
+{
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "sleistner.vscode-fileutils",
+      "eamodio.gitlens",
+      "hashicorp.terraform",
+      "wholroyd.hcl",
+      "olaleye.horizon-theme-vscode",
+      "esbenp.prettier-vscode",
+      "ms-python.python",
+      "danielhuth.styco",
+      "allenmax.styled-components-extractor",
+      "vscodevim.vim"
+    ]
+  }
+}
