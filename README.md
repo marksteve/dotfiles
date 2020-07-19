@@ -27,6 +27,11 @@
     sudo snap install fasd --beta
     ```
 
+- [tpm](https://github.com/tmux-plugins/tpm)
+    ```
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+
 ## Install
 
 ```sh
