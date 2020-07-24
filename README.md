@@ -79,3 +79,10 @@ Use `wsl genie -s` in your terminal emulator
 
 Instructions taken from https://kumekay.com/wsl2-and-systemd/
 
+## Secrets
+
+```
+ln -s .secrets/ssh .ssh
+ln -s .secrets/envrc .envrc
+```
+
