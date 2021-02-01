@@ -32,6 +32,8 @@
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
 
+    Run tmux and press `Ctrl + a, I` to install plugins.
+
 ## Install
 
 ```sh
