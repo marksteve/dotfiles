@@ -20,11 +20,11 @@ install () {
 if [[ `uname` == 'Linux' ]]; then
   OS='linux'
 else
-  OS='osx'
+  OS='macos'
 fi
 
 # Shell config
-install $OS/exports .exports
+install os/$OS/exports .exports
 install aliases .aliases
 install functions .functions
 install zshrc .zshrc
@@ -64,4 +64,4 @@ install tarsnaprc .tarsnaprc
 install gemrc .gemrc
 install tool-versions .tool-versions
 install pycodestyle .config/pycodestyle
-install gpg-agent.conf .gnupg/gpg-agent.conf
+install os/$OS/gpg-agent.conf .gnupg/gpg-agent.conf

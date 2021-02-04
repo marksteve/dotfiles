@@ -12,9 +12,6 @@ for F in exports aliases functions; do
   [ -e "$F" ] && source $F
 done
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
@@ -59,9 +56,6 @@ if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
   export SSH_AUTH_SOCK
 fi
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

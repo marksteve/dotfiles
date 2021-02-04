@@ -1,13 +1,11 @@
 alias ..="cd .."
-alias ls="ls -G --color=always"
-alias l="ls -lah --color=always"
 
 alias python-makefile="curl -sL https://gist.github.com/marksteve/a9ecdbaa2ddff1f6eab23dce75b55a6c/raw/8b43e34192554d8d5d900170fc2e6730fc48ac5f/Makefile > Makefile"
 alias groot="cd $(git rev-parse --show-toplevel)"
 alias v="f -e vim"
 
 alias mount-secrets="gocryptfs ~/Sync/.secrets.enc ~/.secrets"
-alias unmount-secrets="fusermount -u ~/.secrets"
+alias unmount-secrets="umount ~/.secrets"
 
 alias av="source venv/bin/activate"
 alias da="direnv allow"
