@@ -18,8 +18,3 @@ enable-oslogin() {
     add-metadata $INSTANCE \
     --metadata enable-oslogin=TRUE
 }
-
-tm-repo() {
-  git config user.email marksteve@thinkingmachin.es
-  git config commit.gpgsign true
-}
