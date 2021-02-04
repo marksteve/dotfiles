@@ -41,13 +41,41 @@ git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 ./install.sh
 ```
+## MacOS
 
-## Python
+1. Install brew
+1. Install dependencies
+    ```
+    brew install ripgrep fasd tmux direnv gpg envchain
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
 
-```
-pip3 install --user pipx
-cat requirements.in | xargs -I '{}' pipx install {}
-```
+### gocryptfs
+1. Install dependencies
+    ```
+    brew install go openssl@1.1 pkg-config
+    brew install --cask macfuse
+    ```
+1. Clone gocryptfs in ~/Downloads
+1. Patch it with:
+    ```
+    diff --git a/go.mod b/go.mod
+    index 64ab6e5..62ec237 100644
+    --- a/go.mod
+    +++ b/go.mod
+    @@ -17,3 +17,5 @@ require (
+            golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e // indirect
+            golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3
+     )
+    +
+    +replace github.com/hanwen/go-fuse/v2 v2.0.4-0.20201104153454-be8e5f4a85fd => "/Users/marksteve/Downloads/go-fuse/"
+    ```
+    _Taken from https://github.com/rfjakob/gocryptfs/issues/524_
+1. Clone go-fuse in ~/Downloads
+1. Go inside gocryptfs and run `build.bash`
+1. Mount secrets: `~/go/bin/gocryptfs ~/Sync/.secrets.enc ~/.secrets`. This will warn you to update security policy to enable external system extensions.
 
 ## WSL
 
@@ -78,13 +106,28 @@ sudo apt install systemd-genie
 
 Use `wsl genie -s` in your terminal emulator
 
-
 Instructions taken from https://kumekay.com/wsl2-and-systemd/
 
 ## Secrets
 
 ```
 ln -s .secrets/ssh .ssh
-ln -s .secrets/envrc .envrc
+gpg --import ~/.secrets/gpg/secret.asc
+gpg --import-ownertrust ~/.secrets/gpg/ownerturst.txt
+
+# MacOS
+envchain --set github GITHUB_TOKEN
 ```
 
+## Python
+
+```
+pip3 install --user pipx
+cat requirements.in | xargs -I '{}' pipx install {}
+```
+
+## Node
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
