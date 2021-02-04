@@ -1,9 +1,0 @@
-[Unit]
-Description=Wait for utahfs config before mounting notes
-
-[Path]
-PathExists=/home/marksteve/.secrets/utahfs.yaml
-Unit=mount-notes.service
-
-[Install]
-WantedBy=default.target

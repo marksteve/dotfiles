@@ -1,8 +1,0 @@
-[Unit]
-Description=Mount notes using utahfs-client
-
-[Service]
-ExecStart=/home/marksteve/go/bin/utahfs-client -cfg /home/marksteve/.secrets/utahfs.yaml -mount /home/marksteve/Notes -metrics-addr localhost:3004
-
-[Install]
-WantedBy=default.target
