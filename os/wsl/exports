@@ -1,0 +1,41 @@
+export LS_OPTIONS="--color=auto"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# vim as default editor
+export VISUAL=vim
+export EDITOR=vim
+
+# .bin
+export PATH=$PATH:$HOME/.bin:$HOME/.local/bin
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# mozjpeg
+export PATH=$PATH:/opt/mozjpeg/bin
+
+# wsl
+export PATH=$PATH:/mnt/c/Windows/SysWOW64
+export PATH=$PATH:"/mnt/c/Program Files/Docker/Docker/resources/bin"
+
+# vcxsrv
+export DISPLAY=$(cat /etc/resolv.conf | grep 'nameserver' | cut -f 2 -d ' '):0
+
+# keychain
+eval `keychain --eval --agents ssh id_rsa`
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# gcloud fix
+export LD_LIBRARY_PATH=/usr/local/lib

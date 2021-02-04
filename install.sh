@@ -17,8 +17,14 @@ install () {
   echo
 }
 
-if [[ `uname` == 'Linux' ]]; then
-  OS='linux'
+if [[ `uname` == 'Linux' ]]
+then
+  if [[ `uname -r` == '*-microsoft-standard' ]]
+  then
+    OS='wsl'
+  else
+    OS='linux'
+  fi
 else
   OS='macos'
 fi
