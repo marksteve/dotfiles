@@ -121,6 +121,12 @@ envchain --set github GITHUB_TOKEN
 
 ## Python
 
+### Versions
+```
+curl https://pyenv.run | bash
+```
+
+### Global Packages
 ```
 pip3 install --user pipx
 cat requirements.in | xargs -I '{}' pipx install {}
@@ -129,5 +135,6 @@ cat requirements.in | xargs -I '{}' pipx install {}
 ## Node
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+curl https://get.volta.sh | bash
+volta install node yarn
 ```
