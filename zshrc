@@ -18,16 +18,6 @@ done
 # cargo
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 
-# gcloud
-if [ -d $HOME/.local/google-cloud-sdk ]; then
-  # source $HOME/.local/google-cloud-sdk/completion.zsh.inc
-  source $HOME/.local/google-cloud-sdk/path.zsh.inc
-fi
-if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
-  # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-fi
-
 # direnv
 command -v direnv >/dev/null && eval "$(direnv hook zsh)"
 
