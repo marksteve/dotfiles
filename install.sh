@@ -19,7 +19,7 @@ install () {
 
 if [[ `uname` == 'Linux' ]]
 then
-  if [[ `uname -r` == '*-microsoft-standard' ]]
+  if [[ `uname -r` == *-microsoft-standard ]]
   then
     OS='wsl'
   else
