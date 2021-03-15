@@ -41,6 +41,16 @@ git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 ./install.sh
 ```
+
+## Ubuntu
+
+1. Install dependencies
+    ```
+    sudo apt install ripgrep fasd tmux direnv pinentry-gtk2
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
 ## MacOS
 
 1. Install brew
