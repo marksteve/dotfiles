@@ -1,5 +1,0 @@
-#!/bin/bash
-set -ex
-export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.secrets/backups-sa-key.json
-restic --repo gs:marksteve:/notes backup $HOME/Notes
-restic --repo s3:https://s3.amazonaws.com/marksteve/notes backup $HOME/Notes
