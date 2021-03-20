@@ -72,3 +72,4 @@ install gemrc .gemrc
 install tool-versions .tool-versions
 install pycodestyle .config/pycodestyle
 install os/$OS/gpg-agent.conf .gnupg/gpg-agent.conf
+install alacritty.yml .alacritty.yml
