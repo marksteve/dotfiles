@@ -52,6 +52,15 @@ cd dotfiles
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
 1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
+
+## Alacritty
+
+1. Follow [install instructions](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
+1. Set as default terminal
+    ```
+    sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+    sudo update-alternatives --config x-terminal-emulator
+    ```
 ## MacOS
 
 1. Install brew
