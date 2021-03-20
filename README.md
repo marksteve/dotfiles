@@ -38,6 +38,7 @@
 
 ```sh
 git clone https://github.com/marksteve/dotfiles
+git submodule update --init --recursive
 cd dotfiles
 ./install.sh
 ```
