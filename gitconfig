@@ -12,7 +12,7 @@
 [credential]
 	helper = cache
 [core]
-	excludesFile = /home/marksteve/.gitignore
+	excludesFile = ~/.gitignore
 [merge]
 	tool = smerge
 [diff]
@@ -34,3 +34,7 @@
 	trustExitCode = true
 [includeIf "gitdir:~/Work/"]
 	path = ~/.gitconfig-work
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
