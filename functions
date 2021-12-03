@@ -18,3 +18,7 @@ enable-oslogin() {
     add-metadata $INSTANCE \
     --metadata enable-oslogin=TRUE
 }
+
+code() {
+  /mnt/c/Users/MarkSteve/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code "$@"
+}

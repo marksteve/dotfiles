@@ -77,29 +77,23 @@ git submodule update --init --recursive
 ### Setup systemd with genie
 
 ```
+sudo su -
+
 # add Microsoft repo with .Net 3.1 runtime
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
 
-# add repo with genie
-curl -s https://packagecloud.io/install/repositories/arkane-systems/wsl-translinux/script.deb.sh | sudo bash
+# https://arkane-systems.github.io/wsl-transdebian/
+wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
+chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
+cat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list
+deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+deb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
+EOF
+apt update
 
-sudo apt update
-sudo apt install systemd-genie
+apt install systemd-genie
 ```
-
-### `/usr/lib/genie/deviated-preverts.conf`
-
-```
-{
-  "daemonize": "/usr/bin/daemonize",
-  "mount": "/bin/mount",
-  "runuser": "/sbin/runuser",
-  "systemd": "/bin/systemd"
-}
-```
-
-Use `wsl genie -s` in your terminal emulator
 
 Instructions taken from https://kumekay.com/wsl2-and-systemd/
 
