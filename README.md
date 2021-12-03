@@ -4,42 +4,17 @@
 ## Requirements
 
 - zsh
-
-    ```
-    sudo apt install zsh
-    ```
-
 - [prezto](https://github.com/sorin-ionescu/prezto)
-
-    ```
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    ```
-
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-
-    ```
-    sudo apt install ripgrep
-    ```
-
 - [fasd](https://github.com/clvv/fasd)
-
-    ```
-    sudo snap install fasd --beta
-    ```
-
 - [tpm](https://github.com/tmux-plugins/tpm)
-    ```
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ```
-
-    Run tmux and press `Ctrl + a, I` to install plugins.
 
 ## Install
 
 ```sh
 git clone https://github.com/marksteve/dotfiles
-git submodule update --init --recursive
 cd dotfiles
+git submodule update --init --recursive
 ./install.sh
 ```
 
@@ -53,7 +28,7 @@ cd dotfiles
     ```
 1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
 
-## Alacritty
+### Alacritty
 
 1. Follow [install instructions](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
 1. Set as default terminal
@@ -134,9 +109,6 @@ Instructions taken from https://kumekay.com/wsl2-and-systemd/
 ln -s .secrets/ssh .ssh
 gpg --import ~/.secrets/gpg/secret.asc
 gpg --import-ownertrust ~/.secrets/gpg/ownerturst.txt
-
-# MacOS
-envchain --set github GITHUB_TOKEN
 ```
 
 ## Python
