@@ -9,6 +9,25 @@
 - [fasd](https://github.com/clvv/fasd)
 - [tpm](https://github.com/tmux-plugins/tpm)
 
+### Ubuntu
+
+1. Install dependencies
+    ```
+    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
+
+### MacOS
+
+1. Install brew
+1. Install dependencies
+    ```
+    brew install zsh ripgrep fasd tmux direnv gpg envchain
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    ```
+
 ## Install
 
 ```sh
@@ -16,17 +35,12 @@ git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 git submodule update --init --recursive
 ./install.sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-## Ubuntu
+Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing dotfiles
 
-1. Install dependencies
-    ```
-    sudo apt install ripgrep fasd tmux direnv pinentry-gtk2
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ```
-1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
+## Ubuntu
 
 ### Alacritty
 
@@ -37,15 +51,6 @@ git submodule update --init --recursive
     sudo update-alternatives --config x-terminal-emulator
     ```
 ## MacOS
-
-1. Install brew
-1. Install dependencies
-    ```
-    brew install ripgrep fasd tmux direnv gpg envchain
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ```
-1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
 
 ### gocryptfs
 1. Install dependencies
@@ -100,9 +105,12 @@ Instructions taken from https://kumekay.com/wsl2-and-systemd/
 ## Secrets
 
 ```
-ln -s .secrets/ssh .ssh
+mkdir ~/.secrets
+mount-secrets
+rm -rf ~/.ssh
+ln -s ~/.secrets/ssh ~/.ssh
 gpg --import ~/.secrets/gpg/secret.asc
-gpg --import-ownertrust ~/.secrets/gpg/ownerturst.txt
+gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
 ```
 
 ## Python
