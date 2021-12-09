@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+setopt +o nomatch
+
 E='\033[1;30m[exists]'
 I='\033[1;32m[installed]'
 R='\033[0m'
