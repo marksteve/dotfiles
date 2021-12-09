@@ -29,8 +29,8 @@ command -v fasd >/dev/null && eval "$(fasd --init auto)"
 
 # pyenv
 if command -v pyenv >/dev/null; then
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
 fi
 
 # hub
