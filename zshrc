@@ -54,6 +54,6 @@ if [ -d $HOME/.volta ]; then
 fi
 
 # genie
-if [[ ! -v INSIDE_GENIE ]]; then
+if command -v genie && [[ ! -v INSIDE_GENIE ]]; then
   exec /usr/bin/genie -s
 fi

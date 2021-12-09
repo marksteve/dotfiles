@@ -19,6 +19,8 @@ enable-oslogin() {
     --metadata enable-oslogin=TRUE
 }
 
-code() {
-  /mnt/c/Users/MarkSteve/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code "$@"
-}
+if [[ `uname -r` == *-microsoft-standard ]]; then
+  code() {
+    /mnt/c/Users/MarkSteve/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code "$@"
+  }
+fi
