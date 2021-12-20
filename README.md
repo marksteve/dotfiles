@@ -113,6 +113,14 @@ gpg --import ~/.secrets/gpg/secret.asc
 gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
 ```
 
+### MacOS
+
+Store SSH private key passphrase in keychain:
+
+```
+ssh-add -AK
+```
+
 ## Python
 
 ### Versions
