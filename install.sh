@@ -58,6 +58,7 @@ do
 done
 
 # Vim config
+install vim .config/nvim
 install vim .vim
 install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
