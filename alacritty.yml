@@ -32,6 +32,6 @@ schemes:
 
 colors: *tokyo-night
 font:
-  size: 11.0
+  size: 13.0
   offset:
     y: 3
