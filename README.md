@@ -13,25 +13,22 @@
 
 1. Install dependencies
     ```
-    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2 gocryptfs
     ```
-1. Install tpm plugins by running tmux then pressing `Ctrl + a, i`
 
 ### MacOS
 
 1. Install brew and port
 1. Install dependencies
     ```
-    brew install zsh ripgrep fasd tmux direnv gpg envchain
+    brew install zsh ripgrep fasd tmux direnv syncthing gpg envchain
     port install gocryptfs
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     ```
 
 ## Install
 
 ```sh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 git submodule update --init --recursive
