@@ -21,10 +21,11 @@
 
 ### MacOS
 
-1. Install brew
+1. Install brew and port
 1. Install dependencies
     ```
     brew install zsh ripgrep fasd tmux direnv gpg envchain
+    port install gocryptfs
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     ```
 
@@ -50,33 +51,6 @@ Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing
     sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
     sudo update-alternatives --config x-terminal-emulator
     ```
-## MacOS
-
-### gocryptfs
-1. Install dependencies
-    ```
-    brew install go openssl@1.1 pkg-config
-    brew install --cask macfuse
-    ```
-1. Clone gocryptfs in ~/Downloads
-1. Patch it with:
-    ```
-    diff --git a/go.mod b/go.mod
-    index 64ab6e5..62ec237 100644
-    --- a/go.mod
-    +++ b/go.mod
-    @@ -17,3 +17,5 @@ require (
-            golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e // indirect
-            golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3
-     )
-    +
-    +replace github.com/hanwen/go-fuse/v2 v2.0.4-0.20201104153454-be8e5f4a85fd => "/Users/marksteve/Downloads/go-fuse/"
-    ```
-    _Taken from https://github.com/rfjakob/gocryptfs/issues/524_
-1. Clone go-fuse in ~/Downloads
-1. Go inside gocryptfs and run `build.bash`
-1. Mount secrets: `~/go/bin/gocryptfs ~/Sync/.secrets.enc ~/.secrets`. This will warn you to update security policy to enable external system extensions.
-
 ## WSL
 
 ### Setup systemd with genie
