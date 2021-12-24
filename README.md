@@ -35,6 +35,7 @@
 git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 git submodule update --init --recursive
+gpg # run to generate config directory
 ./install.sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
@@ -92,7 +93,7 @@ gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
 Store SSH private key passphrase in keychain:
 
 ```
-ssh-add -AK
+ssh-add -K
 ```
 
 ## Python
