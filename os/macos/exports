@@ -46,3 +46,4 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # mcfly
 export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_FUZZY=2
