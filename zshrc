@@ -1,16 +1,17 @@
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# imports
+for F in aliases exports functions; do
+  F=$HOME/.$F
+  [ -e "$F" ] && source $F
+done
+
+# starship
+eval "$(starship init zsh)"
 
 # asdf
 if [ -d $HOME/.asdf ]; then
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
 fi
-
-# imports
-for F in exports aliases functions; do
-  F=$HOME/.$F
-  [ -e "$F" ] && source $F
-done
 
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh

@@ -4,7 +4,7 @@
 ## Requirements
 
 - zsh
-- [prezto](https://github.com/sorin-ionescu/prezto)
+- [starship](https://starship.rs/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fasd](https://github.com/clvv/fasd)
 - [tpm](https://github.com/tmux-plugins/tpm)
@@ -13,6 +13,7 @@
 
 1. Install dependencies
     ```
+    sh -c "$(curl -fsSL https://starship.rs/install.sh)"
     sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2 gocryptfs
     ```
 
@@ -21,14 +22,13 @@
 1. Install brew and port
 1. Install dependencies
     ```
-    brew install zsh ripgrep fasd tmux direnv syncthing gpg envchain
+    brew install zsh starship ripgrep fasd tmux direnv syncthing gpg envchain
     port install gocryptfs
     ```
 
 ## Install
 
 ```sh
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 git clone https://github.com/marksteve/dotfiles
 cd dotfiles
 git submodule update --init --recursive
