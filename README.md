@@ -22,8 +22,24 @@
 1. Install brew and port
 1. Install dependencies
     ```
-    brew install zsh starship ripgrep fasd tmux direnv syncthing gpg envchain
-    port install gocryptfs
+    eval $(/opt/homebrew/bin/brew shellenv)
+    brew install zsh starship ripgrep fasd tmux direnv syncthing gpg
+    brew install \
+        bitwarden \
+        boop \
+        cloudflare-warp \
+        google-chrome \
+        iterm2 \
+        netnewswire \
+        obsidian \
+        rectangle \
+        spotify \
+        sublime-merge \
+        tailscale \
+        telegram \
+        todoist
+    sudo port install gocryptfs
+    sudo ln -fsn /opt/local/Library/Filesystems/macfuse.fs /Library/Filesystems/macfuse.fs
     ```
 
 ## Install
@@ -39,6 +55,25 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing dotfiles
 
+## Secrets
+
+```
+mkdir ~/.secrets
+mount-secrets
+rm -rf ~/.ssh
+ln -s ~/.secrets/ssh ~/.ssh
+gpg --import ~/.secrets/gpg/secret.asc
+gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
+```
+
+### MacOS
+
+Store SSH private key passphrase in keychain:
+
+```
+ssh-add -K
+```
+
 ## Ubuntu
 
 ### Alacritty
@@ -49,6 +84,7 @@ Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing
     sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
     sudo update-alternatives --config x-terminal-emulator
     ```
+
 ## WSL
 
 ### Setup systemd with genie
@@ -73,25 +109,6 @@ apt install systemd-genie
 ```
 
 Instructions taken from https://kumekay.com/wsl2-and-systemd/
-
-## Secrets
-
-```
-mkdir ~/.secrets
-mount-secrets
-rm -rf ~/.ssh
-ln -s ~/.secrets/ssh ~/.ssh
-gpg --import ~/.secrets/gpg/secret.asc
-gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
-```
-
-### MacOS
-
-Store SSH private key passphrase in keychain:
-
-```
-ssh-add -K
-```
 
 ## Python
 

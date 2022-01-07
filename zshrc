@@ -37,11 +37,6 @@ fi
 # hub
 command -v hub >/dev/null && eval "$(hub alias -s)"
 
-# envchain
-if command -v envchain >/dev/null; then
-  export $(envchain github env | grep GITHUB_TOKEN)
-fi
-
 # gnome-keyring
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
