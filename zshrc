@@ -53,6 +53,3 @@ fi
 if command -v genie && [[ ! -v INSIDE_GENIE ]]; then
   exec /usr/bin/genie -s
 fi
-
-# mcfly
-command -v mcfly >/dev/null && eval "$(mcfly init zsh)"

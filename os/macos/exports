@@ -43,7 +43,3 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # MySQL
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-
-# mcfly
-export MCFLY_INTERFACE_VIEW=BOTTOM
-export MCFLY_FUZZY=2
