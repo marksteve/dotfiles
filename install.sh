@@ -66,7 +66,7 @@ install vim/gvimrc .gvimrc
 install tmux.conf .tmux.conf
 install ackrc .ackrc
 install gitconfig .gitconfig
-install gitconfig-work .gitconfig-work
+install gitconfig-toggl .gitconfig-toggl
 install gitignore .gitignore
 install tigrc .tigrc
 install tarsnaprc .tarsnaprc
