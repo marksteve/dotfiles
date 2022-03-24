@@ -25,6 +25,7 @@
     eval $(/opt/homebrew/bin/brew shellenv)
     brew install zsh starship ripgrep fasd tmux direnv syncthing gpg
     brew install \
+        actual \
         bitwarden \
         boop \
         cloudflare-warp \
@@ -35,7 +36,6 @@
         rectangle \
         spotify \
         sublime-merge \
-        tailscale \
         telegram \
         todoist
     sudo port install gocryptfs
@@ -128,4 +128,9 @@ cat requirements.in | xargs -I '{}' pipx install {}
 ```
 curl https://get.volta.sh | bash
 volta install node yarn
+```
+
+### Global Packages
+```
+volta install d3-dsv
 ```

@@ -2,6 +2,7 @@ awscli
 black
 boto
 flake8
+http-prompt
 isort
 jupyter
 poetry
