@@ -43,3 +43,6 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # MySQL
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Rancher Desktop
+export PATH=$PATH:"/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin"
