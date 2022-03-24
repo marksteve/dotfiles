@@ -4,6 +4,9 @@ for F in aliases exports functions; do
   [ -e "$F" ] && source $F
 done
 
+# emacs bindings
+bindkey -e
+
 # starship
 eval "$(starship init zsh)"
 
