@@ -34,6 +34,7 @@
         netnewswire \
         obsidian \
         rectangle \
+        restic \
         spotify \
         sublime-merge \
         telegram \
