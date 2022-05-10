@@ -45,4 +45,14 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # Rancher Desktop
-export PATH=$PATH:"/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin"
+export PATH="$HOME/.rd/bin:$PATH"
+
+# Puppeteer
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+# Volta
+if [ -d $HOME/.volta ]; then
+  export VOLTA_HOME="$HOME/.volta"
+  export PATH="$VOLTA_HOME/bin:$PATH"
+fi
