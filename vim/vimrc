@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Theme
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'p00f/alabaster_dark.nvim', { 'branch': 'main' }
 
 " Generic
 Plug 'airblade/vim-gitgutter'
@@ -35,8 +35,7 @@ call plug#end()
 " SETTINGS
 
 set termguicolors
-
-colorscheme tokyonight
+colorscheme alabaster_dark
 
 set nocompatible
 
