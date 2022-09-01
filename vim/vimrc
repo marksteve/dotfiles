@@ -3,26 +3,6 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-" Language-specific
-Plug 'alfredodeza/pytest.vim'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'digitaltoad/vim-pug'
-Plug 'elixir-lang/vim-elixir'
-Plug 'evanleck/vim-svelte'
-Plug 'groenewege/vim-less'
-Plug 'guns/vim-clojure-static'
-Plug 'hashivim/vim-terraform'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'lepture/vim-jinja'
-Plug 'mitsuhiko/vim-python-combined'
-Plug 'mitsuhiko/vim-rst'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'StanAngeloff/php.vim'
-Plug 'thosakwe/vim-flutter'
-
 " Generic
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-buftabline'
@@ -33,6 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'mhinz/vim-sayonara'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-xtract'
 Plug 'sjl/gundo.vim'
@@ -192,35 +173,11 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 " Wrap markdown
 au BufRead,BufNewFile {*.md,*.markdown} set wrap
 
-" Go
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
-
 " Python
 let g:python_host_prog = '/usr/bin/python2.7'
 let g:python3_host_prog = '/Users/marksteve/.pyenv/shims/python3'
 
-" JavaScript
-let g:javascript_plugin_jsdoc = 1
-
-" Clojure
-let g:clojure_align_multiline_strings = 1
-let g:clojure_align_subforms = 1
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-let g:rainbow#blacklist = [15, 7, 8]
-augroup rainbow_lisp
-  autocmd!
-  autocmd FileType clojure RainbowParentheses
-augroup END
-
-
 " PLUGINS
-
-" indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
 
 " Sayonara
 nnoremap <Leader>q :Sayonara<CR>
@@ -240,11 +197,3 @@ nmap <Leader>b :Buffers<CR>
 " Gundo
 nnoremap <Leader>u :GundoToggle<CR>
 
-" vim-terraform
-let g:terraform_fmt_on_save = 1
-
-" vim-flutter
-nnoremap <Leader>fa :FlutterRun<CR>
-nnoremap <Leader>fq :FlutterQuit<CR>
-nnoremap <Leader>fr :FlutterHotReload<CR>
-nnoremap <Leader>fR :FlutterHotRestart<CR>
