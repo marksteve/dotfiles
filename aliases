@@ -11,3 +11,5 @@ alias unmount-secrets="umount ~/.secrets"
 alias av="source venv/bin/activate"
 alias da="direnv allow"
 alias tf="terraform"
+
+alias gconfig="gcloud config configurations activate"
