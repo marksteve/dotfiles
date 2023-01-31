@@ -63,6 +63,7 @@ mkdir ~/.secrets
 mount-secrets
 rm -rf ~/.ssh
 ln -s ~/.secrets/ssh ~/.ssh
+ln -s ~/.secrets/npmrc ~/.npmrc
 gpg --import ~/.secrets/gpg/secret.asc
 gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
 ```
