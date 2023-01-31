@@ -4,6 +4,7 @@
 	signingKey = C4E11074DACBC623602E2FA126675B54DFC1C9A1
 [push]
 	default = simple
+	autoSetupRemote = true
 [log]
 	decorate = short
 [alias]
