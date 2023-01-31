@@ -62,9 +62,14 @@ if [ -d $HOME/.deno ]; then
   export PATH="$HOME/.deno/bin:$PATH"
 fi
 
-# bun
+# Bun
 if [ -d $HOME/.bun ]; then
   export BUN_INSTALL="$HOME/.bun"
   export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+# Rust
+if [ -d $HOME/.cargo ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
