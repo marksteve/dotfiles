@@ -44,6 +44,9 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 # MySQL
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
+# libpq
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 # Rancher Desktop
 export PATH="$HOME/.rd/bin:$PATH"
 
@@ -72,4 +75,8 @@ fi
 if [ -d $HOME/.cargo ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
