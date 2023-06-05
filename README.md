@@ -14,7 +14,7 @@
 1. Install dependencies
     ```
     sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2 gocryptfs
+    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2 gocryptfs keychain
     ```
 
 ### MacOS

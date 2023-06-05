@@ -40,13 +40,9 @@ fi
 # hub
 command -v hub >/dev/null && eval "$(hub alias -s)"
 
-# gnome-keyring
-if [ -n "$DESKTOP_SESSION" ];then
-  eval $(gnome-keyring-daemon --start)
-  export SSH_AUTH_SOCK
+# keychain
+if command -v keychain >/dev/null; then
+  keychain $HOME/.ssh/id_rsa
+  source $HOME/.keychain/$HOSTNAME-sh
 fi
 
-# genie
-if command -v genie && [[ ! -v INSIDE_GENIE ]]; then
-  exec /usr/bin/genie -s
-fi
