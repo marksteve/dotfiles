@@ -10,6 +10,12 @@
 [alias]
 	pull = pull --ff-only
 	l = log --oneline --graph
+	next = stack next
+	prev = stack previous
+	reword = stack reword
+	amend = stack amend
+	sync = stack sync
+	run = stack run
 [credential]
 	helper = cache
 [core]
