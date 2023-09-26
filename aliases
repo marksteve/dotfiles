@@ -1,6 +1,5 @@
 alias ..="cd .."
-
-alias python-makefile="curl -sL https://gist.github.com/marksteve/a9ecdbaa2ddff1f6eab23dce75b55a6c/raw/8b43e34192554d8d5d900170fc2e6730fc48ac5f/Makefile > Makefile"
+alias ls="lsd"
 
 alias v="f -e nvim"
 alias vim="nvim"
