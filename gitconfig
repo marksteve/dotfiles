@@ -18,16 +18,22 @@
 	run = stack run
 [credential]
 	helper = cache
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [core]
 	excludesFile = ~/.gitignore
 [merge]
 	tool = smerge
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
 [diff]
-	tool = icdiff
+	tool = difftastic
 [difftool]
 	prompt = false
-[difftool "icdiff"]
-	cmd = icdiff --line-numbers $LOCAL $REMOTE
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -37,12 +43,9 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[mergetool "smerge"]
-	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
-	trustExitCode = true
-[includeIf "gitdir:~/Dev/toggl/"]
-	path = ~/.gitconfig-toggl
 [init]
 	defaultBranch = main
 [pull]
 	ff = only
+[credential "https://dev.azure.com"]
+	useHttpPath = true
