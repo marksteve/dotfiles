@@ -44,3 +44,5 @@ if command -v keychain >/dev/null; then
   source $HOME/.keychain/$HOSTNAME-sh
 fi
 
+# atuin
+command -v atuin >/dev/null && eval "$(atuin init zsh)"
