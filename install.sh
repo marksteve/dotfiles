@@ -63,16 +63,15 @@ install vim/vimrc .vimrc
 install vim/gvimrc .gvimrc
 
 # Misc
-install tmux.conf .tmux.conf
 install ackrc .ackrc
-install gitconfig .gitconfig
-install gitconfig-toggl .gitconfig-toggl
-install gitignore .gitignore
-install tigrc .tigrc
-install tarsnaprc .tarsnaprc
-install gemrc .gemrc
-install tool-versions .tool-versions
-install pycodestyle .config/pycodestyle
-install os/$OS/gpg-agent.conf .gnupg/gpg-agent.conf
 install alacritty.yml .alacritty.yml
-install atuin .local/share/atuin
+install gemrc .gemrc
+install gitconfig .gitconfig
+install gitignore .gitignore
+install mise.toml .config/mise/config.toml
+install os/$OS/gpg-agent.conf .gnupg/gpg-agent.conf
+install pycodestyle .config/pycodestyle
+install tarsnaprc .tarsnaprc
+install tigrc .tigrc
+install tmux.conf .tmux.conf
+
