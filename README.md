@@ -128,11 +128,6 @@ cat requirements.in | xargs -I '{}' pipx install {}
 ## Node
 
 ```
-curl https://get.volta.sh | bash
-volta install node yarn
-```
-
-### Global Packages
-```
-volta install d3-dsv
+curl https://mise.run | sh
+mise install
 ```

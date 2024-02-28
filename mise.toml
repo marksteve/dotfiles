@@ -1,0 +1,7 @@
+[tools]
+node = "20"
+"npm:prettier" = "latest"
+"npm:wait-on" = "latest"
+
+[settings]
+experimental = true

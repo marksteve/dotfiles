@@ -54,12 +54,6 @@ export PATH="$HOME/.rd/bin:$PATH"
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
-# Volta
-if [ -d $HOME/.volta ]; then
-  export VOLTA_HOME="$HOME/.volta"
-  export PATH="$VOLTA_HOME/bin:$PATH"
-fi
-
 # Deno
 if [ -d $HOME/.deno ]; then
   export PATH="$HOME/.deno/bin:$PATH"
@@ -79,4 +73,3 @@ fi
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-

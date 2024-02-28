@@ -10,11 +10,9 @@ bindkey -e
 # starship
 eval "$(starship init zsh)"
 
-# asdf
-if [ -d $HOME/.asdf ]; then
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
-fi
+# mise
+MISE_NODE_COREPACK=true
+[ -f ~/.local/bin/mise ] && eval "$(~/.local/bin/mise activate zsh)"
 
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
