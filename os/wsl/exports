@@ -33,9 +33,5 @@ export DISPLAY=$(cat /etc/resolv.conf | grep 'nameserver' | cut -f 2 -d ' '):0
 # keychain
 eval `keychain --eval --agents ssh id_rsa`
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 # gcloud fix
 export LD_LIBRARY_PATH=/usr/local/lib

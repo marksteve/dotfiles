@@ -29,11 +29,8 @@ command -v fasd >/dev/null && eval "$(fasd --init auto)"
 # iterm2
 [ -f $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
 
-# pyenv
-if command -v pyenv >/dev/null; then
-  eval "$(pyenv init --path)"
-  eval "$(pyenv init -)"
-fi
+# rye
+[ -f $HOME/.rye/env ] && source $HOME/.rye/env
 
 # hub
 command -v hub >/dev/null && eval "$(hub alias -s)"

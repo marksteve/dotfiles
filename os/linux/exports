@@ -23,7 +23,3 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # mozjpeg
 export PATH=$PATH:/opt/mozjpeg/bin
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-

@@ -172,10 +172,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 " Wrap markdown
 au BufRead,BufNewFile {*.md,*.markdown} set wrap
 
-" Python
-let g:python_host_prog = '/usr/bin/python2.7'
-let g:python3_host_prog = '/Users/marksteve/.pyenv/shims/python3'
-
 " PLUGINS
 
 " Sayonara

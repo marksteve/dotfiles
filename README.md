@@ -114,15 +114,14 @@ Instructions taken from https://kumekay.com/wsl2-and-systemd/
 
 ## Python
 
-### Versions
+### Toolchains
 ```
-curl https://pyenv.run | bash
+curl -sSf https://rye-up.com/get | bash
 ```
 
-### Global Packages
+### Tools
 ```
-pip3 install --user pipx
-cat requirements.in | xargs -I '{}' pipx install {}
+cat requirements.in | xargs -I '{}' rye install {}
 ```
 
 ## Node

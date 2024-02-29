@@ -1,11 +1,5 @@
-awscli
 black
-boto
-flake8
-http-prompt
-isort
-jupyter
-poetry
-pre-commit
-tmuxp
-twine
+datasette
+notebook
+python-lsp-server
+youtube-dl
