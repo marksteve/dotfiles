@@ -6,7 +6,7 @@
 - zsh
 - [starship](https://starship.rs/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [fasd](https://github.com/clvv/fasd)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [tpm](https://github.com/tmux-plugins/tpm)
 
 ### Ubuntu
@@ -14,7 +14,8 @@
 1. Install dependencies
     ```
     sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-    sudo apt install zsh ripgrep fasd tmux direnv syncthing pinentry-gtk2 gocryptfs keychain
+    sh -c "$(curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh)"
+    sudo apt install zsh ripgrep tmux direnv syncthing pinentry-gtk2 gocryptfs keychain
     ```
 
 ### MacOS
@@ -23,7 +24,7 @@
 1. Install dependencies
     ```
     eval $(/opt/homebrew/bin/brew shellenv)
-    brew install zsh starship ripgrep fasd tmux direnv syncthing gpg
+    brew install zsh starship ripgrep zoxide tmux direnv syncthing gpg
     brew install \
         actual \
         bitwarden \

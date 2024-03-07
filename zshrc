@@ -23,8 +23,8 @@ MISE_NODE_COREPACK=true
 # direnv
 command -v direnv >/dev/null && eval "$(direnv hook zsh)"
 
-# fasd
-command -v fasd >/dev/null && eval "$(fasd --init auto)"
+# zoxide
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
 # iterm2
 [ -f $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
@@ -43,3 +43,6 @@ fi
 
 # atuin
 command -v atuin >/dev/null && eval "$(atuin init zsh)"
+
+# bun completions
+[ -s "/Users/marksteve/.bun/_bun" ] && source "/Users/marksteve/.bun/_bun"
