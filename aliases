@@ -1,9 +1,6 @@
 alias ..="cd .."
 alias ls="lsd"
 
-alias v="f -e nvim"
-alias vim="nvim"
-
 alias mount-secrets="gocryptfs ~/Sync/.secrets.enc ~/.secrets"
 alias unmount-secrets="umount ~/.secrets"
 

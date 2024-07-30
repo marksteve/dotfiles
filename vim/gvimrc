@@ -1,3 +1,0 @@
-set guioptions-=T " Disable toolbar
-set guifont=InputMonoCondensed:h18
-set cursorline " Highlight current line
