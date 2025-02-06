@@ -49,3 +49,5 @@
 	ff = only
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[rebase]
+	updateRefs = true
