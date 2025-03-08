@@ -67,9 +67,12 @@ fi
 
 # Rust
 if [ -d $HOME/.cargo ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+  source "$HOME/.cargo/env"
 fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# rebar
+export PATH=$PATH:~/.cache/rebar3/bin
