@@ -1,10 +1,39 @@
+[core]
+	excludesFile = ~/.gitignore
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+	rebase = true
+[rebase]
+	updateRefs = true
+	autoSquash = true
+	autoStash = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
 [user]
 	name = Mark Steve Samson
 	email = hello@marksteve.com
-	signingKey = C4E11074DACBC623602E2FA126675B54DFC1C9A1
 [push]
 	default = simple
 	autoSetupRemote = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[merge]
+	tool = smerge
+	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+	tool = difftastic
 [log]
 	decorate = short
 [alias]
@@ -19,15 +48,9 @@
 [credential]
 	helper = cache
 	helper = /usr/local/share/gcm-core/git-credential-manager
-[core]
-	excludesFile = ~/.gitignore
-[merge]
-	tool = smerge
 [mergetool "smerge"]
 	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true
-[diff]
-	tool = difftastic
 [difftool]
 	prompt = false
 [difftool "difftastic"]
@@ -43,11 +66,3 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[init]
-	defaultBranch = main
-[pull]
-	ff = only
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-[rebase]
-	updateRefs = true
