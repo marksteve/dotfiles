@@ -45,4 +45,4 @@ fi
 command -v atuin >/dev/null && eval "$(atuin init zsh)"
 
 # bun completions
-[ -s "/Users/marksteve/.bun/_bun" ] && source "/Users/marksteve/.bun/_bun"
+[ -s $HOME/.bun/_bun ] && source $HOME/.bun/_bun
