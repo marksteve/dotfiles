@@ -76,3 +76,11 @@ export PATH="$PNPM_HOME:$PATH"
 
 # rebar
 export PATH=$PATH:~/.cache/rebar3/bin
+
+# mint
+if [ -d $HOME/.mint ]; then
+  export PATH="$HOME/.mint/bin:$PATH"
+fi
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
