@@ -1,11 +1,15 @@
 [tools]
-node = "20"
+node = "22"
 "npm:prettier" = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:turbo" = "latest"
 "npm:instant-cli" = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
+"npm:sv" = "latest"
+"npm:taze" = "latest"
+"npm:slogtail" = "latest"
+"npm:pnpm" = "11"
+"npm:@earendil-works/pi-coding-agent" = "latest"
 
 [settings]
 experimental = true
