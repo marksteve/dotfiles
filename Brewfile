@@ -131,6 +131,8 @@ brew "tmux"
 brew "overmind"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Shell command parallelization utility
+brew "parallel"
 # Command-line tool to generate, analyze, convert and manipulate colors
 brew "pastel"
 # Sync Postgres data between databases
@@ -145,6 +147,8 @@ brew "pwgen"
 brew "rclone"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
+# Fast, efficient and secure backup program
+brew "restic"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Cross-shell prompt for astronauts
@@ -181,6 +185,8 @@ brew "oven-sh/bun/bun"
 brew "stripe/stripe-cli/stripe"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
 # Image editing and design software
 cask "affinity"
 # Browse, search and analyse your past AI coding sessions
