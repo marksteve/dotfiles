@@ -1,13 +1,18 @@
 # dotfiles
 > That's the Way (I Like It)
 
-## Requirements
+## Install
 
-- zsh
-- [starship](https://starship.rs/)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [tpm](https://github.com/tmux-plugins/tpm)
+```sh
+git clone https://github.com/marksteve/dotfiles
+cd dotfiles
+git submodule update --init --recursive
+gpg # run to generate config directory
+./install.sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing dotfiles
 
 ### Ubuntu
 
@@ -24,38 +29,16 @@
 1. Install dependencies
     ```
     eval $(/opt/homebrew/bin/brew shellenv)
-    brew install zsh starship ripgrep zoxide tmux direnv syncthing gpg
-    brew install \
-        actual \
-        bitwarden \
-        boop \
-        cloudflare-warp \
-        google-chrome \
-        iterm2 \
-        netnewswire \
-        obsidian \
-        rectangle \
-        restic \
-        spotify \
-        sublime-merge \
-        telegram \
-        todoist
+    brew bundle install
     sudo port install gocryptfs
     sudo ln -fsn /opt/local/Library/Filesystems/macfuse.fs /Library/Filesystems/macfuse.fs
     ```
 
-## Install
+Store SSH private key passphrase in keychain:
 
-```sh
-git clone https://github.com/marksteve/dotfiles
-cd dotfiles
-git submodule update --init --recursive
-gpg # run to generate config directory
-./install.sh
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-
-Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing dotfiles
+ssh-add -K
+```
 
 ## Secrets
 
@@ -69,42 +52,8 @@ gpg --import ~/.secrets/gpg/secret.asc
 gpg --import-ownertrust ~/.secrets/gpg/ownertrust.txt
 ```
 
-### MacOS
-
-Store SSH private key passphrase in keychain:
-
-```
-ssh-add -K
-```
-
-## WSL
-
-### Setup systemd with genie
-
-```
-sudo su -
-
-# add Microsoft repo with .Net 3.1 runtime
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
-
-# https://arkane-systems.github.io/wsl-transdebian/
-wget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg
-chmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg
-cat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list
-deb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
-deb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main
-EOF
-apt update
-
-apt install systemd-genie
-```
-
-Instructions taken from https://kumekay.com/wsl2-and-systemd/
-
 ## Python
 
-### Toolchains
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
