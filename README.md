@@ -77,17 +77,6 @@ Store SSH private key passphrase in keychain:
 ssh-add -K
 ```
 
-## Ubuntu
-
-### Alacritty
-
-1. Follow [install instructions](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
-1. Set as default terminal
-    ```
-    sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
-    sudo update-alternatives --config x-terminal-emulator
-    ```
-
 ## WSL
 
 ### Setup systemd with genie

@@ -58,15 +58,11 @@ done
 
 # Misc
 install ackrc .ackrc
-install alacritty.yml .alacritty.yml
 install gemrc .gemrc
 install gitconfig .gitconfig
 install gitignore .gitignore
-install helix.toml .config/helix/config.toml
 install mise.toml .config/mise/config.toml
 install os/$OS/gpg-agent.conf .gnupg/gpg-agent.conf
 install pycodestyle .config/pycodestyle
-install tarsnaprc .tarsnaprc
-install tigrc .tigrc
 install tmux.conf .tmux.conf
 

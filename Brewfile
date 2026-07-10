@@ -81,8 +81,6 @@ brew "gleam"
 brew "gotify"
 # File format designed to store large amounts of data
 brew "hdf5"
-# Post-modern modal text editor
-brew "helix"
 # Configurable static site generator
 brew "hugo"
 # Tools and libraries to manipulate images in select formats
