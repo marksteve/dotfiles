@@ -120,11 +120,6 @@ Instructions taken from https://kumekay.com/wsl2-and-systemd/
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-### Tools
-```
-cat requirements.in | xargs -I '{}' uv tool install {}
-```
-
 ## Node
 
 ```
