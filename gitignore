@@ -4,6 +4,3 @@ venv/
 .venv/
 node_modules/
 .vscode/
-
-# zarla
-firebase/test-data
