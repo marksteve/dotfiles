@@ -117,12 +117,12 @@ Instructions taken from https://kumekay.com/wsl2-and-systemd/
 
 ### Toolchains
 ```
-curl -sSf https://rye-up.com/get | bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ### Tools
 ```
-cat requirements.in | xargs -I '{}' rye install {}
+cat requirements.in | xargs -I '{}' uv tool install {}
 ```
 
 ## Node
