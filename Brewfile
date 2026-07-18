@@ -47,8 +47,6 @@ brew "harfbuzz"
 brew "openexr"
 # New file format for still image compression
 brew "jpeg-xl"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
 # Programmer's text editor
@@ -63,6 +61,8 @@ brew "fzf"
 brew "gcc"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Highest-quality GIF encoder based on pngquant
 brew "gifski"
 # Distributed revision control system
@@ -217,8 +217,6 @@ cask "claude"
 cask "cloudflare-warp"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
-# OpenAI's Codex desktop app for managing coding agents
-cask "codex-app"
 # Mouse and keyboard sharing utility
 cask "deskflow/tap/deskflow"
 # Voice and text chat software
@@ -250,8 +248,6 @@ cask "google-gemini"
 cask "handbrake-app"
 # Speech to text application
 cask "handy"
-# Utility to hide menu bar items
-cask "hiddenbar"
 # Menu bar application that displays the CPU speed limit due to thermal issues
 cask "hot"
 # Free and open-source media player
@@ -286,8 +282,6 @@ cask "ollama-app"
 cask "orbstack"
 # Pear Desktop App
 cask "pear-devs/pear/pear-desktop", trusted: true
-# Colour picker for colours onscreen
-cask "pika"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -304,16 +298,12 @@ cask "sublime-merge"
 cask "sublime-text"
 # Messaging app with a focus on speed and security
 cask "telegram"
-# Unpacks archive files
-cask "the-unarchiver"
 # To-do list
 cask "todoist-app"
 # Open-source code editor
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# Wine wrapper built with SwiftUI
-cask "whisky"
 # Multiplayer code editor
 cask "zed"
 # Video communication and virtual meeting platform
@@ -368,7 +358,6 @@ vscode "usernamehw.errorlens"
 vscode "vscodevim.vim"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
-go "golang.org/x/tools/gopls"
 cargo "ast-grep"
 cargo "cargo-xwin"
 cargo "spacer"
