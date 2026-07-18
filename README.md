@@ -30,8 +30,7 @@ Install tpm plugins by running tmux then pressing `Ctrl + a, i` after installing
     ```
     eval $(/opt/homebrew/bin/brew shellenv)
     brew bundle install
-    sudo port install gocryptfs
-    sudo ln -fsn /opt/local/Library/Filesystems/macfuse.fs /Library/Filesystems/macfuse.fs
+    sudo port install gocryptfs -doc +fs_link
     ```
 
 Store SSH private key passphrase in keychain:
